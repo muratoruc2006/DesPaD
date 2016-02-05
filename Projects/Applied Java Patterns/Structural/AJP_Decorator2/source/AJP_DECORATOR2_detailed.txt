@@ -1,0 +1,58 @@
+v 1 Contact (Interface)
+v 2 RunPattern (Class)
+v 3 ContactImpl (Class)
+v 4 Task (Class)
+v 5 ProjectDecorator (Abstract)
+v 6 Deliverable (Class)
+v 7 DependentProjectItem (Class)
+v 8 ProjectItem (Interface)
+v 9 SupportedProjectItem (Class)
+v 10 Serializable (Interface)
+e 1 - Contact extends 10 - Serializable
+e 3 - ContactImpl implements 1 - Contact
+e 4 - Task implements 8 - ProjectItem
+e 5 - ProjectDecorator implements 8 - ProjectItem
+e 6 - Deliverable implements 8 - ProjectItem
+e 7 - DependentProjectItem extends 5 - ProjectDecorator
+e 8 - ProjectItem extends 10 - Serializable
+e 9 - SupportedProjectItem extends 5 - ProjectDecorator
+e 2 - RunPattern overrides_methods_of 2 - RunPattern
+e 2 - RunPattern related_with_its_method 1 - Contact
+e 2 - RunPattern creates_objects_of 3 - ContactImpl
+e 2 - RunPattern related_with_its_method 4 - Task
+e 2 - RunPattern creates_objects_of 4 - Task
+e 2 - RunPattern related_with_its_method 6 - Deliverable
+e 2 - RunPattern creates_objects_of 6 - Deliverable
+e 2 - RunPattern related_with_its_method 5 - ProjectDecorator
+e 2 - RunPattern creates_objects_of 9 - SupportedProjectItem
+e 2 - RunPattern creates_objects_of 7 - DependentProjectItem
+e 3 - ContactImpl overrides_methods_of 3 - ContactImpl
+e 4 - Task has_the_field_type_of 1 - Contact
+e 4 - Task related_with_its_method 1 - Contact
+e 4 - Task has_a_method_that_has_an_input_parameter_with_the_type_of 1 - Contact
+e 4 - Task overrides_methods_of 4 - Task
+e 4 - Task has_a_method_with_the_return_type_of 1 - Contact
+e 4 - Task related_with_its_method 8 - ProjectItem
+e 4 - Task has_a_method_that_has_an_input_parameter_with_the_type_of 8 - ProjectItem
+e 4 - Task overrides_methods_of 3 - ContactImpl
+e 5 - ProjectDecorator has_the_field_type_of 8 - ProjectItem
+e 5 - ProjectDecorator related_with_its_method 8 - ProjectItem
+e 5 - ProjectDecorator has_a_method_with_the_return_type_of 8 - ProjectItem
+e 5 - ProjectDecorator overrides_methods_of 5 - ProjectDecorator
+e 5 - ProjectDecorator has_a_method_that_has_an_input_parameter_with_the_type_of 8 - ProjectItem
+e 5 - ProjectDecorator overrides_methods_of 4 - Task
+e 6 - Deliverable has_the_field_type_of 1 - Contact
+e 6 - Deliverable related_with_its_method 1 - Contact
+e 6 - Deliverable has_a_method_that_has_an_input_parameter_with_the_type_of 1 - Contact
+e 6 - Deliverable overrides_methods_of 4 - Task
+e 6 - Deliverable overrides_methods_of 6 - Deliverable
+e 6 - Deliverable has_a_method_with_the_return_type_of 1 - Contact
+e 6 - Deliverable overrides_methods_of 3 - ContactImpl
+e 7 - DependentProjectItem has_the_field_type_of 8 - ProjectItem
+e 7 - DependentProjectItem related_with_its_method 8 - ProjectItem
+e 7 - DependentProjectItem has_a_method_that_has_an_input_parameter_with_the_type_of 8 - ProjectItem
+e 7 - DependentProjectItem has_a_method_with_the_return_type_of 8 - ProjectItem
+e 7 - DependentProjectItem overrides_methods_of 7 - DependentProjectItem
+e 7 - DependentProjectItem overrides_methods_of 3 - ContactImpl
+e 9 - SupportedProjectItem overrides_methods_of 9 - SupportedProjectItem
+e 9 - SupportedProjectItem overrides_methods_of 3 - ContactImpl

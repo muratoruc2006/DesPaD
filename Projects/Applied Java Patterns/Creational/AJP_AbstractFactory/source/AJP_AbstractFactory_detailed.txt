@@ -1,0 +1,99 @@
+v 1 PhoneNumber (Abstract)
+v 2 FrenchPhoneNumber (Class)
+v 3 FrenchAddressFactory (Class)
+v 4 RunPattern (Class)
+v 5 USAddressFactory (Class)
+v 6 Address (Abstract)
+v 7 USAddress (Class)
+v 8 FrenchAddress (Class)
+v 9 AddressFactory (Interface)
+v 10 USPhoneNumber (Class)
+v 11 String (Class)
+v 12 Long (Class)
+v 13 int (Class)
+v 14 newNumber (Class)
+v 15 super (Class)
+v 16 ; (Class)
+v 17 usAddressFactory (Class)
+v 18 usAddress (Class)
+v 19 usPhone (Class)
+v 20 frenchAddressFactory (Class)
+v 21 frenchAddress (Class)
+v 22 frenchPhone (Class)
+e 2 - FrenchPhoneNumber extends 1 - PhoneNumber
+e 3 - FrenchAddressFactory implements 9 - AddressFactory
+e 5 - USAddressFactory implements 9 - AddressFactory
+e 7 - USAddress extends 6 - Address
+e 8 - FrenchAddress extends 6 - Address
+e 10 - USPhoneNumber extends 1 - PhoneNumber
+e 1 - PhoneNumber has_the_field_type_of 11 - String
+e 1 - PhoneNumber related_with_its_method 11 - String
+e 1 - PhoneNumber has_a_method_with_the_return_type_of 11 - String
+e 1 - PhoneNumber overrides_methods_of 1 - PhoneNumber
+e 1 - PhoneNumber has_a_method_that_has_an_input_parameter_with_the_type_of 11 - String
+e 1 - PhoneNumber calls_method_of 12 - Long
+e 2 - FrenchPhoneNumber has_the_field_type_of 11 - String
+e 2 - FrenchPhoneNumber has_the_field_type_of 13 - int
+e 2 - FrenchPhoneNumber related_with_its_method 11 - String
+e 2 - FrenchPhoneNumber has_a_method_with_the_return_type_of 11 - String
+e 2 - FrenchPhoneNumber overrides_methods_of 1 - PhoneNumber
+e 2 - FrenchPhoneNumber has_a_method_that_has_an_input_parameter_with_the_type_of 11 - String
+e 2 - FrenchPhoneNumber calls_method_of 14 - newNumber
+e 2 - FrenchPhoneNumber calls_method_of 15 - super
+e 3 - FrenchAddressFactory has_the_return_type_of 16 - ;
+e 3 - FrenchAddressFactory related_with_its_method 6 - Address
+e 3 - FrenchAddressFactory has_a_method_with_the_return_type_of 6 - Address
+e 3 - FrenchAddressFactory overrides_methods_of 3 - FrenchAddressFactory
+e 3 - FrenchAddressFactory creates_objects_of 8 - FrenchAddress
+e 3 - FrenchAddressFactory related_with_its_method 1 - PhoneNumber
+e 3 - FrenchAddressFactory has_a_method_with_the_return_type_of 1 - PhoneNumber
+e 3 - FrenchAddressFactory creates_objects_of 2 - FrenchPhoneNumber
+e 4 - RunPattern overrides_methods_of 4 - RunPattern
+e 4 - RunPattern related_with_its_method 11 - String[]
+e 4 - RunPattern has_a_method_that_has_an_input_parameter_with_the_type_of 11 - String[]
+e 4 - RunPattern related_with_its_method 9 - AddressFactory
+e 4 - RunPattern creates_objects_of 5 - USAddressFactory
+e 4 - RunPattern related_with_its_method 6 - Address
+e 4 - RunPattern calls_method_of 17 - usAddressFactory
+e 4 - RunPattern calls_method_of 5 - USAddressFactory
+e 4 - RunPattern related_with_its_method 1 - PhoneNumber
+e 4 - RunPattern calls_method_of 18 - usAddress
+e 4 - RunPattern calls_method_of 19 - usPhone
+e 4 - RunPattern creates_objects_of 3 - FrenchAddressFactory
+e 4 - RunPattern calls_method_of 20 - frenchAddressFactory
+e 4 - RunPattern calls_method_of 3 - FrenchAddressFactory
+e 4 - RunPattern calls_method_of 21 - frenchAddress
+e 4 - RunPattern calls_method_of 22 - frenchPhone
+e 5 - USAddressFactory has_the_return_type_of 16 - ;
+e 5 - USAddressFactory related_with_its_method 6 - Address
+e 5 - USAddressFactory has_a_method_with_the_return_type_of 6 - Address
+e 5 - USAddressFactory overrides_methods_of 3 - FrenchAddressFactory
+e 5 - USAddressFactory creates_objects_of 7 - USAddress
+e 5 - USAddressFactory related_with_its_method 1 - PhoneNumber
+e 5 - USAddressFactory has_a_method_with_the_return_type_of 1 - PhoneNumber
+e 5 - USAddressFactory creates_objects_of 10 - USPhoneNumber
+e 6 - Address has_the_field_type_of 11 - String
+e 6 - Address related_with_its_method 11 - String
+e 6 - Address has_a_method_with_the_return_type_of 11 - String
+e 6 - Address overrides_methods_of 6 - Address
+e 6 - Address has_a_method_that_has_an_input_parameter_with_the_type_of 11 - String
+e 7 - USAddress has_the_field_type_of 11 - String
+e 7 - USAddress related_with_its_method 11 - String
+e 7 - USAddress has_a_method_with_the_return_type_of 11 - String
+e 7 - USAddress overrides_methods_of 6 - Address
+e 8 - FrenchAddress has_the_field_type_of 11 - String
+e 8 - FrenchAddress related_with_its_method 11 - String
+e 8 - FrenchAddress has_a_method_with_the_return_type_of 11 - String
+e 8 - FrenchAddress overrides_methods_of 6 - Address
+e 9 - AddressFactory has_a_method_with_the_return_type_of 6 - Address
+e 9 - AddressFactory related_with_its_method 6 - Address
+e 9 - AddressFactory has_a_method_with_the_return_type_of 1 - PhoneNumber
+e 9 - AddressFactory related_with_its_method 1 - PhoneNumber
+e 10 - USPhoneNumber has_the_field_type_of 11 - String
+e 10 - USPhoneNumber has_the_field_type_of 13 - int
+e 10 - USPhoneNumber related_with_its_method 11 - String
+e 10 - USPhoneNumber has_a_method_with_the_return_type_of 11 - String
+e 10 - USPhoneNumber overrides_methods_of 1 - PhoneNumber
+e 10 - USPhoneNumber has_a_method_that_has_an_input_parameter_with_the_type_of 11 - String
+e 10 - USPhoneNumber calls_method_of 14 - newNumber
+e 10 - USPhoneNumber calls_method_of 15 - super

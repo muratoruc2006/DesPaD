@@ -1,0 +1,14 @@
+v 1 Contact (Interface)
+v 2 RunPattern (Class)
+v 3 Chovnatlh (Interface)
+v 4 ContactAdapter (Class)
+v 5 ChovnatlhImpl (Class)
+e 4 - ContactAdapter implements 1 - Contact
+e 5 - ChovnatlhImpl implements 3 - Chovnatlh
+e 2 - RunPattern related_with_its_method 1 - Contact
+e 2 - RunPattern creates_objects_of 4 - ContactAdapter
+e 4 - ContactAdapter has_the_field_type_of 3 - Chovnatlh
+e 4 - ContactAdapter creates_objects_of 5 - ChovnatlhImpl
+e 4 - ContactAdapter related_with_its_method 3 - Chovnatlh
+e 4 - ContactAdapter has_a_method_that_has_an_input_parameter_with_the_type_of 3 - Chovnatlh
+e 4 - ContactAdapter has_the_return_type_of 5 - ChovnatlhImpl

@@ -1,0 +1,19 @@
+
+digraph SubdueGraph {
+  107 [label="Class",color=blue,fontcolor=blue];
+  110 [label="Class",color=blue,fontcolor=blue];
+  114 [label="Interface",color=blue,fontcolor=blue];
+  116 [label="Class",color=blue,fontcolor=blue];
+  107 -> 114 [label="implements",color=blue,fontcolor=blue];
+  110 -> 114 [label="implements",color=blue,fontcolor=blue];
+  116 -> 114 [label="implements",color=blue,fontcolor=blue];
+  116 -> 114 [label="has_a_method_that_has_an_input_parameter_with_the_type_of",color=blue,fontcolor=blue];
+  146 [label="Class",color=blue,fontcolor=blue];
+  147 [label="Class",color=blue,fontcolor=blue];
+  149 [label="Interface",color=blue,fontcolor=blue];
+  157 [label="Class",color=blue,fontcolor=blue];
+  146 -> 149 [label="implements",color=blue,fontcolor=blue];
+  147 -> 149 [label="implements",color=blue,fontcolor=blue];
+  157 -> 149 [label="implements",color=blue,fontcolor=blue];
+  157 -> 149 [label="has_a_method_that_has_an_input_parameter_with_the_type_of",color=blue,fontcolor=blue];
+}

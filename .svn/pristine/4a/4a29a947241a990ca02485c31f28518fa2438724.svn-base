@@ -1,0 +1,1078 @@
+package AST;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+public class Proba extends MyVisitor
+{
+   public List<Nodes> GeneratedIds = new ArrayList<Nodes>();
+   public List<Vertices> maxV = new ArrayList<Vertices>();
+   public List<Vertices> maxE = new ArrayList<Vertices>();
+   final List<Nodes> dugumler3 = new ArrayList<Nodes>();
+	   
+   public String getNewIdbyOldId(String OldId) {    	
+	 	   
+	 	   @SuppressWarnings("rawtypes")
+	 	   Iterator iterator2 = GeneratedIds.iterator();
+	 	   String NewId="";
+	        while (iterator2.hasNext())
+	        {
+	        	Nodes o = (Nodes) iterator2.next();
+	            if(o.getNode1().toString().equals(OldId)) 
+		           {
+	            	NewId = o.getNode2().toString(); 
+	            	iterator2.remove();
+	            	break;
+		           }            
+	        }
+	        return NewId;
+   }    
+  
+   public void Drawing()
+   {
+	   
+      String dir = "E:/Linux_Mint/";  
+      String input = dir + "bridgee.dot";
+
+	   
+	  GraphViz gv = new GraphViz();
+	  gv.readSource(input);
+      //System.out.println(gv.getDotSource());
+   		
+	  //    String type = "gif";
+	  //    String type = "dot";
+	  //    String type = "fig";    // open with xfig
+	  //    String type = "pdf";
+	  //    String type = "ps";
+	  //    String type = "svg";    // open with inkscape
+		    String type = "png";
+	  //    String type = "plain";
+
+      File out = new File("E:/Linux_Mint/bridgee." + type);   // Windows
+	  gv.writeGraphToFile( gv.getGraph( gv.getDotSource(), type ), out );
+	  System.out.print("Graph plotted!");
+   }
+      
+   public void start(Boolean sourceCodeGraph,
+		   				Boolean sourceCodeGraphDetail,
+		   				Boolean designPatternGraph,
+		   				String designpatternName,
+		   				Boolean OnlyTerminalCommands,
+		   				String projectName,
+		   				Double threshold,
+		   				String overlap,
+		   				String programPath) 
+		   throws IOException
+   {
+	   	   
+	   String Nodes_Public = "v,1,Class,000;v,2,Class,000;v,2,Class,000";
+	   String Edges_Public = "e,2,1,extends,000;e,2,1,overrides_methods_of,000";
+	   Integer maxClassId = 2;
+	   /*	  
+	    * 100 : means this node/edge will be generated.
+	    * 002 : means this node has two edges and if this is edge, this is the second edge.
+	    * 000 : means this node/edge will be unique.
+	    */
+	   
+	   //-----FACTORY METHOD PATTERN-------
+	   if (designpatternName == "FACTORY"){	   
+	   Nodes_Public = "v,1,Interface,000;v,2,Class,100;v,3,Class,100;v,4,Interface,000";
+	   Edges_Public = "e,2,1,implements,100;e,2,3,creates_objects_of,000;e,3,4,implements,100";
+	   maxClassId = 4;}
+	   
+	   //-----PROTOTYPE PATTERN-------
+	   if (designpatternName == "PROTOTYPE"){	   
+	   Nodes_Public = "v,1,Interface,000;v,2,Class,100;v,3,Class,000";
+	   Edges_Public = "e,2,1,implements,100;e,3,2,related_with_its_method,100;e,2,2,has_the_return_type_of,000";
+	   maxClassId = 3;}
+	   
+	   //-----ABSTRACT FACTORY PATTERN-------
+	   if (designpatternName == "ABSTRACT FACTORY"){	   
+	   Nodes_Public = "v,1,Interface,000;v,2,Class,100;v,3,Class,100;v,4,Abstract,000";
+	   Edges_Public = "e,2,1,implements,100;e,3,2,creates_objects_of,100;e,3,4,extends,100";
+	   maxClassId = 4;}
+	   
+	   //-----BUILDER PATTERN-------
+	   if (designpatternName == "BUILDER"){	   
+	   Nodes_Public = "v,1,Class,000;v,2,Class,000;v,3,Class,100;v,4,Class,000";
+	   Edges_Public = "e,1,2,creates_objects_of,100;e,2,4,related_with_its_method,100;e,3,2,extends,100";
+	   maxClassId = 4;}
+	   
+	   //-----SINGLETON PATTERN-------
+	   if (designpatternName == "SINGLETON"){	   
+	   Nodes_Public = "v,1,Class,000";
+	   Edges_Public = "e,1,1,creates_objects_of,000;e,1,1,related_with_its_method,000";
+	   maxClassId = 1;}
+	   
+	   //-----COMPOSITE PATTERN-------
+	   if (designpatternName == "COMPOSITE"){	   
+	   Nodes_Public = "v,1,Interface,000;v,2,Class,100;v,2,Class,002;v,3,Class,100";
+	   Edges_Public = "e,2,1,implements,100;e,2,1,has_a_method_that_has_an_input_parameter_with_the_type_of,002;e,3,1,implements,100";
+	   //Edges_Public = "e,2,1,implements,100;e,2,1,has_the_field_type_of,002;e,3,1,implements,100";
+	   maxClassId = 3;}
+	   
+	   //-----BRIDGE PATTERN-------
+	   if (designpatternName == "BRIDGE"){	   
+	   Nodes_Public = "v,1,Class,100;v,2,Interface,000;v,3,Class,000;v,4,Class,100";
+	   Edges_Public = "e,1,2,implements,100;e,3,2,related_with_its_method,000;e,4,3,extends,100";
+	   maxClassId = 4;}
+	   
+	   //-----DECORATOR PATTERN-------
+	   if (designpatternName == "DECORATOR"){ 	   
+	   Nodes_Public = "v,1,Interface,000;v,2,Class,100;v,2,Class,002;v,3,Abstract,000;v,4,Class,100";
+	   Edges_Public = "e,2,1,implements,100;e,3,1,implements,000;e,3,1,related_with_its_method,000;e,4,3,extends,100";
+	   //Edges_Public = "e,2,1,implements,100;e,2,1,related_with_its_method,002;e,3,1,implements,000;e,3,1,related_with_its_method,000;e,4,3,extends,100";
+	   maxClassId = 4;}
+	   
+	    //-----TEMPLATE METHOD PATTERN-------
+	   if (designpatternName == "TEMPLATE METHOD"){ 	   
+	   //Nodes_Public = "v,1,Class,000;v,2,Class,100;v,2,Class,002";
+	   Nodes_Public = "v,1,Abstract,000;v,2,Class,100;v,2,Class,002";
+	   Edges_Public = "e,2,1,extends,100;e,2,1,overrides_methods_of,002";
+	   maxClassId = 2;}
+	   	   
+	    
+	   if (sourceCodeGraph == true)	{
+		   System.out.println("---------------------------------");
+		   System.out.println("--SOURCE CODE GRAPH (SUBDUE)");
+		   System.out.println("---------------------------------");
+		   System.out.println();
+	   }
+	   
+	   if (sourceCodeGraphDetail == true)	{
+		   System.out.println("---------------------------------");
+		   System.out.println("--SOURCE CODE GRAPH DETAILED");
+		   System.out.println("---------------------------------");
+		   System.out.println();
+	   }
+	   
+	   PrintWriter writer_source = new PrintWriter("Projects/" + projectName + "/source/"+ projectName + ".g");
+	   PrintWriter writer_source_detail = new PrintWriter("Projects/" + projectName + "/source/"+ projectName + "_detailed.txt");
+	   
+	   //------******---------//
+	   //  VERTICE LIST(BEGIN)//	
+	   //------******---------//
+	   	   
+	   //vertice listemiz "newList" olacak.
+	   final List<Vertices> newList = new ArrayList<Vertices>();
+	   
+//	   for(Vertices v : vertices)
+//	   {
+//		   System.out.println(v);
+//	   }
+	   
+	   // node lardan duplicate olanlar� eliyoruz.
+	   Iterator iterator = vertices.iterator();
+	   int init =1;
+       while (iterator.hasNext())
+       {
+           Vertices o = (Vertices) iterator.next(); 
+
+           //bu if e sadece initilization i�in girer.
+           if (init==1){
+        	   newList.add(o);
+           }
+           else
+           {
+        	   Iterator iterator2 = newList.iterator();
+        	   boolean b = false;
+               while (iterator2.hasNext())
+               {
+            	   Vertices o2 = (Vertices) iterator2.next();
+    	           if(o2.getName().replace("[]", "").replace(".", "").replaceAll("\\<[^>]*>","").trim().
+    	        		   equals(o.getName().replace("[]", "").replace(".", "").replaceAll("\\<[^>]*>","").trim())) 
+    	           {
+    	        	   b=true;
+    	           }    	               	           
+               }
+               if (b==false)
+               {
+            	   newList.add(o);
+               }
+           }
+           init++;
+       }
+       
+       //"newList" i "SUBDUE" graph mining tooluna girecek sekilde dolduruyoruz. (sadece nodelar)
+       for (int j = 0; j < newList.size(); j++) {
+		  newList.get(j).SetId(j+1);
+		  String ss = newList.get(j).getName().replace("[]", "").replace(".", "").replaceAll("\\<[^>]*>","").trim();
+		  newList.get(j).setName(ss);
+		  
+		  if (sourceCodeGraphDetail == true)	{
+			  writer_source_detail.println("v " + newList.get(j).getId() + " " + newList.get(j).getName() + " (" + newList.get(j).getType() + ")");
+			  System.out.println("v " + newList.get(j).getId() + " " + newList.get(j).getName() + " (" + newList.get(j).getType() + ")");
+		  }		 
+		  
+		  //DIKKAT!!!!!!Subdue icin alt kodu ac!--------------------------------------------------------******************************
+		  if (sourceCodeGraph == true)	{			  
+			  writer_source.println("v " + newList.get(j).getId() + " " + newList.get(j).getType());
+			  System.out.println("v " + newList.get(j).getId() + " " + newList.get(j).getType());
+		  }
+  	   }  	       
+       
+       //------******---------//
+	   //	VERTICE LIST(END) //	
+	   //------******---------//
+
+       //------******---------//
+	   //	EDGES LIST(BEGIN) //	
+	   //------******---------//
+       
+      //relation li dugum listesi de "dugumler2" olacak.
+      final List<Nodes> dugumler2 = new ArrayList<Nodes>();
+      
+      
+      // relation lardan duplicate olanlari eliyoruz.
+	  Iterator iterator_dugumler = dugumler.iterator();
+	  int baslangic =1;
+
+	  while (iterator_dugumler.hasNext())
+      {
+		  Nodes o = (Nodes) iterator_dugumler.next();
+		  //System.out.println(o.getNode1().toString()+ " : "+ o.getNode2().toString());
+		  //if(!o.getNode1().equals("null") & !o.getNode1().equals("null")){
+		  
+		  //bu if e sadece initilization icin girer.
+          if (baslangic==1){
+        	  dugumler2.add(o);
+          }
+          else
+          {
+       	   Iterator iterator_dugumler2 = dugumler2.iterator();
+       	   boolean b = false;
+              while (iterator_dugumler2.hasNext())
+              {
+            	  Nodes o2 = (Nodes) iterator_dugumler2.next();
+   	           		if(o2.getNode1().equals(o.getNode1()) 
+   	           				&& o2.getNode2().equals(o.getNode2())
+   	           				&& o2.getRelation().equals(o.getRelation()))
+   	           		{
+   	           			b=true;
+   	           		}    	              	           
+              }
+              
+              if (b==false)
+              {
+            	  dugumler2.add(o);
+              }
+          }
+          baslangic++;
+		  //}
+      }
+	  
+	  if (designPatternGraph == true){dugumler3.clear();}
+	  //"dugumler2" i "SUBDUE" graph mining tooluna girecek �ekilde dolduruyoruz. (nodelar ve aralar�ndaki ili�kiler)
+   	  for (Nodes p : dugumler2) 
+   	  {
+	   	   String node1 = p.getNode1().replace("[]", "").replace(".", "").replaceAll("\\<[^>]*>","").trim();
+	   	   String node2 = p.getNode2().replace("[]", "").replace(".", "").replaceAll("\\<[^>]*>","").trim();
+	   	   Integer Id_1=0;
+	   	   Integer Id_2=0;
+	   	   
+		   for (int z = 0; z < newList.size(); z++) 
+		   {
+			   if (node1.equals(newList.get(z).getName().trim()))
+			   {
+				   Id_1=newList.get(z).getId();
+				   break;
+			   }	   
+		   }
+		   
+		   for (int z = 0; z < newList.size(); z++) 
+		   {		   
+			   if (node2.equals(newList.get(z).getName().trim()))
+			   {
+				   Id_2=newList.get(z).getId();
+				   break;
+			   }	   
+		   }
+		   	
+		   if (sourceCodeGraphDetail == true && !Id_1.equals(0) && !Id_2.equals(0))	{
+			   writer_source_detail.println("e " + Id_1.toString()+" - "+p.getNode1() + " " + p.getRelation() + " " + Id_2.toString() + " - " + p.getNode2());
+			   System.out.println("e " + Id_1.toString()+" - "+p.getNode1() + " " + p.getRelation() + " " + Id_2.toString() + " - " + p.getNode2()  );
+			  }	
+		   	
+		   	//DIKKAT!!!!!!Subdue icin alt kodu ac!--------------------------------------------------------******************************
+		   	if (sourceCodeGraph == true && !Id_1.equals(0) && !Id_2.equals(0))	{		   		
+		   		writer_source.println("e " + Id_1.toString() + " " + Id_2.toString() + " " + p.getRelation());
+		   		System.out.println("e " + Id_1.toString() + " " + Id_2.toString() + " " + p.getRelation());		   	
+			  }	
+		   	
+		   	if (designPatternGraph == true && !Id_1.equals(0) && !Id_2.equals(0))	{		   		
+		   		dugumler3.add(p);
+			  }	
+		   
+   	  }  
+   	
+   	writer_source.close();
+   	writer_source_detail.close();
+   	System.out.println();
+   	System.out.println();
+   	
+   	//------******---------//
+	//	EDGES LIST(END)    //	
+	//------******---------//
+   	
+   	
+   	//------******---------//
+	//DESIGN PATTERNS(BEGIN)//	
+	//------******---------//   	   	   
+   	
+   	if (designPatternGraph == true )	{   			  
+   		System.out.println("%%--------------------------");
+   		System.out.println("%%-----" + designpatternName + " PATTERN-------");
+   		System.out.println("%%--------------------------");
+   		System.out.println();
+   	}
+   	String delims = "[;]";
+   	
+   	// Node Input
+ 	String Nodes_All;
+ 	Nodes_All = Nodes_Public;	 	
+ 	
+	// Relation Input
+	String Edges_All;
+	Edges_All = Edges_Public;
+	
+	String ClassOrder_ = "?2";
+	
+	// Splitting the Input Edges strings...
+	String[] Edges_All_tokens = Edges_All.split(delims);
+	
+	final List<Nodes> GenerateRelations = new ArrayList<Nodes>();
+	final List<Nodes> X = new ArrayList<Nodes>();
+	
+   	if (designPatternGraph == true )	{ 
+   		
+		for (int i = 0; i < Edges_All_tokens.length; i++)
+		{
+			String delims_2="[,]";
+			String[] Edges_All_tokens_ = Edges_All_tokens[i].split(delims_2);
+			if(Edges_All_tokens_[4].equals("100"))
+			{
+				GenerateRelations.add(new Nodes(ClassOrder_ + Edges_All_tokens_[3].toString() , "" , Edges_All_tokens_[1]) );
+				X.add(new Nodes(Edges_All_tokens_[1], Edges_All_tokens_[3].toString(), ""));
+			}		
+		}
+		
+		// Splitting the Input Vertex strings...
+		String[] Nodes_All_tokens = Nodes_All.split(delims);
+		
+		//BURADA INPUT OLARAK SAB�T �L��K�Y� VER�P KA� CLASS IN INPUT PROJEDE BU �L��K�Y� MAKS�MUM ��ERD���N� BULUYORUZ.
+	  	String Relation;
+	  	String ClassOrder="0";
+	  	
+	  	for (Nodes generate : GenerateRelations)
+	  	{
+		  	Relation = generate.getNode1().substring(2,generate.getNode1().length());
+		  	ClassOrder = generate.getNode1().substring(0,1);
+		  	
+		  	if (ClassOrder.equals("?")){
+		  		ClassOrder = generate.getNode1().substring(1,2);
+		  	}
+		  		
+		  	final List<String> NodeRelation = new ArrayList<String>();
+		  	
+		  	for (Nodes p : dugumler3) 
+		  	{
+		  		if (p.getRelation().equals(Relation))
+		  		{
+		  			if (ClassOrder.equals("1"))
+		  				NodeRelation.add(p.getNode1().toString() + Relation.toString());
+		  			if (ClassOrder.equals("2"))
+		  				NodeRelation.add(p.getNode2().toString() + Relation.toString());
+		  		}
+		  	}
+		  	
+	      //Generate edilecek sayiyi buluyoruz.
+	      Iterator iterator_NodeRelation = NodeRelation.iterator();      
+	      final List<Integer> Counts = new ArrayList<Integer>();
+	      final List<Vertices> Counts_ = new ArrayList<Vertices>();
+	      
+	      Integer count=0;
+	      Integer i=0;
+	      
+	      while (iterator_NodeRelation.hasNext())
+	      {
+	  	     String o = (String) iterator_NodeRelation.next();
+	     	 Iterator iterator_NodeRelation2 = NodeRelation.iterator();
+	     	 count = 0;
+	     	 i=0;
+	         
+	     	 while (iterator_NodeRelation2.hasNext())
+	           {
+	        	 
+	          	 String o2 = (String) iterator_NodeRelation2.next();
+	
+	          	 // ikinci iterasyonda girsin...
+	         	     if (!i.equals(0))
+	         	     {
+		  	        	 if(o2.equals(o))
+		  	       	     {
+		  	       		     count++;	
+		  	       		     //iterator_NodeRelation2.remove();
+		  	       	     }
+	         	     }
+	         	     i++;
+	           }
+	           Counts.add(count);
+	           Counts_.add(new Vertices(count, o.toString(), ""));
+	      }
+		  
+	//      for (Vertices vertices : Counts_) {
+	//		System.out.println("count : "+ vertices.getId() +" name : " + vertices.getName() + " murat");}
+	      
+	      Collections.sort(Counts);
+	      Integer maxValue = Counts.get(Counts.size() - 1);
+	      //System.out.println(maxValue.toString() + " murat");
+	      Integer newMaxValue = 100 + maxValue;
+	      
+	      Edges_All = Edges_All.replace("," + Relation + ",100" , "," + Relation + "," + newMaxValue.toString() );
+	      
+	      for(Nodes n : X)
+	      {
+	    	  if (n.getRelation().equals(Relation) && n.getNode1().equals(generate.getNode2())){
+	    		  Nodes_All = Nodes_All.replace("v," + n.getNode1() + ",Class,100" , "v," + n.getNode1() + ",Class," + newMaxValue.toString());
+	    		  Nodes_All = Nodes_All.replace("v," + n.getNode1() + ",Interface,100" , "v," + n.getNode1() + ",Interface," + newMaxValue.toString());
+	    		  Nodes_All = Nodes_All.replace("v," + n.getNode1() + ",Abstract,100" , "v," + n.getNode1() + ",Abstract," + newMaxValue.toString());
+	    	  }
+	      }
+	  	}  	
+		//System.out.println(Nodes_All + " - "+Edges_All);
+	  	
+	  	String[] Nodes_All_tokens_2 = Nodes_All.split(delims);
+	 	String[] Edges_All_tokens_2 = Edges_All.split(delims);
+	 	
+		final List<String> GenerateVertex = new ArrayList<String>();
+		final List<String> BaseVertex = new ArrayList<String>();
+		final List<String> BaseEdges = new ArrayList<String>();
+		
+		//Generate islemi burada baslıyor...
+		for (int i = 0; i < Edges_All_tokens_2.length; i++)
+		{
+			//Kac tane cogaltilacak onu buluyoruz.
+			Integer g = Integer.parseInt(Edges_All_tokens_2[i].substring(Edges_All_tokens_2[i].length()-3, Edges_All_tokens_2[i].length()));
+			
+			if (g != 0){
+				//Generate edilecek vertex.
+				String edge = Edges_All_tokens_2[i].replace(Edges_All_tokens_2[i].substring
+						(Edges_All_tokens_2[i].length()-4, Edges_All_tokens_2[i].length()),"").replace(",", " ");
+				//System.out.println(edge);
+				
+				//Kac tane cogaltilacak onu buluyoruz.
+				maxE.add(new Vertices(g - 100,edge,""));
+			}
+			String sss = Edges_All_tokens_2[i].replace(Edges_All_tokens_2[i].substring(Edges_All_tokens_2[i].length()-4, Edges_All_tokens_2[i].length()), "");
+			BaseEdges.add(sss);
+	
+		}
+		
+		//Generate islemi burada basliyor...
+		for (int i = 0; i < Nodes_All_tokens_2.length; i++)
+		{
+			//Generate edilecek sayiyi buluyoruz.
+			int g = Integer.parseInt(Nodes_All_tokens_2[i].substring(Nodes_All_tokens_2[i].length()-3, Nodes_All_tokens_2[i].length()));
+			
+			if (g != 0){
+				//Generate edilecek vertex.
+				String vertex = Nodes_All_tokens_2[i].replace(Nodes_All_tokens_2[i].substring
+						(Nodes_All_tokens_2[i].length()-4,Nodes_All_tokens_2[i].length()),"").replace(",", " ");
+				//System.out.println(vertex);
+				
+				//Kac tane cogaltilacak onu buluyoruz.
+				maxV.add(new Vertices(g - 100,vertex,""));
+			}
+			
+			String sss = Nodes_All_tokens_2[i].replace(Nodes_All_tokens_2[i].substring(Nodes_All_tokens_2[i].length()-4, Nodes_All_tokens_2[i].length()), "");		
+			BaseVertex.add(sss);
+		}
+		
+		int M=0;String Mnode="";String Medge = "";
+		int N=0;String Nnode="";String Nedge = "";
+		
+		int sayac = 0;
+		for (Vertices v : maxV){
+			for (Vertices e : maxE){
+				if (v.getId() == e.getId())
+				{
+					if(sayac == 0){
+						M = v.getId()-1;
+						Mnode = v.getName();
+						Medge = e.getName();
+						sayac++;
+						break;
+					}
+					
+					if(sayac == 1 && Medge != "" && !Medge.equals(e.getName())){
+						N = v.getId()-1;
+						Nnode = v.getName();
+						Nedge = e.getName();
+						break;	
+					}
+				}
+			}							
+		}
+
+		//Base pattern i yazdiriyoruz.
+		PrintWriter writer = new PrintWriter("Projects/" + projectName + "/inputs/" + designpatternName + "_inputs/" + designpatternName + "_1.g");
+		
+		writer.println("%%Generated-- : 1");
+		for (String s : BaseVertex)
+			writer.println(s.replace(",", " "));
+		for (String s : BaseEdges)
+			writer.println(s.replace(",", " "));
+		writer.close();
+		
+		if (OnlyTerminalCommands == false){
+			System.out.println("%%Generated-- : 1");
+			
+			for (String s : BaseVertex)
+				System.out.println("%"+s.replace(",", " "));
+			for (String s : BaseEdges)
+				System.out.println("%"+s.replace(",", " "));
+			
+			System.out.println();
+			System.out.println("%-----------------------");
+			System.out.println();
+		}
+		
+		//ilk dongude M ve N in permutasyon sonucunu yazdiricaz.
+		int gen = 2;
+		Integer mxc = maxClassId;
+		for (int i = 0; i < M ; i++)
+		{
+			PrintWriter writer2 = new PrintWriter("Projects/" + projectName + "/inputs/" + designpatternName + "_inputs/" + designpatternName + "_" + gen +".g");						
+			
+			writer2.println("%%Generated-- : "+ gen);
+			gen++;
+	
+			for (String s : BaseVertex){
+				writer2.println(s.replace(",", " "));
+			}
+			int h = 0;
+			while (h <= i)
+			{
+				mxc++;
+				writer2.println(Mnode.replace(Mnode.substring(2,3), mxc.toString()));
+				h++;
+			}
+			
+			if (N != 0)
+			{			
+				int ekle = 1;				
+				
+				while (ekle <= N)
+				{
+					//init
+					if(ekle == 1)
+					{
+						mxc++;
+						writer2.println(Nnode.replace(Nnode.substring(2,3), mxc.toString()));
+						if (OnlyTerminalCommands == false)
+							System.out.println("%"+Nnode.replace(Nnode.substring(2,3), mxc.toString()));
+						
+						for (String s : BaseEdges){
+							writer2.println(s.replace(",", " "));
+							if (OnlyTerminalCommands == false)
+								System.out.println("%"+s.replace(",", " "));
+						}
+						mxc = maxClassId;
+						
+						int p = 0;
+						while (p <= i)
+						{
+							mxc++;
+							writer2.println(Medge.replace(Medge.substring(2,3), mxc.toString()));
+							if (OnlyTerminalCommands == false)
+								System.out.println("%"+Medge.replace(Medge.substring(2,3), mxc.toString()));
+							p++;
+						}
+						
+						mxc++;
+						writer2.println(Nedge.replace(Nedge.substring(2,3), mxc.toString()));
+						if (OnlyTerminalCommands == false)
+							System.out.println("%"+Nedge.replace(Nedge.substring(2,3), mxc.toString()));
+						
+						if (OnlyTerminalCommands == false){
+							System.out.println();
+							System.out.println("%-----------------------");
+							System.out.println();
+						}
+						mxc = maxClassId;
+						writer2.close();
+					}
+					else
+					{
+						PrintWriter writer3 = new PrintWriter("Projects/" + projectName + "/inputs/" + designpatternName + "_inputs/" + designpatternName + "_" + gen +".g");
+											
+						writer3.println("%%Generated-- : "+ gen);
+						if (OnlyTerminalCommands == false)
+							System.out.println("%%Generated-- : "+ gen);
+						gen++;
+	
+						for (String s : BaseVertex){
+							writer3.println(s.replace(",", " "));
+							if (OnlyTerminalCommands == false)
+								System.out.println("%"+s.replace(",", " "));
+						}
+						
+						int hh = 0;
+						while (hh <= i)
+						{
+							mxc++;
+							writer3.println(Mnode.replace(Mnode.substring(2,3), mxc.toString()));
+							if (OnlyTerminalCommands == false)
+								System.out.println("%"+Mnode.replace(Mnode.substring(2,3), mxc.toString()));
+							hh++;
+						}
+						
+						for (int j = 0; j < ekle; j++)
+						{
+							mxc++;
+							writer3.println(Nnode.replace(Nnode.substring(2,3), mxc.toString()));
+							if (OnlyTerminalCommands == false)
+								System.out.println("%"+Nnode.replace(Nnode.substring(2,3), mxc.toString()));
+						}
+						
+						mxc = maxClassId;
+						for (String s : BaseEdges){
+							writer3.println(s.replace(",", " "));
+							if (OnlyTerminalCommands == false)
+								System.out.println("%"+s.replace(",", " "));
+						}
+						
+						int g = 0;
+						while (g <= i)
+						{
+							mxc++;
+							writer3.println(Medge.replace(Medge.substring(2,3), mxc.toString()));
+							if (OnlyTerminalCommands == false)
+								System.out.println("%"+Medge.replace(Medge.substring(2,3), mxc.toString()));
+							g++;
+						}
+						
+						for (int j = 0; j < ekle; j++)
+						{
+							mxc++;
+							writer3.println(Nedge.replace(Nedge.substring(2,3), mxc.toString()));
+							if (OnlyTerminalCommands == false)
+								System.out.println("%"+Nedge.replace(Nedge.substring(2,3), mxc.toString()));
+						}
+						
+						if (OnlyTerminalCommands == false){
+							System.out.println();
+							System.out.println("%-----------------------");
+							System.out.println();
+						}
+						mxc = maxClassId;
+						writer3.close();
+					}
+					ekle++;
+				}
+			};
+	
+		}
+		
+		//ikinci dongude M in olasi kumesini yazdiricaz.
+		mxc = maxClassId;
+		for (int i = 0; i < M ; i++)
+		{
+			PrintWriter writer4 = new PrintWriter("Projects/" + projectName + "/inputs/" + designpatternName + "_inputs/" + designpatternName + "_" + gen +".g");
+						
+			writer4.println("%%Generated-- : "+ gen);
+			if (OnlyTerminalCommands == false)
+				System.out.println("%%Generated-- : "+ gen);
+			gen++;
+	
+			for (String s : BaseVertex){
+				writer4.println(s.replace(",", " "));
+				if (OnlyTerminalCommands == false)
+					System.out.println("%"+s.replace(",", " "));
+			}
+			
+			int h = 0;
+			while (h <= i)
+			{
+				mxc++;
+				writer4.println(Mnode.replace(Mnode.substring(2,3), mxc.toString()));
+				if (OnlyTerminalCommands == false)
+					System.out.println("%"+Mnode.replace(Mnode.substring(2,3), mxc.toString()));
+				h++;
+			}
+			
+			mxc = maxClassId;
+			for (String s : BaseEdges){
+				writer4.println(s.replace(",", " "));
+				if (OnlyTerminalCommands == false)
+					System.out.println("%"+s.replace(",", " "));
+			}
+			
+			int g = 0;
+			while (g <= i)
+			{
+				mxc++;
+				writer4.println(Medge.replace(Medge.substring(2,3), mxc.toString()));
+				if (OnlyTerminalCommands == false)
+					System.out.println("%"+Medge.replace(Medge.substring(2,3), mxc.toString()));
+				g++;
+			}
+			
+			if (OnlyTerminalCommands == false){
+				System.out.println();
+				System.out.println("%-----------------------");
+				System.out.println();
+			}
+			mxc = maxClassId;
+			writer4.close();
+		}
+
+		//Ucuncu dongude N in olasi kumesini yazdiricaz, eger varsa...
+		if (N != 0)
+		{
+			mxc = maxClassId;
+			for (int i = 0; i < N ; i++)
+			{
+				PrintWriter writer5 = new PrintWriter("Projects/" + projectName + "/inputs/" + designpatternName + "_inputs/" + designpatternName + "_" + gen +".g");
+				
+				writer5.println("%%Generated-- : "+ gen);
+				if (OnlyTerminalCommands == false)
+					System.out.println("%%Generated-- : "+ gen);
+				gen++;
+		
+				for (String s : BaseVertex){
+					writer5.println(s.replace(",", " "));
+					if (OnlyTerminalCommands == false)
+						System.out.println("%"+s.replace(",", " "));
+				}
+				
+				int h = 0;
+				while (h <= i)
+				{
+					mxc++;
+					writer5.println(Nnode.replace(Nnode.substring(2,3), mxc.toString()));
+					if (OnlyTerminalCommands == false)
+						System.out.println("%"+Nnode.replace(Nnode.substring(2,3), mxc.toString()));
+					h++;
+				}
+				
+				mxc = maxClassId;
+				for (String s : BaseEdges){
+					writer5.println(s.replace(",", " "));
+					if (OnlyTerminalCommands == false)
+						System.out.println("%"+s.replace(",", " "));
+				}
+				int g = 0;
+				while (g <= i)
+				{
+					mxc++;
+					writer5.println(Nedge.replace(Nedge.substring(2,3), mxc.toString()));
+					if (OnlyTerminalCommands == false)
+						System.out.println("%"+Nedge.replace(Nedge.substring(2,3), mxc.toString()));
+					g++;
+				}
+				
+				if (OnlyTerminalCommands == false){
+					System.out.println();
+					System.out.println("%-----------------------");
+					System.out.println();
+				}
+				mxc = maxClassId;
+				writer5.close();
+			}
+		}
+		
+		System.out.println("M : " + (M+1) + "; N : " + (N+1));
+		
+		
+		if (OnlyTerminalCommands==true){
+			if (M > 0 && N > 0)
+		   	{		
+				PrintWriter writer6 = new PrintWriter("Projects/" + projectName + "/" + "batch/script_" + designpatternName + ".sh" );
+				writer6.println("#! /bin/bash");
+				writer6.println();
+				writer6.println("START=$(date +%s)");
+				writer6.println();
+				writer6.println("CONT=9");
+				writer6.println("GENERATE=0");
+				writer6.println();
+				writer6.println("#initilization");
+				writer6.println();
+				writer6.println(programPath+"/Subdue/sgiso -dot "+overlap+" "+programPath+"/Projects/"+projectName+"/outputs/"+designpatternName+"_outputs/out1.g -threshold "+threshold+" "+programPath+"/Projects/"+projectName+"/inputs/"+designpatternName+"_inputs/"+designpatternName+"_1.g "+programPath+"/Projects/"+projectName+"/source/"+projectName+".g");			
+				writer6.println();
+				writer6.println("#first_loop(M combination)");
+				writer6.println("for (( c=" + ((M*N)+2) + "; c<=" + (((M*N)+1) + M) + "; c++ ))");
+				writer6.println("do");
+				writer6.println(programPath+"/Subdue/sgiso -dot "+programPath+"/Projects/"+projectName+"/outputs/"+designpatternName+"_outputs/out$c.g -threshold "+threshold+" "+programPath+"/Projects/"+projectName+"/inputs/"+designpatternName+"_inputs/"+designpatternName+"_$c.g "+programPath+"/Projects/"+projectName+"/source/"+projectName+".g");
+				writer6.println();			
+				writer6.println("GENERATE=`expr $GENERATE + 1`");
+				writer6.println();
+				writer6.println("declare -i NUMBER");
+				writer6.println("NUMBER=1");
+				writer6.println();
+				writer6.println("declare -i LASTNUMBER");
+				writer6.println("LASTNUMBER=9");
+				writer6.println();
+				writer6.println("S1=\"/\"");
+				writer6.println("S2=\"\"");
+				writer6.println("S3=\"d\"");
+				writer6.println();
+				writer6.println("while read line");
+				writer6.println("do");
+				writer6.println("V=${line:0:1}");
+				writer6.println();
+				writer6.println("if [ \"$V\" == \"$S1\" ]; then");
+				writer6.println("continue;");
+				writer6.println("fi");
+				writer6.println("if [ \"$V\" == \"$S2\" ]; then");
+				writer6.println("continue;");
+				writer6.println("fi");
+				writer6.println("if [ \"$V\" == \"$S3\" ]; then");
+				writer6.println("continue;");
+				writer6.println("fi");
+				writer6.println("if [ \"$NUMBER\" == \"$V\" ]; then");
+				writer6.println();
+				writer6.println("if [ \"$NUMBER\" == \"$LASTNUMBER\" ]; then ");
+				writer6.println("CONT=`expr $CONT + 1`");
+				writer6.println("break;	");
+				writer6.println("fi");
+				writer6.println("NUMBER=`expr $NUMBER + 1`");
+				writer6.println("else");
+				writer6.println("break;");
+				writer6.println("fi");
+				writer6.println("done<"+programPath+"/Projects/"+projectName+"/outputs/"+designpatternName+"_outputs/out$c.g");
+				writer6.println("if [ \"$CONT\" == \"$LASTNUMBER\" ]; then");
+				writer6.println("continue;");
+				writer6.println("else");
+				writer6.println("break;");
+				writer6.println("fi");
+				writer6.println("done");
+				writer6.println();
+				writer6.println("#second_loop(M X N combination)");
+				writer6.println();
+				writer6.println("CONT=9");
+				writer6.println("for (( c=1; c<=GENERATE; c++ ))");
+				writer6.println("do");
+				writer6.println();
+				writer6.println("for (( d=(((c-1) * "+N+") + 2); d<=(((c-1) * "+N+") + (2+"+M+")); d++ ))");
+				writer6.println("do");
+				writer6.println(programPath+"/Subdue/sgiso -dot "+programPath+"/Projects/"+projectName+"/outputs/"+designpatternName+"_outputs/out$d.g -threshold "+threshold+" "+programPath+"/Projects/"+projectName+"/inputs/"+designpatternName+"_inputs/"+designpatternName+"_$d.g "+programPath+"/Projects/"+projectName+"/source/"+projectName+".g");
+				writer6.println();
+				writer6.println("declare -i NUMBER");
+				writer6.println("NUMBER=1");
+				writer6.println();
+				writer6.println("declare -i LASTNUMBER");
+				writer6.println("LASTNUMBER=9");
+				writer6.println();
+				writer6.println("S1=\"/\"");
+				writer6.println("S2=\"\"");
+				writer6.println("S3=\"d\"");
+				writer6.println();
+				writer6.println("while read line");
+				writer6.println("do");
+				writer6.println("V=${line:0:1}");
+				writer6.println();
+				writer6.println("if [ \"$V\" == \"$S1\" ]; then");
+				writer6.println("continue;");
+				writer6.println("fi");
+				writer6.println("if [ \"$V\" == \"$S2\" ]; then");
+				writer6.println("continue;");
+				writer6.println("fi");
+				writer6.println("if [ \"$V\" == \"$S3\" ]; then");
+				writer6.println("continue;");
+				writer6.println("fi");
+				writer6.println("if [ \"$NUMBER\" == \"$V\" ]; then");
+				writer6.println();
+				writer6.println("if [ \"$NUMBER\" == \"$LASTNUMBER\" ]; then ");
+				writer6.println("CONT=`expr $CONT + 1`");
+				writer6.println("break;	");
+				writer6.println("fi");
+				writer6.println("NUMBER=`expr $NUMBER + 1`");
+				writer6.println("else");
+				writer6.println("break;");
+				writer6.println("fi");
+				writer6.println("done<"+programPath+"/Projects/"+projectName+"/outputs/"+designpatternName+"_outputs/out$d.g");
+				writer6.println("if [ \"$CONT\" == \"$LASTNUMBER\" ]; then");
+				writer6.println("continue;");
+				writer6.println("else");
+				writer6.println("break;");
+				writer6.println("fi");
+				writer6.println("done");
+				writer6.println("done");
+				writer6.println();
+				writer6.println("#third_loop(N combination)");
+				writer6.println("for (( c=" + (((M*N)+2)+M) + "; c<=" + ((((M*N)+1)+M) + N) + "; c++ ))");
+				writer6.println("do");
+				writer6.println(programPath+"/Subdue/sgiso -dot "+programPath+"/Projects/"+projectName+"/outputs/"+designpatternName+"_outputs/out$c.g -threshold "+threshold+" "+programPath+"/Projects/"+projectName+"/inputs/"+designpatternName+"_inputs/"+designpatternName+"_$c.g "+programPath+"/Projects/"+projectName+"/source/"+projectName+".g");
+				writer6.println();
+				writer6.println("declare -i NUMBER");
+				writer6.println("NUMBER=1");
+				writer6.println();
+				writer6.println("declare -i LASTNUMBER");
+				writer6.println("LASTNUMBER=9");
+				writer6.println();
+				writer6.println("S1=\"/\"");
+				writer6.println("S2=\"\"");
+				writer6.println("S3=\"d\"");
+				writer6.println();
+				writer6.println("while read line");
+				writer6.println("do");
+				writer6.println("V=${line:0:1}");
+				writer6.println();
+				writer6.println("if [ \"$V\" == \"$S1\" ]; then");
+				writer6.println("continue;");
+				writer6.println("fi");
+				writer6.println("if [ \"$V\" == \"$S2\" ]; then");
+				writer6.println("continue;");
+				writer6.println("fi");
+				writer6.println("if [ \"$V\" == \"$S3\" ]; then");
+				writer6.println("continue;");
+				writer6.println("fi");
+				writer6.println("if [ \"$NUMBER\" == \"$V\" ]; then");
+				writer6.println();
+				writer6.println("if [ \"$NUMBER\" == \"$LASTNUMBER\" ]; then ");
+				writer6.println("CONT=`expr $CONT + 1`");
+				writer6.println("break;	");
+				writer6.println("fi");
+				writer6.println("NUMBER=`expr $NUMBER + 1`");
+				writer6.println("else");
+				writer6.println("break;");
+				writer6.println("fi");
+				writer6.println("done<"+programPath+"/Projects/"+projectName+"/outputs/"+designpatternName+"_outputs/out$c.g");
+				writer6.println("if [ \"$CONT\" == \"$LASTNUMBER\" ]; then");
+				writer6.println("continue;");
+				writer6.println("else");
+				writer6.println("break;");
+				writer6.println("fi");
+				writer6.println("done");
+				writer6.println();
+				writer6.println(programPath+"/Subdue/graph2dot "+programPath+"/Projects/"+projectName+"/source/"+projectName+".g "+programPath+"/Projects/"+projectName+"/source/"+projectName+".dot");
+				writer6.println();
+				writer6.println("END=$(date +%s)");
+				writer6.println("DIFF=$(( $END - $START ))");
+				writer6.println("echo \"It took $DIFF seconds\"");
+				writer6.println();
+				writer6.println();
+				writer6.close();
+				
+				//Give permissions.
+				//1
+				String myShellScript = "";
+				myShellScript = "chmod +x "+programPath+"/Projects/" + projectName + "/" + "batch/script_" + designpatternName + ".sh";
+				Runtime.getRuntime().exec(myShellScript);
+				//2
+				myShellScript = "";
+				myShellScript = "chmod +x "+programPath+"/Projects/bin/sgiso";
+				Runtime.getRuntime().exec(myShellScript);
+				//3
+				myShellScript = "";
+				myShellScript = "chmod +x "+programPath+"/Projects/bin/graph2dot";
+				Runtime.getRuntime().exec(myShellScript);
+				
+				//Copy the executable file.
+				myShellScript = "";
+				myShellScript = "cp "+programPath+"/Projects/" + projectName + "/" + "batch/script_" + designpatternName + ".sh "+
+								programPath+"/Projects/";
+				Runtime.getRuntime().exec(myShellScript);
+		   	}
+		
+			if (M > 0 && N <= 0)
+		   	{
+				PrintWriter writer7 = new PrintWriter("Projects/" + projectName + "/" + "batch/script_" + designpatternName + ".sh" );
+				writer7.println("#! /bin/bash");
+				writer7.println();
+				writer7.println("START=$(date +%s)");
+				writer7.println();
+				writer7.println("CONT=9");
+				writer7.println("GENERATE=0");
+				writer7.println();
+				writer7.println("#initilization");
+				writer7.println();
+				writer7.println(programPath+"/Subdue/sgiso -dot "+overlap+" "+programPath+"/Projects/"+projectName+"/outputs/"+designpatternName+"_outputs/out1.g -threshold "+threshold+" "+programPath+"/Projects/"+projectName+"/inputs/"+designpatternName+"_inputs/"+designpatternName+"_1.g "+programPath+"/Projects/"+projectName+"/source/"+projectName+".g");			
+				writer7.println();
+				writer7.println("#first_loop(M combination)");
+				writer7.println("for (( c=" + ((M*N)+2) + "; c<=" + (((M*N)+1) + M) + "; c++ ))");
+				writer7.println("do");
+				writer7.println("bin/sgiso -dot "+projectName+"/outputs/"+designpatternName+"_outputs/out$c.g -threshold "+threshold+" "+projectName+"/inputs/"+designpatternName+"_inputs/"+designpatternName+"_$c.g "+projectName+"/source/"+projectName+".g");
+				writer7.println();			
+				writer7.println("GENERATE=`expr $GENERATE + 1`");
+				writer7.println();
+				writer7.println("declare -i NUMBER");
+				writer7.println("NUMBER=1");
+				writer7.println();
+				writer7.println("declare -i LASTNUMBER");
+				writer7.println("LASTNUMBER=9");
+				writer7.println();
+				writer7.println("S1=\"/\"");
+				writer7.println("S2=\"\"");
+				writer7.println("S3=\"d\"");
+				writer7.println();
+				writer7.println("while read line");
+				writer7.println("do");
+				writer7.println("V=${line:0:1}");
+				writer7.println();
+				writer7.println("if [ \"$V\" == \"$S1\" ]; then");
+				writer7.println("continue;");
+				writer7.println("fi");
+				writer7.println("if [ \"$V\" == \"$S2\" ]; then");
+				writer7.println("continue;");
+				writer7.println("fi");
+				writer7.println("if [ \"$V\" == \"$S3\" ]; then");
+				writer7.println("continue;");
+				writer7.println("fi");
+				writer7.println("if [ \"$NUMBER\" == \"$V\" ]; then");
+				writer7.println();
+				writer7.println("if [ \"$NUMBER\" == \"$LASTNUMBER\" ]; then ");
+				writer7.println("CONT=`expr $CONT + 1`");
+				writer7.println("break;	");
+				writer7.println("fi");
+				writer7.println("NUMBER=`expr $NUMBER + 1`");
+				writer7.println("else");
+				writer7.println("break;");
+				writer7.println("fi");
+				writer7.println("done<"+projectName+"/outputs/"+designpatternName+"_outputs/out$c.g");
+				writer7.println("if [ \"$CONT\" == \"$LASTNUMBER\" ]; then");
+				writer7.println("continue;");
+				writer7.println("else");
+				writer7.println("break;");
+				writer7.println("fi");
+				writer7.println("done");
+				writer7.println();			
+				writer7.println(programPath+"/Subdue/graph2dot "+programPath+"/Projects/"+projectName+"/source/"+projectName+".g "+programPath+"/Projects/"+projectName+"/source/"+projectName+".dot");
+				writer7.println();
+				writer7.println("END=$(date +%s)");
+				writer7.println("DIFF=$(( $END - $START ))");
+				writer7.println("echo \"It took $DIFF seconds\"");
+				writer7.println();
+				writer7.println();
+				writer7.close();
+				
+				//Give permissions.
+				//1
+				String myShellScript = "";
+				myShellScript = "chmod +x "+programPath+"/Projects/" + projectName + "/" + "batch/script_" + designpatternName + ".sh";
+				Runtime.getRuntime().exec(myShellScript);
+				//2
+				myShellScript = "";
+				myShellScript = "chmod +x "+programPath+"/Projects/bin/sgiso";
+				Runtime.getRuntime().exec(myShellScript);
+				//3
+				myShellScript = "";
+				myShellScript = "chmod +x "+programPath+"/Projects/bin/graph2dot";
+				Runtime.getRuntime().exec(myShellScript);
+				
+				//Copy the executable file.
+				myShellScript = "";
+				myShellScript = "cp "+programPath+"/Projects/" + projectName + "/" + "batch/script_" + designpatternName + ".sh "+
+								programPath+"/Projects/";
+				Runtime.getRuntime().exec(myShellScript);				
+		   	}
+		}
+   	}
+  }
+}

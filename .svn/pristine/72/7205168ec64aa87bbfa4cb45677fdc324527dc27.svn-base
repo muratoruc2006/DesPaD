@@ -1,0 +1,365 @@
+package AST;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import AST.JavaParser.ClassBodyDeclarationContext;
+import AST.JavaParser.ClassDeclarationContext;
+import AST.JavaParser.CreatedNameContext;
+import AST.JavaParser.ExpressionContext;
+import AST.JavaParser.FieldDeclarationContext;
+import AST.JavaParser.FormalParameterContext;
+import AST.JavaParser.GenericMethodDeclarationContext;
+import AST.JavaParser.InterfaceDeclarationContext;
+import AST.JavaParser.LocalVariableDeclarationContext;
+import AST.JavaParser.MethodDeclarationContext;
+import AST.JavaParser.TypeDeclarationContext;
+
+/*MyVisitor2 class � MyVisitor class �n�n buldu�u class ve interface leri kullan�r. 
+ * B�ylece internal class lar� kullanmam�� oluruz.
+ * ��erdi�i ili�kiler : 1. creates_objects_of
+ * 						2. overrides_methods_of
+ * 						3. calls_method_of
+ * 						4. has_the_field_type_of
+ * 						5. has_a_method_with_the_return_type_of (related_with_its_method)
+ * 						6. has_a_method_that_defines_a_local_variable_with_the_type_of  (related_with_its_method)
+ * 						7. has_a_method_that_has_an_input_parameter_with_the_type_of (related_with_its_method)
+ * 						8. generic_type_declaration */
+public class MyVisitor2 extends MyVisitor {
+
+    public static void main(String[] args) throws IOException {    
+
+    	modifiers.clear();
+    	modifiers.add(new String("public"));
+    	modifiers.add(new String("private"));
+    	modifiers.add(new String("static"));
+    	modifiers.add(new String("native"));
+    	modifiers.add(new String("abstract"));
+    	modifiers.add(new String("transient"));
+    	modifiers.add(new String("protected"));
+    	modifiers.add(new String("final"));
+    	modifiers.add(new String("synchronized"));
+    	modifiers.add(new String("threadsafe"));
+    	
+    }
+    
+   private String  MainClassOrInterface;
+   private String  classType;
+   private String  CreatedClassName;   
+   private String  MethodPattern= "[^=][a-zA-Z]*\\.[a-zA-Z]*\\([a-zA-Z]*\\)";
+      
+   List<String> SuperClassArray1 = new ArrayList<String>();
+   List<String> SuperClassArray2 = new ArrayList<String>();
+   
+   public void addVertice(Integer id,String name,String type)
+   {   
+	   if(getTypebyName(name) == ""){
+		   vertices.add(new Vertices(id,name,type));
+		   }     		  
+   }
+   
+   public static List<String> modifiers = new ArrayList<String>();
+ 
+   //Superclass � bulmak i�in...
+   public Void visitClassDeclaration(ClassDeclarationContext ctx) {    	
+   		MainClassOrInterface = ctx.Identifier().toString();   		
+   		SuperClassArray1.clear();
+   		
+   		Integer total_children = ctx.getChildCount();
+   		if (!ctx.children.get(0).getText().equals(modifiers))
+    	{	 
+    		for (int i = 0; i < total_children; i++) {    			
+    			if (ctx.children.get(i).getText().equals("extends")){
+    				if(!ctx.children.get(i+1).getText().contains(",")){	    				    	
+	    				SuperClassArray1.add(ctx.children.get(i+1).getText());
+	    		    	}
+	    			else if(ctx.children.get(i+1).getText().contains(",")){
+						//Virg�llerin say�s�n� buluyoruz.    					
+						String[] words = ctx.children.get(i+1).getText().split(",");   
+						
+						for (String s: words) {
+							SuperClassArray1.add(s);
+						}
+	    			}
+    			}  
+    		}
+    	}
+   		else if (ctx.children.get(0).getText().equals(modifiers))
+    	{
+    		
+    		for (int i = 0; i < total_children; i++) {
+    			if (ctx.children.get(i).getText().equals("extends")){    
+    				if(!ctx.children.get(i+1).getText().contains(",")){	    				
+	    				SuperClassArray1.add(ctx.children.get(i+1).getText());
+	    			}    			
+	    			else if(ctx.children.get(i+1).getText().contains(",")){
+						//Virg�llerin say�s�n� buluyoruz.    					
+						String[] words = ctx.children.get(i+1).getText().split(",");   
+						
+						for (String s: words) {
+							SuperClassArray1.add(s);
+						}
+	    			}
+    			}
+    		}
+    	}
+   		
+   		return super.visitClassDeclaration(ctx);
+   }
+   
+   //Superclass � bulmak i�in...
+   @Override
+   public Void visitInterfaceDeclaration(InterfaceDeclarationContext ctx) {      	
+	   	MainClassOrInterface = ctx.Identifier().toString();
+	   	SuperClassArray2.clear();
+	   	
+	   	Integer total_children = ctx.getChildCount();
+    	
+		if (!ctx.children.get(0).getText().equals(modifiers))
+    	{	 
+			
+			for (int i = 0; i < total_children; i++) {
+				if (ctx.children.get(i).getText().equals("extends")){    	
+					if(!ctx.children.get(i+1).getText().contains(",")){	    			
+	    				SuperClassArray2.add(ctx.children.get(i+1).getText());
+	    			}				
+					else if(ctx.children.get(i+1).getText().contains(",")){
+						//Virg�llerin say�s�n� buluyoruz.    					
+						String[] words = ctx.children.get(i+1).getText().split(",");   
+						
+						for (String s: words) {
+							SuperClassArray2.add(s);
+						}
+	    			}
+				}
+			}
+    	}
+		else if (ctx.children.get(0).getText().equals(modifiers))
+    	{
+			
+			for (int i = 0; i < total_children; i++) {
+				if (ctx.children.get(i).getText().equals("extends")){  
+					if(!ctx.children.get(i+1).getText().contains(",")){	    			  	
+	    				SuperClassArray2.add(ctx.children.get(i+1).getText());
+	    			}				
+					else if(ctx.children.get(i+1).getText().contains(",")){
+						//Virg�llerin say�s�n� buluyoruz.    					
+						String[] words = ctx.children.get(i+1).getText().split(",");   
+						
+						for (String s: words) {
+							SuperClassArray2.add(s);
+						}
+	    			}
+				}
+			}
+    	}
+		return super.visitInterfaceDeclaration(ctx);
+   }
+	   	
+	   	   
+    //*********************creates_objects_of****************************************************************************
+    //*******************************************************************************************************************
+    //Class A [creates objects of] Class B.
+    @Override
+    public Void visitCreatedName(CreatedNameContext ctx) {
+    	//System.out.println(MainClassOrInterface + " [creates objects of] " + ctx.getText()); 
+    	CreatedClassName=null;
+    	CreatedClassName=ctx.getText();
+
+    	dugumler.add(new Nodes(MainClassOrInterface,"creates_objects_of",ctx.getText())); //Add the relation to the list.
+	
+    	return super.visitCreatedName(ctx);
+    }
+    //*******************************************************************************************************************
+    //*******************************************************************************************************************
+     
+    
+    //**********************overrides_methods_of*************************************************************************
+    //*******************************************************************************************************************
+    //Class A [overrides methods of] Class B.
+    @Override
+    public Void visitClassBodyDeclaration(ClassBodyDeclarationContext ctx) {    	
+    	   	
+    	if((ctx.getText().contains("@Override") && !(SuperClassArray1.isEmpty())) || (ctx.getText().contains("super") && !(SuperClassArray1.isEmpty())))
+    	{    		    		
+    		for(String sclass : SuperClassArray1)
+    		{
+    			//System.out.println(MainClassOrInterface+ " [overrides  methods of] " + SuperClass);
+        		dugumler.add(new Nodes(MainClassOrInterface,"overrides_methods_of",sclass)); //Add the relation to the list.
+        		
+    		}
+    	}
+    	
+    	if((ctx.getText().contains("@Override") && !(SuperClassArray2.isEmpty())) || (ctx.getText().contains("super") && !(SuperClassArray2.isEmpty())))
+    	{    		    		
+    		for(String sclass : SuperClassArray2)
+    		{
+    			//System.out.println(MainClassOrInterface+ " [overrides  methods of] " + SuperClass);
+        		dugumler.add(new Nodes(MainClassOrInterface,"overrides_methods_of",sclass)); //Add the relation to the list.
+
+    		}
+    	}
+    	
+    	return super.visitClassBodyDeclaration(ctx);
+    }
+    
+    
+    //*****************************calls_method_of***********************************************************************
+    //*******************************************************************************************************************    
+    //Class A [calls_method_of] Class B.
+    @Override
+    public Void visitExpression(ExpressionContext ctx) {
+    		
+    	boolean matches = Pattern.matches(MethodPattern, ctx.getText());
+    	String name =""; 
+    	int dot = -1;
+    	
+    	if (matches)
+    	{
+    		Pattern pattern = Pattern.compile(MethodPattern);
+    		Matcher matcher = pattern.matcher(ctx.getText());
+			
+    		dot = ctx.getText().indexOf(".");
+    		
+    		while(matcher.find()) 
+    		{
+	    		name = ctx.getText().substring(matcher.start(), dot);
+    		}
+    		
+            //System.out.println(MainClassOrInterface +" [has a method that calls a method of] "+ name );
+            dugumler.add(new Nodes(MainClassOrInterface,"calls_method_of",name)); //Add the relation to the list.
+    		
+    		if (getTypebyName(CreatedClassName) != "")
+			{
+	            //System.out.println(MainClassOrInterface +" [has a method that calls a method of] "+ CreatedClassName );
+	            dugumler.add(new Nodes(MainClassOrInterface,"calls_method_of",CreatedClassName)); //Add the relation to the list.
+	            
+	    		CreatedClassName = null;
+			}
+    	}
+     	    	
+    	return super.visitExpression(ctx);
+    }
+      
+    
+    //***********************has_the_field_type_of***********************************************************************
+    //*******************************************************************************************************************
+    //Class A [has the field type of] Class B.
+    @Override
+    public Void visitFieldDeclaration(FieldDeclarationContext ctx) {
+    	//System.out.println(MainClassOrInterface + " [has the field type of] " + ctx.type().getText()); //+"__C");    	
+    	dugumler.add(new Nodes(MainClassOrInterface,"has_the_field_type_of",ctx.type().getText())); //Add the relation to the list.
+    	
+    	return super.visitFieldDeclaration(ctx);
+    }
+    //*******************************************************************************************************************
+    //*******************************************************************************************************************
+    
+    
+    //**************************related_with_its_method******************************************************************        
+    //****************************has_a_method_with_the_return_type_of***************************************************
+    //*******************************************************************************************************************
+	//Class A [has a method with the return type of] Class B.
+	@Override
+	public Void visitMethodDeclaration(MethodDeclarationContext ctx) {
+		
+		if (!ctx.children.get(0).getText().equals("void"))
+		{
+			//Method relation.
+			//System.out.println(MainClassOrInterface + " [has a method with the return type of] " + ctx.type().getText()); //+"__C");				
+			dugumler.add(new Nodes(MainClassOrInterface,"related_with_its_method",ctx.type().getText())); //Add the relation to the list.
+			//dugumler.add(new Nodes(MainClassOrInterface,"has_a_method_with_the_return_type_of",ctx.type().getText())); //Add the relation to the list.			
+
+			//System.out.println(MainClassOrInterface+ " [overrides  methods of] " + ctx.type().getText());
+    		dugumler.add(new Nodes(MainClassOrInterface,"overrides_methods_of",ctx.type().getText())); //Add the relation to the list.
+    		
+    	}
+		return super.visitMethodDeclaration(ctx);
+	}	
+	//*******************************************************************************************************************
+	//*******************************************************************************************************************
+	
+	//**************************related_with_its_method******************************************************************		
+	//************************has_a_method_that_has_an_input_parameter_with_the_type_of**********************************
+	//Class A [has a method that has an input parameter with the type of] Class B.
+	@Override
+	public Void visitFormalParameter(FormalParameterContext ctx) {						
+		//System.out.println(MainClassOrInterface+ " [has a method that has an input parameter with the type of] " + ctx.type().getText()); //+"__C");
+		dugumler.add(new Nodes(MainClassOrInterface,"related_with_its_method",ctx.type().getText())); //Add the relation to the list.
+		//dugumler.add(new Nodes(MainClassOrInterface,"has_a_method_that_has_an_input_parameter_with_the_type_of",ctx.type().getText())); //Add the relation to the list.
+		
+		return super.visitFormalParameter(ctx);
+	}
+	//*******************************************************************************************************************
+	//*******************************************************************************************************************
+	
+	
+	//**************************related_with_its_method******************************************************************
+	//**************************has_a_method_that_defines_a_local_variable_with_the_type_of******************************
+	//Class A [has_a_method_that_defines_a_local_variable_with_the_type_of] Class B.
+	@Override
+	public Void visitLocalVariableDeclaration(LocalVariableDeclarationContext ctx) {
+	    //System.out.println(MainClassOrInterface + " [has a method that defines a local variable with the type of] " + ctx.type().getText()); //+"__C");
+	    dugumler.add(new Nodes(MainClassOrInterface,"related_with_its_method",ctx.type().getText())); //Add the relation to the list.
+	    //dugumler.add(new Nodes(MainClassOrInterface,"has_a_method_that_defines_a_local_variable_with_the_type_of",ctx.type().getText()));
+	 		
+		return super.visitLocalVariableDeclaration(ctx);
+	}
+   	//*******************************************************************************************************************
+	//*******************************************************************************************************************	
+	
+	//**************************generic_type_declaration*****************************************************************
+	//*******************************************************************************************************************	
+	//Class A [uses ... in a generic type declaration] Class B
+	@Override
+	public Void visitTypeDeclaration (TypeDeclarationContext ctx) {
+
+	   //If the class uses a generic type
+		if (ctx.getChildCount()>1)/*2 �nceden 1 idi bir incele*/
+		{ 
+		   if (ctx.children.get(1).getChildCount()>2)/*2 �nceden 1 idi bir incele*/
+		   {
+			  if ((ctx.children.get(1).getChild(2).getChildCount()>2))
+			  {
+		 		   if (
+		 				   (ctx.children.get(1).getChild(2).getChild(0).getText().equals("<")) && 
+		 				   (ctx.children.get(1).getChild(2).getChild(1).getText().contains("extends")) &&
+		 				   (ctx.children.get(1).getChild(2).getChild(2).getText().equals(">"))
+		 			)
+		 		  {	 			 
+//		 			  System.out.println(ctx.classDeclaration().Identifier().getText() +
+//		 					  " [uses ... in a generic type declaration] " + 
+//		 					  ctx.children.get(1).getChild(2).getChild(1).getChild(2).getText()); //+"__C");	 			 
+		 			  dugumler.add(new Nodes(MainClassOrInterface,"generic_type_declaration",ctx.children.get(1).getChild(2).getChild(1).getChild(2).getText())); //Add the relation to the list.
+		 			
+		 			  // Class yoksa ekle.
+//		 				if (DoesClassExists(ctx.children.get(1).getChild(2).getChild(1).getChild(2).getText()) == false){
+//		 					
+//			 		    	if (getTypebyName(ctx.children.get(1).getChild(2).getChild(1).getChild(2).getText()) != "")
+//			 		    	{classType = getTypebyName(ctx.children.get(1).getChild(2).getChild(1).getChild(2).getText());}
+//			 		    	else
+//			 		    	{classType = "Class";}
+//			 			 
+//			 		    	addVertice(0,ctx.children.get(1).getChild(2).getChild(1).getChild(2).getText(),classType);
+//		 					}
+
+		 		  }
+			  }
+		   }
+		}
+
+	 return super.visitTypeDeclaration(ctx);
+	}
+	
+	@Override
+	public Void visitGenericMethodDeclaration (GenericMethodDeclarationContext ctx) {
+		
+		return super.visitGenericMethodDeclaration(ctx);
+	}
+	//******************************************************************************************************************* 	 
+	//*******************************************************************************************************************	
+
+}

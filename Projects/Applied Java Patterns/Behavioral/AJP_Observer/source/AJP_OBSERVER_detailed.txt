@@ -1,0 +1,71 @@
+v 1 ObserverGui (Class)
+v 2 WindowCloseManager (Class)
+v 3 TaskSelectorPanel (Class)
+v 4 TaskChangeObserver (Interface)
+v 5 RunPattern (Class)
+v 6 TaskChangeObservable (Class)
+v 7 Task (Class)
+v 8 TaskEditorPanel (Class)
+v 9 TaskHistoryPanel (Class)
+v 10 WindowAdapter (Class)
+v 11 JPanel (Class)
+v 12 ActionListener (Interface)
+e 2 - WindowCloseManager extends 10 - WindowAdapter
+e 3 - TaskSelectorPanel extends 11 - JPanel
+e 3 - TaskSelectorPanel implements 12 - ActionListener
+e 3 - TaskSelectorPanel implements 4 - TaskChangeObserver
+e 8 - TaskEditorPanel extends 11 - JPanel
+e 8 - TaskEditorPanel implements 12 - ActionListener
+e 8 - TaskEditorPanel implements 4 - TaskChangeObserver
+e 9 - TaskHistoryPanel extends 11 - JPanel
+e 9 - TaskHistoryPanel implements 4 - TaskChangeObserver
+e 1 - ObserverGui overrides_methods_of 1 - ObserverGui
+e 1 - ObserverGui related_with_its_method 6 - TaskChangeObservable
+e 1 - ObserverGui creates_objects_of 6 - TaskChangeObservable
+e 1 - ObserverGui related_with_its_method 3 - TaskSelectorPanel
+e 1 - ObserverGui creates_objects_of 3 - TaskSelectorPanel
+e 1 - ObserverGui related_with_its_method 9 - TaskHistoryPanel
+e 1 - ObserverGui creates_objects_of 9 - TaskHistoryPanel
+e 1 - ObserverGui related_with_its_method 8 - TaskEditorPanel
+e 1 - ObserverGui creates_objects_of 8 - TaskEditorPanel
+e 1 - ObserverGui calls_method_of 8 - TaskEditorPanel
+e 1 - ObserverGui creates_objects_of 7 - Task
+e 1 - ObserverGui calls_method_of 7 - Task
+e 1 - ObserverGui creates_objects_of 2 - WindowCloseManager
+e 1 - ObserverGui calls_method_of 2 - WindowCloseManager
+e 2 - WindowCloseManager overrides_methods_of 2 - WindowCloseManager
+e 3 - TaskSelectorPanel has_the_field_type_of 6 - TaskChangeObservable
+e 3 - TaskSelectorPanel related_with_its_method 6 - TaskChangeObservable
+e 3 - TaskSelectorPanel has_a_method_that_has_an_input_parameter_with_the_type_of 6 - TaskChangeObservable
+e 3 - TaskSelectorPanel overrides_methods_of 1 - ObserverGui
+e 3 - TaskSelectorPanel overrides_methods_of 3 - TaskSelectorPanel
+e 3 - TaskSelectorPanel related_with_its_method 7 - Task
+e 3 - TaskSelectorPanel has_a_method_that_has_an_input_parameter_with_the_type_of 7 - Task
+e 4 - TaskChangeObserver related_with_its_method 7 - Task
+e 4 - TaskChangeObserver has_a_method_that_has_an_input_parameter_with_the_type_of 7 - Task
+e 5 - RunPattern overrides_methods_of 5 - RunPattern
+e 5 - RunPattern related_with_its_method 1 - ObserverGui
+e 5 - RunPattern creates_objects_of 1 - ObserverGui
+e 5 - RunPattern calls_method_of 1 - ObserverGui
+e 6 - TaskChangeObservable overrides_methods_of 6 - TaskChangeObservable
+e 6 - TaskChangeObservable related_with_its_method 4 - TaskChangeObserver
+e 6 - TaskChangeObservable has_a_method_that_has_an_input_parameter_with_the_type_of 4 - TaskChangeObserver
+e 6 - TaskChangeObservable related_with_its_method 7 - Task
+e 6 - TaskChangeObservable has_a_method_that_has_an_input_parameter_with_the_type_of 7 - Task
+e 7 - Task overrides_methods_of 7 - Task
+e 8 - TaskEditorPanel has_the_field_type_of 11 - JPanel
+e 8 - TaskEditorPanel has_the_field_type_of 6 - TaskChangeObservable
+e 8 - TaskEditorPanel has_the_field_type_of 7 - Task
+e 8 - TaskEditorPanel related_with_its_method 6 - TaskChangeObservable
+e 8 - TaskEditorPanel has_a_method_that_has_an_input_parameter_with_the_type_of 6 - TaskChangeObservable
+e 8 - TaskEditorPanel overrides_methods_of 1 - ObserverGui
+e 8 - TaskEditorPanel creates_objects_of 11 - JPanel
+e 8 - TaskEditorPanel overrides_methods_of 3 - TaskSelectorPanel
+e 8 - TaskEditorPanel creates_objects_of 7 - Task
+e 8 - TaskEditorPanel calls_method_of 7 - Task
+e 8 - TaskEditorPanel related_with_its_method 7 - Task
+e 8 - TaskEditorPanel has_a_method_that_has_an_input_parameter_with_the_type_of 7 - Task
+e 9 - TaskHistoryPanel overrides_methods_of 1 - ObserverGui
+e 9 - TaskHistoryPanel overrides_methods_of 3 - TaskSelectorPanel
+e 9 - TaskHistoryPanel related_with_its_method 7 - Task
+e 9 - TaskHistoryPanel has_a_method_that_has_an_input_parameter_with_the_type_of 7 - Task

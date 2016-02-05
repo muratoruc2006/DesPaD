@@ -1,0 +1,50 @@
+v 1 Project (Class)
+v 2 Contact (Interface)
+v 3 RunPattern (Class)
+v 4 ContactImpl (Class)
+v 5 Task (Class)
+v 6 DataRetriever (Class)
+v 7 DataCreator (Class)
+v 8 Deliverable (Class)
+v 9 ProjectItem (Interface)
+v 10 Serializable (Interface)
+e 1 - Project implements 9 - ProjectItem
+e 2 - Contact extends 10 - Serializable
+e 4 - ContactImpl implements 2 - Contact
+e 5 - Task implements 9 - ProjectItem
+e 8 - Deliverable implements 9 - ProjectItem
+e 9 - ProjectItem extends 10 - Serializable
+e 1 - Project overrides_methods_of 1 - Project
+e 1 - Project related_with_its_method 9 - ProjectItem
+e 1 - Project has_a_method_that_has_an_input_parameter_with_the_type_of 9 - ProjectItem
+e 3 - RunPattern overrides_methods_of 3 - RunPattern
+e 3 - RunPattern related_with_its_method 1 - Project
+e 4 - ContactImpl overrides_methods_of 4 - ContactImpl
+e 5 - Task has_the_field_type_of 2 - Contact
+e 5 - Task related_with_its_method 2 - Contact
+e 5 - Task has_a_method_that_has_an_input_parameter_with_the_type_of 2 - Contact
+e 5 - Task overrides_methods_of 1 - Project
+e 5 - Task overrides_methods_of 5 - Task
+e 5 - Task has_a_method_with_the_return_type_of 2 - Contact
+e 5 - Task related_with_its_method 9 - ProjectItem
+e 5 - Task has_a_method_that_has_an_input_parameter_with_the_type_of 9 - ProjectItem
+e 6 - DataRetriever overrides_methods_of 6 - DataRetriever
+e 7 - DataCreator overrides_methods_of 3 - RunPattern
+e 7 - DataCreator overrides_methods_of 7 - DataCreator
+e 7 - DataCreator related_with_its_method 10 - Serializable
+e 7 - DataCreator has_a_method_with_the_return_type_of 10 - Serializable
+e 7 - DataCreator related_with_its_method 2 - Contact
+e 7 - DataCreator creates_objects_of 4 - ContactImpl
+e 7 - DataCreator related_with_its_method 1 - Project
+e 7 - DataCreator creates_objects_of 1 - Project
+e 7 - DataCreator related_with_its_method 8 - Deliverable
+e 7 - DataCreator creates_objects_of 8 - Deliverable
+e 7 - DataCreator related_with_its_method 5 - Task
+e 7 - DataCreator creates_objects_of 5 - Task
+e 7 - DataCreator has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Serializable
+e 8 - Deliverable has_the_field_type_of 2 - Contact
+e 8 - Deliverable related_with_its_method 2 - Contact
+e 8 - Deliverable has_a_method_that_has_an_input_parameter_with_the_type_of 2 - Contact
+e 8 - Deliverable overrides_methods_of 1 - Project
+e 8 - Deliverable has_a_method_with_the_return_type_of 2 - Contact
+e 8 - Deliverable overrides_methods_of 5 - Task

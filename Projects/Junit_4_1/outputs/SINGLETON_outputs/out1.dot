@@ -1,0 +1,19 @@
+
+digraph SubdueGraph {
+  152 [label="Class",color=blue,fontcolor=blue];
+  152 -> 152 [label="creates_objects_of",color=blue,fontcolor=blue];
+  152 -> 152 [label="has_the_return_type_of",color=blue,fontcolor=blue];
+  152 -> 152 [label="related_with_its_method",color=blue,fontcolor=blue];
+  116 [label="Class",color=blue,fontcolor=blue];
+  116 -> 116 [label="creates_objects_of",color=blue,fontcolor=blue];
+  116 -> 116 [label="related_with_its_method",color=blue,fontcolor=blue];
+  116 -> 116 [label="has_the_return_type_of",color=blue,fontcolor=blue];
+  89 [label="Class",color=blue,fontcolor=blue];
+  89 -> 89 [label="related_with_its_method",color=blue,fontcolor=blue];
+  89 -> 89 [label="creates_objects_of",color=blue,fontcolor=blue];
+  89 -> 89 [label="has_the_return_type_of",color=blue,fontcolor=blue];
+  86 [label="Class",color=blue,fontcolor=blue];
+  86 -> 86 [label="related_with_its_method",color=blue,fontcolor=blue];
+  86 -> 86 [label="creates_objects_of",color=blue,fontcolor=blue];
+  86 -> 86 [label="has_the_return_type_of",color=blue,fontcolor=blue];
+}

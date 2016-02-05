@@ -1,0 +1,184 @@
+v 1 EqualsExpression (Class)
+v 2 Contact (Interface)
+v 3 OrExpression (Class)
+v 4 RunPattern (Class)
+v 5 ConstantExpression (Class)
+v 6 ContactImpl (Class)
+v 7 ContactList (Class)
+v 8 AndExpression (Class)
+v 9 ContainsExpression (Class)
+v 10 Context (Class)
+v 11 VariableExpression (Class)
+v 12 ComparisonExpression (Abstract)
+v 13 CompoundExpression (Abstract)
+v 14 Expression (Interface)
+v 15 Serializable (Interface)
+v 16 expressionA (Class)
+v 17 expressionB (Class)
+v 18 Boolean (Class)
+v 19 c (Class)
+v 20 String (Class)
+v 21 void (Class)
+v 22 Object (Class)
+v 23 ArrayList (Class)
+v 24 Iterator (Class)
+v 25 contacts (Class)
+v 26 elements (Class)
+v 27 expr (Class)
+v 28 ctx (Class)
+v 29 results (Class)
+v 30 HashMap (Class)
+v 31 map (Class)
+v 32 Method (Class)
+v 33 source (Class)
+e 1 - EqualsExpression extends 12 - ComparisonExpression
+e 2 - Contact extends 15 - Serializable
+e 3 - OrExpression extends 13 - CompoundExpression
+e 5 - ConstantExpression implements 14 - Expression
+e 6 - ContactImpl implements 2 - Contact
+e 7 - ContactList implements 15 - Serializable
+e 8 - AndExpression extends 13 - CompoundExpression
+e 9 - ContainsExpression extends 12 - ComparisonExpression
+e 11 - VariableExpression implements 14 - Expression
+e 12 - ComparisonExpression implements 14 - Expression
+e 13 - CompoundExpression implements 14 - Expression
+e 1 - EqualsExpression overrides_methods_of 12 - ComparisonExpression
+e 1 - EqualsExpression related_with_its_method 14 - Expression
+e 1 - EqualsExpression has_a_method_that_has_an_input_parameter_with_the_type_of 14 - Expression
+e 1 - EqualsExpression overrides_methods_of 1 - EqualsExpression
+e 1 - EqualsExpression related_with_its_method 10 - Context
+e 1 - EqualsExpression has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Context
+e 1 - EqualsExpression calls_method_of 16 - expressionA
+e 1 - EqualsExpression calls_method_of 17 - expressionB
+e 1 - EqualsExpression related_with_its_method 18 - Boolean
+e 1 - EqualsExpression creates_objects_of 18 - Boolean
+e 1 - EqualsExpression calls_method_of 19 - c
+e 1 - EqualsExpression calls_method_of 18 - Boolean
+e 2 - Contact has_a_method_with_the_return_type_of 20 - String
+e 2 - Contact related_with_its_method 20 - String
+e 2 - Contact has_a_method_that_has_an_input_parameter_with_the_type_of 20 - String
+e 3 - OrExpression overrides_methods_of 13 - CompoundExpression
+e 3 - OrExpression related_with_its_method 12 - ComparisonExpression
+e 3 - OrExpression has_a_method_that_has_an_input_parameter_with_the_type_of 12 - ComparisonExpression
+e 3 - OrExpression overrides_methods_of 1 - EqualsExpression
+e 3 - OrExpression related_with_its_method 10 - Context
+e 3 - OrExpression has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Context
+e 3 - OrExpression calls_method_of 16 - expressionA
+e 3 - OrExpression calls_method_of 17 - expressionB
+e 3 - OrExpression related_with_its_method 18 - Boolean
+e 3 - OrExpression creates_objects_of 18 - Boolean
+e 3 - OrExpression calls_method_of 19 - c
+e 3 - OrExpression calls_method_of 18 - Boolean
+e 4 - RunPattern overrides_methods_of 4 - RunPattern
+e 4 - RunPattern related_with_its_method 20 - String[]
+e 4 - RunPattern has_a_method_that_has_an_input_parameter_with_the_type_of 20 - String[]
+e 4 - RunPattern related_with_its_method 7 - ContactList
+e 4 - RunPattern related_with_its_method 10 - Context
+e 4 - RunPattern creates_objects_of 10 - Context
+e 4 - RunPattern related_with_its_method 2 - Contact
+e 4 - RunPattern creates_objects_of 6 - ContactImpl
+e 4 - RunPattern related_with_its_method 11 - VariableExpression
+e 4 - RunPattern creates_objects_of 11 - VariableExpression
+e 4 - RunPattern related_with_its_method 5 - ConstantExpression
+e 4 - RunPattern creates_objects_of 5 - ConstantExpression
+e 4 - RunPattern related_with_its_method 9 - ContainsExpression
+e 4 - RunPattern creates_objects_of 9 - ContainsExpression
+e 4 - RunPattern related_with_its_method 22 - Object
+e 4 - RunPattern related_with_its_method 1 - EqualsExpression
+e 4 - RunPattern creates_objects_of 1 - EqualsExpression
+e 4 - RunPattern related_with_its_method 8 - AndExpression
+e 4 - RunPattern creates_objects_of 8 - AndExpression
+e 4 - RunPattern has_the_return_type_of 8 - AndExpression
+e 4 - RunPattern has_a_method_with_the_return_type_of 7 - ContactList
+e 4 - RunPattern creates_objects_of 7 - ContactList
+e 5 - ConstantExpression has_the_field_type_of 22 - Object
+e 5 - ConstantExpression related_with_its_method 22 - Object
+e 5 - ConstantExpression has_a_method_that_has_an_input_parameter_with_the_type_of 22 - Object
+e 5 - ConstantExpression overrides_methods_of 1 - EqualsExpression
+e 5 - ConstantExpression related_with_its_method 10 - Context
+e 5 - ConstantExpression has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Context
+e 6 - ContactImpl has_the_field_type_of 20 - String
+e 6 - ContactImpl related_with_its_method 20 - String
+e 6 - ContactImpl has_a_method_that_has_an_input_parameter_with_the_type_of 20 - String
+e 6 - ContactImpl has_a_method_with_the_return_type_of 20 - String
+e 6 - ContactImpl overrides_methods_of 6 - ContactImpl
+e 7 - ContactList has_the_field_type_of 23 - ArrayList
+e 7 - ContactList creates_objects_of 23 - ArrayList
+e 7 - ContactList has_the_return_type_of 23 - ArrayList
+e 7 - ContactList related_with_its_method 23 - ArrayList
+e 7 - ContactList has_a_method_with_the_return_type_of 23 - ArrayList
+e 7 - ContactList overrides_methods_of 7 - ContactList
+e 7 - ContactList related_with_its_method 2 - Contact[]
+e 7 - ContactList has_a_method_with_the_return_type_of 2 - Contact[]
+e 7 - ContactList creates_objects_of 2 - Contact
+e 7 - ContactList has_the_return_type_of 2 - Contact
+e 7 - ContactList related_with_its_method 14 - Expression
+e 7 - ContactList has_a_method_that_has_an_input_parameter_with_the_type_of 14 - Expression
+e 7 - ContactList related_with_its_method 10 - Context
+e 7 - ContactList has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Context
+e 7 - ContactList related_with_its_method 22 - Object
+e 7 - ContactList has_a_method_that_has_an_input_parameter_with_the_type_of 22 - Object
+e 7 - ContactList related_with_its_method 24 - Iterator
+e 7 - ContactList calls_method_of 25 - contacts
+e 7 - ContactList calls_method_of 23 - ArrayList
+e 7 - ContactList calls_method_of 26 - elements
+e 7 - ContactList calls_method_of 27 - expr
+e 7 - ContactList calls_method_of 28 - ctx
+e 7 - ContactList calls_method_of 29 - results
+e 7 - ContactList has_a_method_that_has_an_input_parameter_with_the_type_of 23 - ArrayList
+e 7 - ContactList related_with_its_method 2 - Contact
+e 7 - ContactList has_a_method_that_has_an_input_parameter_with_the_type_of 2 - Contact
+e 7 - ContactList related_with_its_method 20 - String
+e 7 - ContactList has_a_method_with_the_return_type_of 20 - String
+e 7 - ContactList overrides_methods_of 6 - ContactImpl
+e 8 - AndExpression overrides_methods_of 13 - CompoundExpression
+e 8 - AndExpression related_with_its_method 12 - ComparisonExpression
+e 8 - AndExpression has_a_method_that_has_an_input_parameter_with_the_type_of 12 - ComparisonExpression
+e 8 - AndExpression overrides_methods_of 1 - EqualsExpression
+e 8 - AndExpression related_with_its_method 10 - Context
+e 8 - AndExpression has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Context
+e 8 - AndExpression calls_method_of 16 - expressionA
+e 8 - AndExpression calls_method_of 17 - expressionB
+e 8 - AndExpression related_with_its_method 18 - Boolean
+e 8 - AndExpression creates_objects_of 18 - Boolean
+e 8 - AndExpression calls_method_of 19 - c
+e 8 - AndExpression calls_method_of 18 - Boolean
+e 9 - ContainsExpression overrides_methods_of 12 - ComparisonExpression
+e 9 - ContainsExpression related_with_its_method 14 - Expression
+e 9 - ContainsExpression has_a_method_that_has_an_input_parameter_with_the_type_of 14 - Expression
+e 9 - ContainsExpression overrides_methods_of 1 - EqualsExpression
+e 9 - ContainsExpression related_with_its_method 10 - Context
+e 9 - ContainsExpression has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Context
+e 9 - ContainsExpression calls_method_of 16 - expressionA
+e 9 - ContainsExpression calls_method_of 17 - expressionB
+e 9 - ContainsExpression related_with_its_method 22 - Object
+e 9 - ContainsExpression calls_method_of 19 - c
+e 10 - Context has_the_field_type_of 30 - HashMap
+e 10 - Context creates_objects_of 30 - HashMap
+e 10 - Context has_the_return_type_of 30 - HashMap
+e 10 - Context related_with_its_method 22 - Object
+e 10 - Context has_a_method_with_the_return_type_of 22 - Object
+e 10 - Context overrides_methods_of 10 - Context
+e 10 - Context has_a_method_that_has_an_input_parameter_with_the_type_of 22 - Object
+e 10 - Context calls_method_of 31 - map
+e 10 - Context calls_method_of 30 - HashMap
+e 11 - VariableExpression has_the_field_type_of 22 - Object
+e 11 - VariableExpression has_the_field_type_of 20 - String
+e 11 - VariableExpression related_with_its_method 22 - Object
+e 11 - VariableExpression has_a_method_that_has_an_input_parameter_with_the_type_of 22 - Object
+e 11 - VariableExpression related_with_its_method 20 - String
+e 11 - VariableExpression has_a_method_that_has_an_input_parameter_with_the_type_of 20 - String
+e 11 - VariableExpression overrides_methods_of 1 - EqualsExpression
+e 11 - VariableExpression related_with_its_method 10 - Context
+e 11 - VariableExpression has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Context
+e 11 - VariableExpression calls_method_of 19 - c
+e 11 - VariableExpression related_with_its_method 32 - Method
+e 11 - VariableExpression calls_method_of 33 - source
+e 12 - ComparisonExpression has_the_field_type_of 14 - Expression
+e 12 - ComparisonExpression related_with_its_method 14 - Expression
+e 12 - ComparisonExpression has_a_method_that_has_an_input_parameter_with_the_type_of 14 - Expression
+e 13 - CompoundExpression has_the_field_type_of 12 - ComparisonExpression
+e 13 - CompoundExpression related_with_its_method 12 - ComparisonExpression
+e 13 - CompoundExpression has_a_method_that_has_an_input_parameter_with_the_type_of 12 - ComparisonExpression
+e 14 - Expression related_with_its_method 10 - Context
+e 14 - Expression has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Context

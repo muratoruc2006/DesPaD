@@ -1,0 +1,23 @@
+v 1 BaseList (Class)
+v 2 RunPattern (Class)
+v 3 ListImpl (Interface)
+v 4 OrnamentedList (Class)
+v 5 NumberedList (Class)
+v 6 OrderedListImpl (Class)
+e 4 - OrnamentedList extends 1 - BaseList
+e 5 - NumberedList extends 1 - BaseList
+e 6 - OrderedListImpl implements 3 - ListImpl
+e 1 - BaseList has_the_field_type_of 3 - ListImpl
+e 1 - BaseList related_with_its_method 3 - ListImpl
+e 1 - BaseList has_a_method_that_has_an_input_parameter_with_the_type_of 3 - ListImpl
+e 2 - RunPattern related_with_its_method 3 - ListImpl
+e 2 - RunPattern creates_objects_of 6 - OrderedListImpl
+e 2 - RunPattern related_with_its_method 1 - BaseList
+e 2 - RunPattern creates_objects_of 1 - BaseList
+e 2 - RunPattern calls_method_of 1 - BaseList
+e 2 - RunPattern related_with_its_method 4 - OrnamentedList
+e 2 - RunPattern creates_objects_of 4 - OrnamentedList
+e 2 - RunPattern related_with_its_method 5 - NumberedList
+e 2 - RunPattern creates_objects_of 5 - NumberedList
+e 4 - OrnamentedList overrides_methods_of 1 - BaseList
+e 5 - NumberedList overrides_methods_of 1 - BaseList

@@ -1,0 +1,14 @@
+
+digraph SubdueGraph {
+  1 [label="Class",color=blue,fontcolor=blue];
+  2 [label="Class",color=blue,fontcolor=blue];
+  4 [label="Interface",color=blue,fontcolor=blue];
+  9 [label="Class",color=blue,fontcolor=blue];
+  11 [label="Class",color=blue,fontcolor=blue];
+  12 [label="Interface",color=blue,fontcolor=blue];
+  1 -> 12 [label="implements",color=blue,fontcolor=blue];
+  2 -> 4 [label="implements",color=blue,fontcolor=blue];
+  11 -> 12 [label="implements",color=blue,fontcolor=blue];
+  9 -> 11 [label="creates_objects_of",color=blue,fontcolor=blue];
+  12 -> 4 [label="has_a_method_that_has_an_input_parameter_with_the_type_of",color=blue,fontcolor=blue];
+}

@@ -1,0 +1,6 @@
+digraph SubdueGraph {
+  34 [label="Class",color=blue,fontcolor=blue];
+  34 -> 34 [label="related_with_its_method",color=blue,fontcolor=blue];
+  34 -> 34 [label="creates_objects_of",color=blue,fontcolor=blue];
+  34 -> 34 [label="has_the_return_type_of",color=blue,fontcolor=blue];
+}

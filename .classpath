@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="AST/lib/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/AST/lib"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry exported="true" kind="lib" path="src/AST/lib/antlr-4.4-complete.jar" sourcepath="src/AST/lib/antlr-4.4-complete.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/AST/lib/antlr-runtime-4.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/AST/lib/antlr-3.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/AST/lib/eclipse.jdt.core_3.1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/AST/lib/java-squid-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/AST/lib/querydsl-collections-3.6.3-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="src/AST/lib/querydsl-jpa-3.6.3-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/apache-commons.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-io-2.4-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-io-2.4-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-io-2.4-test-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-io-2.4-tests.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="lib/jgoodies-forms.jar" sourcepath="lib/jgoodies-forms-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AST/lib/jgoodies-forms-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/jgoodies-common.jar" sourcepath="lib/jgoodies-common-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/AST/lib/jgoodies-common-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

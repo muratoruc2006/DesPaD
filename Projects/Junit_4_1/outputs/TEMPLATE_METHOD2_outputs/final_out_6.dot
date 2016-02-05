@@ -1,0 +1,9 @@
+digraph SubdueGraph {
+  20 [label="Class",color=blue,fontcolor=blue];
+  156 [label="Class",color=blue,fontcolor=blue];
+  162 [label="Class",color=blue,fontcolor=blue];
+  20 -> 162 [label="extends",color=blue,fontcolor=blue];
+  156 -> 162 [label="extends",color=blue,fontcolor=blue];
+  20 -> 162 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  156 -> 162 [label="overrides_methods_of",color=blue,fontcolor=blue];
+}

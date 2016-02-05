@@ -1,0 +1,43 @@
+
+digraph SubdueGraph {
+  20 [label="Class",color=blue,fontcolor=blue];
+  23 [label="Class",color=blue,fontcolor=blue];
+  20 -> 23 [label="extends",color=blue,fontcolor=blue];
+  20 -> 23 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  21 [label="Class",color=blue,fontcolor=blue];
+  34 [label="Class",color=blue,fontcolor=blue];
+  21 -> 34 [label="extends",color=blue,fontcolor=blue];
+  21 -> 34 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  18 [label="Class",color=blue,fontcolor=blue];
+  56 [label="Class",color=blue,fontcolor=blue];
+  18 -> 56 [label="extends",color=blue,fontcolor=blue];
+  18 -> 56 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  33 [label="Class",color=blue,fontcolor=blue];
+  57 [label="Class",color=blue,fontcolor=blue];
+  33 -> 57 [label="extends",color=blue,fontcolor=blue];
+  33 -> 57 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  35 [label="Class",color=blue,fontcolor=blue];
+  58 [label="Class",color=blue,fontcolor=blue];
+  35 -> 58 [label="extends",color=blue,fontcolor=blue];
+  35 -> 58 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  37 [label="Class",color=blue,fontcolor=blue];
+  59 [label="Class",color=blue,fontcolor=blue];
+  37 -> 59 [label="extends",color=blue,fontcolor=blue];
+  37 -> 59 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  38 [label="Class",color=blue,fontcolor=blue];
+  60 [label="Class",color=blue,fontcolor=blue];
+  38 -> 60 [label="extends",color=blue,fontcolor=blue];
+  38 -> 60 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  42 [label="Class",color=blue,fontcolor=blue];
+  62 [label="Class",color=blue,fontcolor=blue];
+  42 -> 62 [label="extends",color=blue,fontcolor=blue];
+  42 -> 62 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  48 [label="Class",color=blue,fontcolor=blue];
+  64 [label="Class",color=blue,fontcolor=blue];
+  48 -> 64 [label="extends",color=blue,fontcolor=blue];
+  48 -> 64 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  52 [label="Class",color=blue,fontcolor=blue];
+  66 [label="Class",color=blue,fontcolor=blue];
+  52 -> 66 [label="extends",color=blue,fontcolor=blue];
+  52 -> 66 [label="overrides_methods_of",color=blue,fontcolor=blue];
+}

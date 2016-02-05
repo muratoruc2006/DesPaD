@@ -1,0 +1,8 @@
+digraph SubdueGraph {
+  44 [label="Interface",color=blue,fontcolor=blue];
+  217 [label="Class",color=blue,fontcolor=blue];
+  259 [label="Class",color=blue,fontcolor=blue];
+  217 -> 44 [label="implements",color=blue,fontcolor=blue];
+  259 -> 44 [label="implements",color=blue,fontcolor=blue];
+  217 -> 44 [label="has_a_method_that_has_an_input_parameter_with_the_type_of",color=blue,fontcolor=blue];
+}

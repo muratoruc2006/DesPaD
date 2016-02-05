@@ -1,0 +1,33 @@
+
+digraph SubdueGraph {
+  110 [label="Interface",color=blue,fontcolor=blue];
+  245 [label="Class",color=blue,fontcolor=blue];
+  261 [label="Class",color=blue,fontcolor=blue];
+  299 [label="Class",color=blue,fontcolor=blue];
+  343 [label="Class",color=blue,fontcolor=blue];
+  372 [label="Class",color=blue,fontcolor=blue];
+  381 [label="Class",color=blue,fontcolor=blue];
+  453 [label="Class",color=blue,fontcolor=blue];
+  245 -> 453 [label="extends",color=blue,fontcolor=blue];
+  261 -> 453 [label="extends",color=blue,fontcolor=blue];
+  299 -> 110 [label="implements",color=blue,fontcolor=blue];
+  343 -> 453 [label="extends",color=blue,fontcolor=blue];
+  372 -> 110 [label="implements",color=blue,fontcolor=blue];
+  381 -> 110 [label="implements",color=blue,fontcolor=blue];
+  453 -> 110 [label="related_with_its_method",color=blue,fontcolor=blue];
+  27 [label="Class",color=blue,fontcolor=blue];
+  55 [label="Class",color=blue,fontcolor=blue];
+  79 [label="Class",color=blue,fontcolor=blue];
+  81 [label="Class",color=blue,fontcolor=blue];
+  106 [label="Class",color=blue,fontcolor=blue];
+  395 [label="Class",color=blue,fontcolor=blue];
+  428 [label="Class",color=blue,fontcolor=blue];
+  480 [label="Interface",color=blue,fontcolor=blue];
+  27 -> 480 [label="implements",color=blue,fontcolor=blue];
+  55 -> 480 [label="implements",color=blue,fontcolor=blue];
+  79 -> 480 [label="implements",color=blue,fontcolor=blue];
+  81 -> 428 [label="extends",color=blue,fontcolor=blue];
+  106 -> 428 [label="extends",color=blue,fontcolor=blue];
+  395 -> 428 [label="extends",color=blue,fontcolor=blue];
+  428 -> 480 [label="related_with_its_method",color=blue,fontcolor=blue];
+}

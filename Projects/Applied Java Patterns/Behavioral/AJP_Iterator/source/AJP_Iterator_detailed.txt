@@ -1,0 +1,139 @@
+v 1 ToDoListCollectionImpl (Class)
+v 2 ListPrinter (Class)
+v 3 RunPattern (Class)
+v 4 ToDoList (Interface)
+v 5 ToDoListCollection (Interface)
+v 6 DataRetriever (Class)
+v 7 DataCreator (Class)
+v 8 Iterating (Interface)
+v 9 ToDoListImpl (Class)
+v 10 Serializable (Interface)
+v 11 HashMap (Class)
+v 12 list (Class)
+v 13 int (Class)
+v 14 lists (Class)
+v 15 Iterator (Class)
+v 16 String (Class)
+v 17 PrintStream (Class)
+v 18 elements (Class)
+v 19 lotsOfLists (Class)
+v 20 element (Class)
+v 21 Object (Class)
+v 22 output (Class)
+v 23 File (Class)
+v 24 void (Class)
+v 25 inputFile (Class)
+v 26 ObjectInputStream (Class)
+v 27 FileInputStream (Class)
+v 28 readIn (Class)
+v 29 exc (Class)
+v 30 data (Class)
+v 31 ObjectOutputStream (Class)
+v 32 FileOutputStream (Class)
+v 33 serOut (Class)
+v 34 ArrayList (Class)
+v 35 items (Class)
+e 1 - ToDoListCollectionImpl implements 5 - ToDoListCollection
+e 4 - ToDoList extends 8 - Iterating
+e 5 - ToDoListCollection extends 8 - Iterating
+e 8 - Iterating extends 10 - Serializable
+e 9 - ToDoListImpl implements 4 - ToDoList
+e 1 - ToDoListCollectionImpl has_the_field_type_of 11 - HashMap
+e 1 - ToDoListCollectionImpl creates_objects_of 11 - HashMap
+e 1 - ToDoListCollectionImpl overrides_methods_of 1 - ToDoListCollectionImpl
+e 1 - ToDoListCollectionImpl related_with_its_method 4 - ToDoList
+e 1 - ToDoListCollectionImpl has_a_method_that_has_an_input_parameter_with_the_type_of 4 - ToDoList
+e 1 - ToDoListCollectionImpl calls_method_of 12 - list
+e 1 - ToDoListCollectionImpl calls_method_of 11 - HashMap
+e 1 - ToDoListCollectionImpl related_with_its_method 13 - int
+e 1 - ToDoListCollectionImpl has_a_method_with_the_return_type_of 13 - int
+e 1 - ToDoListCollectionImpl calls_method_of 14 - lists
+e 1 - ToDoListCollectionImpl related_with_its_method 15 - Iterator
+e 1 - ToDoListCollectionImpl has_a_method_with_the_return_type_of 15 - Iterator
+e 1 - ToDoListCollectionImpl related_with_its_method 16 - String
+e 1 - ToDoListCollectionImpl has_a_method_with_the_return_type_of 16 - String
+e 2 - ListPrinter overrides_methods_of 2 - ListPrinter
+e 2 - ListPrinter related_with_its_method 4 - ToDoList
+e 2 - ListPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 4 - ToDoList
+e 2 - ListPrinter related_with_its_method 17 - PrintStream
+e 2 - ListPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 17 - PrintStream
+e 2 - ListPrinter related_with_its_method 15 - Iterator
+e 2 - ListPrinter calls_method_of 12 - list
+e 2 - ListPrinter calls_method_of 18 - elements
+e 2 - ListPrinter related_with_its_method 5 - ToDoListCollection
+e 2 - ListPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 5 - ToDoListCollection
+e 2 - ListPrinter calls_method_of 19 - lotsOfLists
+e 2 - ListPrinter related_with_its_method 8 - Iterating
+e 2 - ListPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 8 - Iterating
+e 2 - ListPrinter calls_method_of 20 - element
+e 2 - ListPrinter related_with_its_method 21 - Object
+e 2 - ListPrinter calls_method_of 22 - output
+e 3 - RunPattern overrides_methods_of 3 - RunPattern
+e 3 - RunPattern related_with_its_method 16 - String[]
+e 3 - RunPattern has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String[]
+e 3 - RunPattern creates_objects_of 23 - File
+e 3 - RunPattern related_with_its_method 5 - ToDoListCollection
+e 4 - ToDoList related_with_its_method 16 - String
+e 4 - ToDoList has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String
+e 4 - ToDoList related_with_its_method 13 - int
+e 4 - ToDoList has_a_method_that_has_an_input_parameter_with_the_type_of 13 - int
+e 4 - ToDoList has_a_method_with_the_return_type_of 13 - int
+e 4 - ToDoList has_a_method_with_the_return_type_of 16 - String
+e 5 - ToDoListCollection related_with_its_method 4 - ToDoList
+e 5 - ToDoListCollection has_a_method_that_has_an_input_parameter_with_the_type_of 4 - ToDoList
+e 5 - ToDoListCollection has_a_method_with_the_return_type_of 13 - int
+e 5 - ToDoListCollection related_with_its_method 13 - int
+e 6 - DataRetriever related_with_its_method 21 - Object
+e 6 - DataRetriever has_a_method_with_the_return_type_of 21 - Object
+e 6 - DataRetriever overrides_methods_of 6 - DataRetriever
+e 6 - DataRetriever related_with_its_method 16 - String
+e 6 - DataRetriever has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String
+e 6 - DataRetriever related_with_its_method 23 - File
+e 6 - DataRetriever creates_objects_of 23 - File
+e 6 - DataRetriever calls_method_of 25 - inputFile
+e 6 - DataRetriever calls_method_of 23 - File
+e 6 - DataRetriever related_with_its_method 26 - ObjectInputStream
+e 6 - DataRetriever creates_objects_of 26 - ObjectInputStream
+e 6 - DataRetriever creates_objects_of 27 - FileInputStream
+e 6 - DataRetriever calls_method_of 28 - readIn
+e 6 - DataRetriever calls_method_of 27 - FileInputStream
+e 6 - DataRetriever calls_method_of 29 - exc
+e 7 - DataCreator has_the_field_type_of 16 - String
+e 7 - DataCreator overrides_methods_of 3 - RunPattern
+e 7 - DataCreator related_with_its_method 16 - String[]
+e 7 - DataCreator has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String[]
+e 7 - DataCreator related_with_its_method 16 - String
+e 7 - DataCreator overrides_methods_of 7 - DataCreator
+e 7 - DataCreator has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String
+e 7 - DataCreator calls_method_of 29 - exc
+e 7 - DataCreator related_with_its_method 10 - Serializable
+e 7 - DataCreator has_a_method_with_the_return_type_of 10 - Serializable
+e 7 - DataCreator related_with_its_method 5 - ToDoListCollection
+e 7 - DataCreator creates_objects_of 1 - ToDoListCollectionImpl
+e 7 - DataCreator related_with_its_method 4 - ToDoList
+e 7 - DataCreator creates_objects_of 9 - ToDoListImpl
+e 7 - DataCreator calls_method_of 30 - data
+e 7 - DataCreator calls_method_of 9 - ToDoListImpl
+e 7 - DataCreator has_a_method_that_has_an_input_parameter_with_the_type_of 10 - Serializable
+e 7 - DataCreator related_with_its_method 31 - ObjectOutputStream
+e 7 - DataCreator creates_objects_of 31 - ObjectOutputStream
+e 7 - DataCreator creates_objects_of 32 - FileOutputStream
+e 7 - DataCreator calls_method_of 33 - serOut
+e 7 - DataCreator calls_method_of 32 - FileOutputStream
+e 8 - Iterating has_a_method_with_the_return_type_of 15 - Iterator
+e 8 - Iterating related_with_its_method 15 - Iterator
+e 9 - ToDoListImpl has_the_field_type_of 16 - String
+e 9 - ToDoListImpl has_the_field_type_of 34 - ArrayList
+e 9 - ToDoListImpl creates_objects_of 34 - ArrayList
+e 9 - ToDoListImpl overrides_methods_of 1 - ToDoListCollectionImpl
+e 9 - ToDoListImpl related_with_its_method 16 - String
+e 9 - ToDoListImpl has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String
+e 9 - ToDoListImpl calls_method_of 34 - ArrayList
+e 9 - ToDoListImpl calls_method_of 35 - items
+e 9 - ToDoListImpl related_with_its_method 13 - int
+e 9 - ToDoListImpl has_a_method_that_has_an_input_parameter_with_the_type_of 13 - int
+e 9 - ToDoListImpl has_a_method_with_the_return_type_of 13 - int
+e 9 - ToDoListImpl related_with_its_method 15 - Iterator
+e 9 - ToDoListImpl has_a_method_with_the_return_type_of 15 - Iterator
+e 9 - ToDoListImpl has_a_method_with_the_return_type_of 16 - String
+e 9 - ToDoListImpl overrides_methods_of 9 - ToDoListImpl

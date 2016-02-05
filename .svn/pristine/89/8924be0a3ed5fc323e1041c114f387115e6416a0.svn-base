@@ -1,0 +1,430 @@
+package AST;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import AST.JavaParser.ClassDeclarationContext;
+import AST.JavaParser.InterfaceDeclarationContext;
+
+/*MyVisitor class � temel inheritance ili�kileri olan sadece extends ve implements ili�kilerini bulur. */
+public class MyVisitor extends MyVisitorBase {
+
+    public static void main(String[] args) throws IOException {    
+
+    	modifiers.clear();
+    	modifiers.add(new String("public"));
+    	modifiers.add(new String("private"));
+    	modifiers.add(new String("static"));
+    	modifiers.add(new String("native"));
+    	modifiers.add(new String("abstract"));
+    	modifiers.add(new String("transient"));
+    	modifiers.add(new String("protected"));
+    	modifiers.add(new String("final"));
+    	modifiers.add(new String("synchronized"));
+    	modifiers.add(new String("threadsafe"));
+    	
+    }
+    
+   private String  MainClassOrInterface;
+   //private String  isAbstract;
+   private String  classType;   
+   
+   public static List<Nodes> dugumler = new ArrayList<Nodes>();
+   public static List<Vertices> vertices = new ArrayList<Vertices>();
+    
+   public static List<String> modifiers = new ArrayList<String>();
+   
+	public String getTypebyName(String name) {    	
+	 	   
+	 	   @SuppressWarnings("rawtypes")
+	 	   Iterator iterator = vertices.iterator();
+	 	   String type="";
+	        while (iterator.hasNext())
+	        {
+	            Vertices o = (Vertices) iterator.next();
+	            if(o.getName().equals(name)) 
+		           {
+		        	  type = o.getType();
+		           }
+	            
+	        }
+	        return type;
+	   }
+   
+	public Boolean DoesClassExists(String name) {    	
+	 	   
+	 	   @SuppressWarnings("rawtypes")
+	 	   Iterator iterator = vertices.iterator();
+	 	   Boolean b =false;
+	        while (iterator.hasNext())
+	        {
+	            Vertices o = (Vertices) iterator.next();
+	            if(o.getName().equals(name)) 
+		           {
+		        	  b = true;
+		           }
+	            
+	        }
+	        return b;
+	   }
+	
+    //********1**********[extends]****************************************************************************************
+    //********1**********[implements]*************************************************************************************
+    //Class A [extends] Class B.
+    //Class A [implements] Interface A.
+    @Override
+    public Void visitClassDeclaration(ClassDeclarationContext ctx) {    	
+    	classType="Class";
+    	MainClassOrInterface = ctx.Identifier().toString();
+    	
+    	Integer total_children = ctx.getChildCount();
+		
+    	//If the [extends] or [implements] block occurs... Without modifier name...
+    	if (!ctx.children.get(0).getText().equals(modifiers))
+    	{	 
+    		for (int i = 0; i < total_children; i++) {
+    			
+    			if (ctx.children.get(i).getText().equals("extends")){
+    				if(!ctx.children.get(i+1).getText().contains(",")){
+	    				//System.out.println(MainClassOrInterface + " [" + ctx.children.get(i) + "] " +  ctx.children.get(i+1).getText());	    	
+	    		    	//SuperClass = ctx.children.get(i+1).getText();	  
+	    		    	dugumler.add(new Nodes(MainClassOrInterface,"extends",ctx.children.get(i+1).getText())); // Add the relation to the list.	    		    	
+	    		    	
+	    		    	// Class yoksa ekle.
+//						if (DoesClassExists(ctx.children.get(i+1).getText()) == false){
+//							if (getTypebyName(ctx.children.get(i+1).getText()) != "")
+//	    	    		    	{classType = getTypebyName(ctx.children.get(i+1).getText());}
+//	    	    		    	else
+//	    	    		    	{classType = "Class";}
+//								
+//							addVertice(0,ctx.children.get(i+1).getText(),classType);
+//							}
+				    	
+    				}
+    				else if(ctx.children.get(i+1).getText().contains(",")){
+    					//Virg�llerin say�s�n� buluyoruz.    					
+    					String[] words = ctx.children.get(i+1).getText().split(",");   
+    					
+    					for (String s: words) {
+    						dugumler.add(new Nodes(MainClassOrInterface,"extends",s)); // Add the relation to the list.
+    					
+    						// Class yoksa ekle.
+//    						if (DoesClassExists(s) == false){
+//    							if (getTypebyName(s) != "")
+//    	    	    		    	{classType = getTypebyName(s);}
+//    	    	    		    	else
+//    	    	    		    	{classType = "Class";}
+//    								
+//    							addVertice(0,s,classType);
+//    							}
+    						
+    					}
+    				}
+    			}
+    			
+    			if (ctx.children.get(i).getText().equals("implements")){
+    				if(!ctx.children.get(i+1).getText().contains(",")){
+	    				//System.out.println(MainClassOrInterface + " [" + ctx.children.get(i) + "] " +  ctx.children.get(i+1).getText());	    	
+	    		    	//SuperClass = ctx.children.get(i+1).getText();	  
+	    		    	dugumler.add(new Nodes(MainClassOrInterface,"implements",ctx.children.get(i+1).getText())); // Add the relation to the list.
+	    		    	
+	    		    	// Class yoksa ekle.
+//						if (DoesClassExists(ctx.children.get(i+1).getText()) == false){
+//							if (getTypebyName(ctx.children.get(i+1).getText()) != "")
+//	    	    		    	{classType = getTypebyName(ctx.children.get(i+1).getText());}
+//	    	    		    	else
+//	    	    		    	{classType = "Class";}
+//								
+//							addVertice(0,ctx.children.get(i+1).getText(),classType);
+//							}
+	    		    	
+    				}
+    				else if(ctx.children.get(i+1).getText().contains(",")){
+    					//Virg�llerin say�s�n� buluyoruz.    					
+    					String[] words = ctx.children.get(i+1).getText().split(",");   
+    					
+    					for (String s: words) {
+    						dugumler.add(new Nodes(MainClassOrInterface,"implements",s)); // Add the relation to the list.
+    						
+    						// Class yoksa ekle.
+//    						if (DoesClassExists(s) == false){
+//    							if (getTypebyName(s) != "")
+//    	    	    		    	{classType = getTypebyName(s);}
+//    	    	    		    	else
+//    	    	    		    	{classType = "Class";}
+//    								
+//    							addVertice(0,s,classType);
+//    							}
+    					}
+    				}
+    			}
+    		}    		
+    	
+    	}//if (!ctx.children.get(0).getText().equals(modifiers))
+    	
+    	//If the [extends] or [implements] block occurs... With modifier name...
+    	else if (ctx.children.get(0).getText().equals(modifiers))
+    	{
+    		
+    		for (int i = 0; i < total_children; i++) {
+    			
+    			if (ctx.children.get(i).getText().equals("extends")){
+    				if(!ctx.children.get(i+1).getText().contains(",")){
+	    				//System.out.println(MainClassOrInterface + " [" + ctx.children.get(i) + "] " +  ctx.children.get(i+1).getText());	    	
+				    	//SuperClass = ctx.children.get(i+1).getText();	  
+				    	dugumler.add(new Nodes(MainClassOrInterface,"extends",ctx.children.get(i+1).getText())); // Add the relation to the list.
+				    	
+				    	// Class yoksa ekle.
+//						if (DoesClassExists(ctx.children.get(i+1).getText()) == false){
+//							if (getTypebyName(ctx.children.get(i+1).getText()) != "")
+//	    	    		    	{classType = getTypebyName(ctx.children.get(i+1).getText());}
+//	    	    		    	else
+//	    	    		    	{classType = "Class";}
+//								
+//							addVertice(0,ctx.children.get(i+1).getText(),classType);
+//							}
+						
+    				}
+    				else if(ctx.children.get(i+1).getText().contains(",")){
+    					//Virg�llerin say�s�n� buluyoruz.    					
+    					String[] words = ctx.children.get(i+1).getText().split(",");   
+    					
+    					for (String s: words) {
+    						dugumler.add(new Nodes(MainClassOrInterface,"extends",s)); // Add the relation to the list.
+    						
+    						// Class yoksa ekle.
+//    						if (DoesClassExists(s) == false){
+//    							if (getTypebyName(s) != "")
+//    	    	    		    	{classType = getTypebyName(s);}
+//    	    	    		    	else
+//    	    	    		    	{classType = "Class";}
+//    								
+//    							addVertice(0,s,classType);
+//    							}
+    						
+    					}
+    				}
+    				
+    			}
+    			
+    			if (ctx.children.get(i).getText().equals("implements")){
+    				//System.out.println(MainClassOrInterface + " [" + ctx.children.get(i) + "] " +  ctx.children.get(i+1).getText());	    	
+			    	//SuperClass = ctx.children.get(i+1).getText();	  
+    				if(!ctx.children.get(i+1).getText().contains(",")){
+    					dugumler.add(new Nodes(MainClassOrInterface,"implements",ctx.children.get(i+1).getText()));
+    					
+    					// Class yoksa ekle.
+//						if (DoesClassExists(ctx.children.get(i+1).getText()) == false){
+//							classType = "Interface";
+//								
+//							addVertice(0,ctx.children.get(i+1).getText(),classType);
+//							}
+
+    			    	} // Add the relation to the list.
+    				else if(ctx.children.get(i+1).getText().contains(",")){
+    					//Virg�llerin say�s�n� buluyoruz.    					
+    					String[] words = ctx.children.get(i+1).getText().split(",");   
+    					
+    					for (String s: words) {           
+    						dugumler.add(new Nodes(MainClassOrInterface,"implements",s));
+    						
+    						// Class yoksa ekle.
+//    						if (DoesClassExists(s) == false){
+//    							classType = "Interface";
+//    								
+//    							addVertice(0,s,classType);
+//    							}   
+    					}    				
+    				}    				
+    			}
+    		}
+    	}    		    	
+
+    	return super.visitClassDeclaration(ctx);
+    }
+    //********1***********************************************************************************************************
+    //********1***********************************************************************************************************
+    
+    
+    //********2**********[extends]****************************************************************************************
+    //********2***********************************************************************************************************
+    //Interface A [extends] Interface B.
+    @Override
+    public Void visitInterfaceDeclaration(InterfaceDeclarationContext ctx) {      	
+    	MainClassOrInterface = ctx.Identifier().toString();
+    	classType = "Interface";
+    		
+    	Integer total_children = ctx.getChildCount();
+    	
+		if (!ctx.children.get(0).getText().equals(modifiers))
+    	{	 
+			
+			for (int i = 0; i < total_children; i++) {
+    			
+    			if (ctx.children.get(i).getText().equals("extends")){
+    				if(!ctx.children.get(i+1).getText().contains(",")){
+	    				//System.out.println(MainClassOrInterface + " [" + ctx.children.get(i) + "] " +  ctx.children.get(i+1).getText());	    	
+				    	//SuperClass = ctx.children.get(i+1).getText();	  
+				    	dugumler.add(new Nodes(MainClassOrInterface,"extends",ctx.children.get(i+1).getText())); // Add the relation to the list.
+				    	
+				    	// Class yoksa ekle.
+//						if (DoesClassExists(ctx.children.get(i+1).getText()) == false){
+//							if (getTypebyName(ctx.children.get(i+1).getText()) != "")
+//	    	    		    	{classType = getTypebyName(ctx.children.get(i+1).getText());}
+//	    	    		    	else
+//	    	    		    	{classType = "Class";}
+//								
+//							addVertice(0,ctx.children.get(i+1).getText(),classType);
+//							}
+						
+    				}
+    				else if(ctx.children.get(i+1).getText().contains(",")){
+    					//Virg�llerin say�s�n� buluyoruz.    					
+    					String[] words = ctx.children.get(i+1).getText().split(",");   
+    					
+    					for (String s: words) {
+    						dugumler.add(new Nodes(MainClassOrInterface,"extends",s)); // Add the relation to the list.
+    						
+    						// Class yoksa ekle.
+//    						if (DoesClassExists(s) == false){
+//    							if (getTypebyName(s) != "")
+//    	    	    		    	{classType = getTypebyName(s);}
+//    	    	    		    	else
+//    	    	    		    	{classType = "Class";}
+//    								
+//    							addVertice(0,s,classType);
+//    							}
+    						
+    					}
+    				}
+    			}
+    			
+    			if (ctx.children.get(i).getText().equals("implements")){
+    				if(!ctx.children.get(i+1).getText().contains(",")){
+	    				//System.out.println(MainClassOrInterface + " [" + ctx.children.get(i) + "] " +  ctx.children.get(i+1).getText());	    	
+				    	//SuperClass = ctx.children.get(i+1).getText();	  
+				    	dugumler.add(new Nodes(MainClassOrInterface,"implements",ctx.children.get(i+1).getText())); // Add the relation to the list.
+				    	
+				    	// Class yoksa ekle.
+//						if (DoesClassExists(ctx.children.get(i+1).getText()) == false){
+//							if (getTypebyName(ctx.children.get(i+1).getText()) != "")
+//	    	    		    	{classType = getTypebyName(ctx.children.get(i+1).getText());}
+//	    	    		    	else
+//	    	    		    	{classType = "Class";}
+//								
+//							addVertice(0,ctx.children.get(i+1).getText(),classType);
+//							}
+						
+    				}
+    				else if(ctx.children.get(i+1).getText().contains(",")){
+    					//Virg�llerin say�s�n� buluyoruz.    					
+    					String[] words = ctx.children.get(i+1).getText().split(",");   
+    					
+    					for (String s: words) {
+    						dugumler.add(new Nodes(MainClassOrInterface,"implements",s)); // Add the relation to the list.
+    						
+    						// Class yoksa ekle.
+//    						if (DoesClassExists(s) == false){
+//    							if (getTypebyName(s) != "")
+//    	    	    		    	{classType = getTypebyName(s);}
+//    	    	    		    	else
+//    	    	    		    	{classType = "Class";}
+//    								
+//    							addVertice(0,s,classType);
+//    							}
+    					}
+    				}
+    			}
+    		}
+    	}
+			
+
+		else if (ctx.children.get(0).getText().equals(modifiers))
+    	{
+			
+			for (int i = 0; i < total_children; i++) {
+    			
+    			if (ctx.children.get(i).getText().equals("extends")){
+    				if(!ctx.children.get(i+1).getText().contains(",")){
+	    				//System.out.println(MainClassOrInterface + " [" + ctx.children.get(i) + "] " +  ctx.children.get(i+1).getText());	    	
+				    	//SuperClass = ctx.children.get(i+1).getText();	  
+				    	dugumler.add(new Nodes(MainClassOrInterface,"extends",ctx.children.get(i+1).getText())); // Add the relation to the list.
+//
+//				    	// Class yoksa ekle.
+//						if (DoesClassExists(ctx.children.get(i+1).getText()) == false){
+//							if (getTypebyName(ctx.children.get(i+1).getText()) != "")
+//	    	    		    	{classType = getTypebyName(ctx.children.get(i+1).getText());}
+//	    	    		    	else
+//	    	    		    	{classType = "Class";}
+//								
+//							addVertice(0,ctx.children.get(i+1).getText(),classType);
+//							}
+    				}
+    				else if(ctx.children.get(i+1).getText().contains(",")){
+    					//Virg�llerin say�s�n� buluyoruz.    					
+    					String[] words = ctx.children.get(i+1).getText().split(",");   
+    					
+    					for (String s: words) {
+    						dugumler.add(new Nodes(MainClassOrInterface,"extends",s)); // Add the relation to the list.
+//
+//    						// Class yoksa ekle.
+//    						if (DoesClassExists(s) == false){
+//    							if (getTypebyName(s) != "")
+//    	    	    		    	{classType = getTypebyName(s);}
+//    	    	    		    	else
+//    	    	    		    	{classType = "Class";}
+//    								
+//    							addVertice(0,s,classType);
+//    							}
+    					}
+    				}
+    			}
+    			
+    			if (ctx.children.get(i).getText().equals("implements")){
+    				if(!ctx.children.get(i+1).getText().contains(",")){
+	    				//System.out.println(MainClassOrInterface + " [" + ctx.children.get(i) + "] " +  ctx.children.get(i+1).getText());	    	
+				    	//SuperClass = ctx.children.get(i+1).getText();	  
+				    	dugumler.add(new Nodes(MainClassOrInterface,"implements",ctx.children.get(i+1).getText())); // Add the relation to the list.
+				    	
+				    	// Class yoksa ekle.
+//						if (DoesClassExists(ctx.children.get(i+1).getText()) == false){
+//							if (getTypebyName(ctx.children.get(i+1).getText()) != "")
+//	    	    		    	{classType = getTypebyName(ctx.children.get(i+1).getText());}
+//	    	    		    	else
+//	    	    		    	{classType = "Class";}
+//								
+//							addVertice(0,ctx.children.get(i+1).getText(),classType);
+//							}
+    				
+    				}
+    				else if(ctx.children.get(i+1).getText().contains(",")){
+    					//Virg�llerin say�s�n� buluyoruz.    					
+    					String[] words = ctx.children.get(i+1).getText().split(",");   
+    					
+    					for (String s: words) {
+    						dugumler.add(new Nodes(MainClassOrInterface,"implements",s)); // Add the relation to the list.
+    						
+    						// Class yoksa ekle.
+//    						if (DoesClassExists(s) == false){
+//    							if (getTypebyName(s) != "")
+//    	    	    		    	{classType = getTypebyName(s);}
+//    	    	    		    	else
+//    	    	    		    	{classType = "Class";}
+//    								
+//    							addVertice(0,s,classType);
+//    							}
+    					}
+    				}
+    			}
+    		}
+		
+    	}
+    	
+    	return super.visitInterfaceDeclaration(ctx);
+    }      
+//    //********2*********************************************************************************************************   
+//    //********2*********************************************************************************************************
+
+}

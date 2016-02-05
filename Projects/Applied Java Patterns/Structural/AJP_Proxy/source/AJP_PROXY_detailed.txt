@@ -1,0 +1,47 @@
+v 1 RunPattern (Class)
+v 2 Address (Interface)
+v 3 AddressImpl (Class)
+v 4 DataCreator (Class)
+v 5 AddressBook (Interface)
+v 6 FileLoader (Class)
+v 7 AddressBookImpl (Class)
+v 8 AddressBookProxy (Class)
+v 9 Serializable (Interface)
+e 2 - Address extends 9 - Serializable
+e 3 - AddressImpl implements 2 - Address
+e 7 - AddressBookImpl implements 5 - AddressBook
+e 8 - AddressBookProxy implements 5 - AddressBook
+e 1 - RunPattern overrides_methods_of 1 - RunPattern
+e 1 - RunPattern related_with_its_method 8 - AddressBookProxy
+e 1 - RunPattern creates_objects_of 8 - AddressBookProxy
+e 1 - RunPattern creates_objects_of 3 - AddressImpl
+e 1 - RunPattern calls_method_of 3 - AddressImpl
+e 3 - AddressImpl overrides_methods_of 3 - AddressImpl
+e 4 - DataCreator overrides_methods_of 1 - RunPattern
+e 4 - DataCreator overrides_methods_of 4 - DataCreator
+e 4 - DataCreator related_with_its_method 9 - Serializable
+e 4 - DataCreator has_a_method_with_the_return_type_of 9 - Serializable
+e 4 - DataCreator creates_objects_of 3 - AddressImpl
+e 4 - DataCreator has_a_method_that_has_an_input_parameter_with_the_type_of 9 - Serializable
+e 5 - AddressBook related_with_its_method 2 - Address
+e 5 - AddressBook has_a_method_that_has_an_input_parameter_with_the_type_of 2 - Address
+e 5 - AddressBook has_a_method_with_the_return_type_of 2 - Address
+e 6 - FileLoader overrides_methods_of 6 - FileLoader
+e 6 - FileLoader related_with_its_method 9 - Serializable
+e 6 - FileLoader has_a_method_that_has_an_input_parameter_with_the_type_of 9 - Serializable
+e 7 - AddressBookImpl overrides_methods_of 7 - AddressBookImpl
+e 7 - AddressBookImpl related_with_its_method 2 - Address
+e 7 - AddressBookImpl has_a_method_with_the_return_type_of 2 - Address
+e 7 - AddressBookImpl overrides_methods_of 3 - AddressImpl
+e 7 - AddressBookImpl related_with_its_method 3 - AddressImpl
+e 7 - AddressBookImpl has_a_method_that_has_an_input_parameter_with_the_type_of 2 - Address
+e 7 - AddressBookImpl calls_method_of 6 - FileLoader
+e 8 - AddressBookProxy has_the_field_type_of 7 - AddressBookImpl
+e 8 - AddressBookProxy overrides_methods_of 7 - AddressBookImpl
+e 8 - AddressBookProxy creates_objects_of 7 - AddressBookImpl
+e 8 - AddressBookProxy calls_method_of 7 - AddressBookImpl
+e 8 - AddressBookProxy related_with_its_method 2 - Address
+e 8 - AddressBookProxy has_a_method_with_the_return_type_of 2 - Address
+e 8 - AddressBookProxy overrides_methods_of 3 - AddressImpl
+e 8 - AddressBookProxy related_with_its_method 3 - AddressImpl
+e 8 - AddressBookProxy has_a_method_that_has_an_input_parameter_with_the_type_of 2 - Address

@@ -1,0 +1,10 @@
+
+digraph SubdueGraph {
+  3 [label="Class",color=blue,fontcolor=blue];
+  5 [label="Class",color=blue,fontcolor=blue];
+  8 [label="Interface",color=blue,fontcolor=blue];
+  5 -> 8 [label="implements",color=blue,fontcolor=blue];
+  3 -> 8 [label="related_with_its_method",color=blue,fontcolor=blue];
+  5 -> 8 [label="related_with_its_method",color=blue,fontcolor=blue];
+  8 -> 8 [label="has_a_method_with_the_return_type_of",color=blue,fontcolor=blue];
+}

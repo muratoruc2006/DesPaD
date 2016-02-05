@@ -1,0 +1,244 @@
+v 1 Class
+v 2 Class
+v 3 Class
+v 4 Class
+v 5 Interface
+v 6 Abstract
+v 7 Interface
+v 8 Interface
+v 9 Abstract
+v 10 Class
+v 11 Class
+v 12 Interface
+v 13 Interface
+v 14 Class
+v 15 Class
+v 16 Class
+v 17 Class
+v 18 Class
+v 19 Class
+v 20 Class
+v 21 Class
+v 22 Class
+v 23 Class
+v 24 Class
+v 25 Interface
+v 26 Interface
+v 27 Interface
+v 28 Class
+v 29 Class
+v 30 Abstract
+v 31 Class
+v 32 Class
+v 33 Class
+v 34 Class
+v 35 Class
+v 36 Class
+v 37 Class
+v 38 Class
+v 39 Class
+v 40 Class
+v 41 Class
+v 42 Class
+v 43 Interface
+v 44 Class
+v 45 Class
+v 46 Class
+v 47 Class
+v 48 Class
+v 49 Class
+v 50 Class
+v 51 Class
+v 52 Class
+v 53 Class
+v 54 Interface
+e 2 9 extends
+e 3 13 implements
+e 6 26 implements
+e 9 7 implements
+e 10 9 extends
+e 11 13 implements
+e 15 6 extends
+e 16 26 implements
+e 19 30 extends
+e 20 23 extends
+e 21 34 extends
+e 22 23 extends
+e 23 29 extends
+e 23 25 implements
+e 28 33 extends
+e 30 29 extends
+e 30 25 implements
+e 34 25 implements
+e 15 54 implements
+e 36 12 implements
+e 39 43 implements
+e 41 26 implements
+e 45 43 implements
+e 47 18 extends
+e 2 14 has_the_field_type_of
+e 2 14 creates_objects_of
+e 2 34 calls_method_of
+e 3 14 related_with_its_method
+e 3 14 overrides_methods_of
+e 3 14 creates_objects_of
+e 4 5 related_with_its_method
+e 6 25 related_with_its_method
+e 6 33 related_with_its_method
+e 6 25 overrides_methods_of
+e 6 34 creates_objects_of
+e 6 13 related_with_its_method
+e 6 13 overrides_methods_of
+e 6 3 creates_objects_of
+e 6 11 creates_objects_of
+e 12 32 related_with_its_method
+e 15 16 has_the_field_type_of
+e 15 16 creates_objects_of
+e 15 16 related_with_its_method
+e 15 34 creates_objects_of
+e 15 31 related_with_its_method
+e 15 31 overrides_methods_of
+e 15 25 related_with_its_method
+e 15 15 related_with_its_method
+e 15 15 creates_objects_of
+e 15 15 calls_method_of
+e 15 13 related_with_its_method
+e 15 13 overrides_methods_of
+e 15 11 creates_objects_of
+e 15 31 creates_objects_of
+e 15 1 calls_method_of
+e 16 31 related_with_its_method
+e 16 32 related_with_its_method
+e 16 25 related_with_its_method
+e 16 33 related_with_its_method
+e 15 31 has_the_field_type_of
+e 15 18 has_the_field_type_of
+e 15 17 has_the_field_type_of
+e 15 48 related_with_its_method
+e 15 48 creates_objects_of
+e 15 18 creates_objects_of
+e 15 17 creates_objects_of
+e 15 30 related_with_its_method
+e 15 25 has_the_field_type_of
+e 19 30 overrides_methods_of
+e 20 23 overrides_methods_of
+e 20 25 related_with_its_method
+e 20 31 related_with_its_method
+e 21 34 overrides_methods_of
+e 21 31 related_with_its_method
+e 21 25 related_with_its_method
+e 21 25 has_the_field_type_of
+e 21 31 has_the_field_type_of
+e 22 23 overrides_methods_of
+e 22 25 related_with_its_method
+e 22 31 related_with_its_method
+e 22 27 related_with_its_method
+e 22 27 creates_objects_of
+e 22 31 has_the_field_type_of
+e 23 25 has_the_field_type_of
+e 23 25 related_with_its_method
+e 23 31 related_with_its_method
+e 23 25 overrides_methods_of
+e 25 31 related_with_its_method
+e 26 25 related_with_its_method
+e 26 33 related_with_its_method
+e 28 33 overrides_methods_of
+e 28 24 creates_objects_of
+e 28 24 calls_method_of
+e 29 33 creates_objects_of
+e 29 28 creates_objects_of
+e 30 31 related_with_its_method
+e 30 31 overrides_methods_of
+e 30 31 creates_objects_of
+e 31 25 related_with_its_method
+e 31 32 creates_objects_of
+e 31 33 related_with_its_method
+e 31 26 related_with_its_method
+e 31 30 related_with_its_method
+e 31 27 related_with_its_method
+e 31 27 creates_objects_of
+e 31 30 has_the_field_type_of
+e 31 27 calls_method_of
+e 32 25 has_the_field_type_of
+e 32 25 related_with_its_method
+e 32 25 overrides_methods_of
+e 34 25 related_with_its_method
+e 34 25 overrides_methods_of
+e 34 30 creates_objects_of
+e 34 34 creates_objects_of
+e 34 34 calls_method_of
+e 34 31 related_with_its_method
+e 15 35 has_the_field_type_of
+e 15 40 has_the_field_type_of
+e 15 12 has_the_field_type_of
+e 15 32 creates_objects_of
+e 15 32 calls_method_of
+e 15 43 related_with_its_method
+e 15 35 related_with_its_method
+e 15 35 overrides_methods_of
+e 15 35 creates_objects_of
+e 15 12 related_with_its_method
+e 15 12 overrides_methods_of
+e 15 36 creates_objects_of
+e 15 40 related_with_its_method
+e 15 40 overrides_methods_of
+e 15 40 creates_objects_of
+e 15 45 related_with_its_method
+e 15 45 creates_objects_of
+e 15 39 related_with_its_method
+e 15 39 creates_objects_of
+e 15 47 creates_objects_of
+e 15 7 related_with_its_method
+e 15 49 related_with_its_method
+e 15 49 creates_objects_of
+e 15 7 overrides_methods_of
+e 15 10 creates_objects_of
+e 15 10 calls_method_of
+e 15 31 calls_method_of
+e 15 32 related_with_its_method
+e 38 37 creates_objects_of
+e 38 38 creates_objects_of
+e 38 32 related_with_its_method
+e 38 38 calls_method_of
+e 38 37 related_with_its_method
+e 38 37 overrides_methods_of
+e 39 41 has_the_field_type_of
+e 39 54 has_the_field_type_of
+e 39 54 related_with_its_method
+e 39 41 creates_objects_of
+e 39 25 related_with_its_method
+e 39 25 overrides_methods_of
+e 39 44 related_with_its_method
+e 39 31 related_with_its_method
+e 41 44 has_the_field_type_of
+e 42 44 related_with_its_method
+e 42 25 related_with_its_method
+e 42 33 related_with_its_method
+e 42 25 overrides_methods_of
+e 42 44 creates_objects_of
+e 42 42 creates_objects_of
+e 42 25 has_the_field_type_of
+e 43 25 related_with_its_method
+e 43 31 related_with_its_method
+e 44 25 has_the_field_type_of
+e 44 25 related_with_its_method
+e 44 34 related_with_its_method
+e 44 34 overrides_methods_of
+e 45 54 has_the_field_type_of
+e 46 32 related_with_its_method
+e 46 6 calls_method_of
+e 46 54 related_with_its_method
+e 46 46 creates_objects_of
+e 46 25 related_with_its_method
+e 46 25 overrides_methods_of
+e 46 31 related_with_its_method
+e 48 49 calls_method_of
+e 48 1 calls_method_of
+e 52 7 related_with_its_method
+e 52 50 creates_objects_of
+e 52 51 creates_objects_of
+e 52 52 creates_objects_of
+e 52 50 calls_method_of
+e 52 53 creates_objects_of
+e 53 53 calls_method_of
+e 54 25 related_with_its_method

@@ -1,0 +1,31 @@
+// Subdue 5.2.2 graph in dot format
+
+digraph SubdueGraph {
+  1 [label="C",color=black,fontcolor=black];
+  2 [label="I",color=black,fontcolor=black];
+  3 [label="C",color=black,fontcolor=black];
+  4 [label="C",color=black,fontcolor=black];
+  5 [label="C",color=black,fontcolor=black];
+  6 [label="I",color=black,fontcolor=black];
+  7 [label="C",color=black,fontcolor=black];
+  8 [label="C",color=black,fontcolor=black];
+  9 [label="I",color=black,fontcolor=black];
+  10 [label="C",color=black,fontcolor=black];
+  4 -> 2 [label="I",color=black,fontcolor=black];
+  5 -> 9 [label="I",color=black,fontcolor=black];
+  7 -> 9 [label="I",color=black,fontcolor=black];
+  8 -> 6 [label="I",color=black,fontcolor=black];
+  3 -> 1 [label="M",color=black,fontcolor=black];
+  3 -> 1 [label="C",color=black,fontcolor=black];
+  3 -> 10 [label="MC",color=black,fontcolor=black];
+  3 -> 1 [label="MC",color=black,fontcolor=black];
+  3 -> 4 [label="C",color=black,fontcolor=black];
+  3 -> 8 [label="C",color=black,fontcolor=black];
+  10 -> 9 [label="F",color=black,fontcolor=black];
+  10 -> 7 [label="C",color=black,fontcolor=black];
+  10 -> 5 [label="C",color=black,fontcolor=black];
+  10 -> 5 [label="R",color=black,fontcolor=black];
+  10 -> 9 [label="M",color=black,fontcolor=black];
+  10 -> 9 [label="O",color=black,fontcolor=black];
+  10 -> 9 [label="MI",color=black,fontcolor=black];
+}

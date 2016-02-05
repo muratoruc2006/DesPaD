@@ -1,0 +1,138 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.7.0_65" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq t {comp label1:::p::p, space :21:433:x}, seq {par l {comp label4::l:p::p, seq l {par t:::p {comp button1::l::260:x, comp tfThreshold::l:::x, comp cbSelectionDP::l::260:x, comp label2::l:p::p, comp btRun::l::260:x}, space :p:30:p, par l:::p {comp label3:::p::p, comp tfProjectName::::260:x, seq {comp chbOverlap:::p::p, space :::x, comp chbInnerClass:::p::p}, comp btRunSgiso::l::260:x, comp button2::l::260:x}}}, space :0:56:x}, seq t {par t {comp scrollPane1::::594:x, seq {par l {seq {comp label5:::p::p, space :0:418:x}, comp tfProgramPath::l::564:x, comp tfPath::t::564:x}, space :::p, par l:::p {comp btPathFinder:::::x, comp btProgramPath:::::x}}}, space :::p}}}}"
+			"$verticalGroup": "par l {seq l {space :p:29:p, comp label1:::p::p, space :p:5:p, par b {comp tfPath::b:p::p, comp btPathFinder::b::31:x}, space :::p, comp label5:::p::p, space :::p, par b {comp tfProgramPath::b:p::p, comp btProgramPath::b:p::p}, space s:::p, par b {comp label2::b:p::p, comp label3::b:p::p}, space :::p, par b {comp cbSelectionDP::b:p::p, comp tfProjectName::b:p::p}, space s:::p, comp label4:::p::p, space u:::p, par b {comp tfThreshold::b:p::p, comp chbOverlap::b:p::p, comp chbInnerClass::b:p::p}, space s:::p, par b {comp btRun::b:p:47:p, comp btRunSgiso::b:p:47:p}, space s:::p, par l:::p {comp button2::::45:x, comp button1::::45:x}, space s:::p, comp scrollPane1::::184:x, space :::p}}"
+		} ) {
+			name: "this"
+			"$sizePolicy": 1
+			"$locationPolicy": 1
+			"title": "DesPaD (Design Pattern Detector)"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 2, "FileView.computerIcon" )
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "thisWindowClosing", true ) )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btPathFinder"
+				"text": "..."
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 1, false )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btPathFinderActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Source Code Directory Path"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tfPath"
+				"text": "..."
+				"editable": false
+				"foreground": sfield java.awt.Color blue
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Select Design Pattern"
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "cbSelectionDP"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "FACTORY_METHOD"
+					addElement( "FACTORY_METHOD" )
+					addElement( "PROTOTYPE" )
+					addElement( "ABSTRACT_FACTORY" )
+					addElement( "BUILDER" )
+					addElement( "SINGLETON" )
+					addElement( "COMPOSITE" )
+					addElement( "FACADE" )
+					addElement( "DECORATOR" )
+					addElement( "DECORATOR2" )
+					addElement( "BRIDGE" )
+					addElement( "FLYWEIGHT" )
+					addElement( "ADAPTER" )
+					addElement( "PROXY" )
+					addElement( "MEDIATOR" )
+					addElement( "STATE" )
+					addElement( "OBSERVER" )
+					addElement( "TEMPLATE_METHOD" )
+					addElement( "TEMPLATE_METHOD2" )
+					addElement( "COMMAND" )
+					addElement( "CHAIN_OF_RESPONSIBILITY" )
+					addElement( "INTERPRETER" )
+					addElement( "MEMENTO" )
+					addElement( "ITERATOR" )
+					addElement( "STRATEGY" )
+					addElement( "VISITOR" )
+				}
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btRun"
+				"text": "1. Build Model Graph"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btRunActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Project Name"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tfProjectName"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Threshold"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tfThreshold"
+				"text": "0.0"
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "chbOverlap"
+				"text": "Overlap"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btRunSgiso"
+				"text": "2. Run Subdue-Sgiso Algorithm"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btRunSgisoActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "taInfo"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Program Directory Path"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "tfProgramPath"
+				"editable": false
+				"foreground": sfield java.awt.Color blue
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btProgramPath"
+				"text": "..."
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btProgramPathActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "3. Exclude overlap outputs"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "4. Graph Representations"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "chbInnerClass"
+				"text": "Include Inner Classes"
+				"selected": true
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 630, 625 )
+		} )
+	}
+}

@@ -1,0 +1,1607 @@
+v 1 Version (Class)
+v 2 LoadingTestCollector (Class)
+v 3 ReloadingTestSuiteLoader (Class)
+v 4 Sorter (Class)
+v 5 Swapper (Interface)
+v 6 BaseTestRunner (Abstract)
+v 7 TestCollector (Interface)
+v 8 TestRunListener (Interface)
+v 9 ClassPathTestCollector (Abstract)
+v 10 SimpleTestCollector (Class)
+v 11 StandardTestSuiteLoader (Class)
+v 12 FailureDetailView (Interface)
+v 13 TestSuiteLoader (Interface)
+v 14 TestCaseClassLoader (Class)
+v 15 TestRunner (Class)
+v 16 ResultPrinter (Class)
+v 17 Logo (Class)
+v 18 ProgressBar (Class)
+v 19 ExceptionTestCase (Class)
+v 20 RepeatedTest (Class)
+v 21 ActiveTestSuite (Class)
+v 22 TestSetup (Class)
+v 23 TestDecorator (Class)
+v 24 ComparisonCompactor (Class)
+v 25 Test (Interface)
+v 26 TestListener (Interface)
+v 27 Protectable (Interface)
+v 28 ComparisonFailure (Class)
+v 29 Assert (Class)
+v 30 TestCase (Abstract)
+v 31 TestResult (Class)
+v 32 TestFailure (Class)
+v 33 AssertionFailedError (Class)
+v 34 TestSuite (Class)
+v 35 CounterPanel (Class)
+v 36 DefaultFailureDetailView (Class)
+v 37 StackTraceListModel (Class)
+v 38 StackEntryRenderer (Class)
+v 39 TestHierarchyRunView (Class)
+v 40 StatusLine (Class)
+v 41 TestSuitePanel (Class)
+v 42 TestTreeCellRenderer (Class)
+v 43 TestRunView (Interface)
+v 44 TestTreeModel (Class)
+v 45 FailureRunView (Class)
+v 46 FailureListCellRenderer (Class)
+v 47 MacProgressBar (Class)
+v 48 AboutDialog (Class)
+v 49 TestSelector (Class)
+v 50 TestCellRenderer (Class)
+v 51 DoubleClickListener (Class)
+v 52 KeySelectListener (Class)
+v 53 ParallelSwapper (Class)
+v 54 TestRunContext (Interface)
+v 55 ClassLoader (Class)
+v 56 Canvas (Class)
+v 57 Error (Class)
+v 58 JPanel (Class)
+v 59 AbstractListModel (Class)
+v 60 DefaultListCellRenderer (Class)
+v 61 JTextField (Class)
+v 62 DefaultTreeCellRenderer (Class)
+v 63 TreeModel (Interface)
+v 64 JDialog (Class)
+v 65 MouseAdapter (Class)
+v 66 KeyAdapter (Class)
+v 67 SorterSwapper (Interface)
+v 68 JProgressBar (Class)
+v 69 String (Class)
+v 70 boolean (Class)
+v 71 Class (Class)
+v 72 testClass (Class)
+v 73 aClass (Class)
+v 74 Vector (Class)
+v 75 int (Class)
+v 76 values (Class)
+v 77 void (Class)
+v 78 test (Class)
+v 79 Properties (Class)
+v 80 FileOutputStream (Class)
+v 81 fos (Class)
+v 82 Throwable (Class)
+v 83 suiteClassName (Class)
+v 84 e (Class)
+v 85 Method (Class)
+v 86 suiteMethod (Class)
+v 87 long (Class)
+v 88 NumberFormat (Class)
+v 89 s (Class)
+v 90 File (Class)
+v 91 InputStream (Class)
+v 92 FileInputStream (Class)
+v 93 is (Class)
+v 94 Integer (Class)
+v 95 StringWriter (Class)
+v 96 PrintWriter (Class)
+v 97 t (Class)
+v 98 StringBuffer (Class)
+v 99 stringWriter (Class)
+v 100 buffer (Class)
+v 101 StringReader (Class)
+v 102 BufferedReader (Class)
+v 103 br (Class)
+v 104 pw (Class)
+v 105 sw (Class)
+v 106 Enumeration (Class)
+v 107 Hashtable (Class)
+v 108 result (Class)
+v 109 roots (Class)
+v 110 thisRoot (Class)
+v 111 StringTokenizer (Class)
+v 112 tokenizer (Class)
+v 113 classFileName (Class)
+v 114 Component (Class)
+v 115 st (Class)
+v 116 URL (Class)
+v 117 byte (Class)
+v 118 ClassNotFoundException (Class)
+v 119 file (Class)
+v 120 ByteArrayOutputStream (Class)
+v 121 stream (Class)
+v 122 out (Class)
+v 123 ZipFile (Class)
+v 124 archive (Class)
+v 125 ZipEntry (Class)
+v 126 zipFile (Class)
+v 127 entry (Class)
+v 128 p (Class)
+v 129 path (Class)
+v 130 PrintStream (Class)
+v 131 runner (Class)
+v 132 System (Class)
+v 133 suite (Class)
+v 134 aTestRunner (Class)
+v 135 r (Class)
+v 136 Exception (Class)
+v 137 booBoos (Class)
+v 138 booBoo (Class)
+v 139 Frame (Class)
+v 140 Thread (Class)
+v 141 TextArea (Class)
+v 142 TextField (Class)
+v 143 Button (Class)
+v 144 List (Class)
+v 145 Label (Class)
+v 146 Checkbox (Class)
+v 147 Font (Class)
+v 148 about (Class)
+v 149 Panel (Class)
+v 150 double (Class)
+v 151 GridBagConstraints (Class)
+v 152 Insets (Class)
+v 153 Menu (Class)
+v 154 MenuItem (Class)
+v 155 ActionListener (Class)
+v 156 ActionEvent (Class)
+v 157 menu (Class)
+v 158 MenuBar (Class)
+v 159 Image (Class)
+v 160 frame (Class)
+v 161 BorderLayout (Class)
+v 162 WindowAdapter (Class)
+v 163 WindowEvent (Class)
+v 164 TextListener (Class)
+v 165 TextEvent (Class)
+v 166 ItemListener (Class)
+v 167 ItemEvent (Class)
+v 168 GridLayout (Class)
+v 169 GridBagLayout (Class)
+v 170 Toolkit (Class)
+v 171 url (Class)
+v 172 rerunTest (Class)
+v 173 reloadedTest (Class)
+v 174 label (Class)
+v 175 MediaTracker (Class)
+v 176 tracker (Class)
+v 177 Graphics (Class)
+v 178 Color (Class)
+v 179 Rectangle (Class)
+v 180 super (Class)
+v 181 IllegalArgumentException (Class)
+v 182 source (Class)
+v 183 Object (Class)
+v 184 expected (Class)
+v 185 Double (Class)
+v 186 float (Class)
+v 187 Float (Class)
+v 188 Long (Class)
+v 189 Boolean (Class)
+v 190 Byte (Class)
+v 191 char (Class)
+v 192 Character (Class)
+v 193 short (Class)
+v 194 Short (Class)
+v 195 runMethod (Class)
+v 196 Constructor (Class)
+v 197 theClass (Class)
+v 198 constructor (Class)
+v 199 superClass (Class)
+v 200 m (Class)
+v 201 names (Class)
+v 202 JFrame (Class)
+v 203 JComboBox (Class)
+v 204 DefaultListModel (Class)
+v 205 JLabel (Class)
+v 206 JButton (Class)
+v 207 JTabbedPane (Class)
+v 208 JCheckBox (Class)
+v 209 Runnable (Class)
+v 210 v (Class)
+v 211 viewClass (Class)
+v 212 JMenu (Class)
+v 213 JMenuItem (Class)
+v 214 Icon (Class)
+v 215 JMenuBar (Class)
+v 216 box (Class)
+v 217 run (Class)
+v 218 combo (Class)
+v 219 KeyEvent (Class)
+v 220 event (Class)
+v 221 lv (Class)
+v 222 tv (Class)
+v 223 ChangeListener (Class)
+v 224 ChangeEvent (Class)
+v 225 view (Class)
+v 226 JScrollPane (Class)
+v 227 JSeparator (Class)
+v 228 JSplitPane (Class)
+v 229 ListModel (Class)
+v 230 DocumentEvent (Class)
+v 231 clazz (Class)
+v 232 param (Class)
+v 233 clazzConstructor (Class)
+v 234 selector (Class)
+v 235 collectorClass (Class)
+v 236 ImageIcon (Class)
+v 237 icon (Class)
+v 238 FileReader (Class)
+v 239 BufferedWriter (Class)
+v 240 FileWriter (Class)
+v 241 testsuite (Class)
+v 242 bw (Class)
+v 243 failures (Class)
+v 244 failure (Class)
+v 245 field (Class)
+v 246 BorderFactory (Class)
+v 247 JList (Class)
+v 248 TreeSelectionListener (Class)
+v 249 TreeSelectionEvent (Class)
+v 250 JTree (Class)
+v 251 tree (Class)
+v 252 model (Class)
+v 253 vpath (Class)
+v 254 TreePath (Class)
+v 255 Dimension (Class)
+v 256 o (Class)
+v 257 testModel (Class)
+v 258 ToolTipManager (Class)
+v 259 treePath (Class)
+v 260 TreeModelListener (Class)
+v 261 target (Class)
+v 262 TreeModelEvent (Class)
+v 263 l (Class)
+v 264 ListSelectionListener (Class)
+v 265 ListSelectionEvent (Class)
+v 266 MouseEvent (Class)
+v 267 Cursor (Class)
+v 268 c (Class)
+v 269 collector (Class)
+v 270 each (Class)
+v 271 displayVector (Class)
+e 2 - LoadingTestCollector extends 9 - ClassPathTestCollector
+e 3 - ReloadingTestSuiteLoader implements 13 - TestSuiteLoader
+e 6 - BaseTestRunner implements 26 - TestListener
+e 9 - ClassPathTestCollector implements 7 - TestCollector
+e 10 - SimpleTestCollector extends 9 - ClassPathTestCollector
+e 11 - StandardTestSuiteLoader implements 13 - TestSuiteLoader
+e 14 - TestCaseClassLoader extends 55 - ClassLoader
+e 15 - TestRunner extends 6 - BaseTestRunner
+e 16 - ResultPrinter implements 26 - TestListener
+e 17 - Logo extends 56 - Canvas
+e 18 - ProgressBar extends 56 - Canvas
+e 19 - ExceptionTestCase extends 30 - TestCase
+e 20 - RepeatedTest extends 23 - TestDecorator
+e 21 - ActiveTestSuite extends 34 - TestSuite
+e 22 - TestSetup extends 23 - TestDecorator
+e 23 - TestDecorator extends 29 - Assert
+e 23 - TestDecorator implements 25 - Test
+e 28 - ComparisonFailure extends 33 - AssertionFailedError
+e 30 - TestCase extends 29 - Assert
+e 30 - TestCase implements 25 - Test
+e 33 - AssertionFailedError extends 57 - Error
+e 34 - TestSuite implements 25 - Test
+e 15 - TestRunner implements 54 - TestRunContext
+e 35 - CounterPanel extends 58 - JPanel
+e 36 - DefaultFailureDetailView implements 12 - FailureDetailView
+e 37 - StackTraceListModel extends 59 - AbstractListModel
+e 38 - StackEntryRenderer extends 60 - DefaultListCellRenderer
+e 39 - TestHierarchyRunView implements 43 - TestRunView
+e 40 - StatusLine extends 61 - JTextField
+e 41 - TestSuitePanel extends 58 - JPanel
+e 41 - TestSuitePanel implements 26 - TestListener
+e 42 - TestTreeCellRenderer extends 62 - DefaultTreeCellRenderer
+e 44 - TestTreeModel implements 63 - TreeModel
+e 45 - FailureRunView implements 43 - TestRunView
+e 46 - FailureListCellRenderer extends 60 - DefaultListCellRenderer
+e 47 - MacProgressBar extends 18 - ProgressBar
+e 48 - AboutDialog extends 64 - JDialog
+e 49 - TestSelector extends 64 - JDialog
+e 50 - TestCellRenderer extends 60 - DefaultListCellRenderer
+e 51 - DoubleClickListener extends 65 - MouseAdapter
+e 52 - KeySelectListener extends 66 - KeyAdapter
+e 53 - ParallelSwapper implements 67 - Sorter.Swapper
+e 18 - ProgressBar extends 68 - JProgressBar
+e 1 - Version related_with_its_method 69 - String
+e 1 - Version has_a_method_with_the_return_type_of 69 - String
+e 1 - Version overrides_methods_of 1 - Version
+e 1 - Version related_with_its_method 69 - String[]
+e 1 - Version has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String[]
+e 2 - LoadingTestCollector has_the_field_type_of 14 - TestCaseClassLoader
+e 2 - LoadingTestCollector creates_objects_of 14 - TestCaseClassLoader
+e 2 - LoadingTestCollector has_the_return_type_of 14 - TestCaseClassLoader
+e 2 - LoadingTestCollector related_with_its_method 70 - boolean
+e 2 - LoadingTestCollector has_a_method_with_the_return_type_of 70 - boolean
+e 2 - LoadingTestCollector overrides_methods_of 2 - LoadingTestCollector
+e 2 - LoadingTestCollector related_with_its_method 69 - String
+e 2 - LoadingTestCollector has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 2 - LoadingTestCollector related_with_its_method 71 - Class
+e 2 - LoadingTestCollector has_a_method_with_the_return_type_of 71 - Class
+e 2 - LoadingTestCollector has_a_method_that_has_an_input_parameter_with_the_type_of 71 - Class
+e 2 - LoadingTestCollector calls_method_of 72 - testClass
+e 2 - LoadingTestCollector calls_method_of 14 - TestCaseClassLoader
+e 2 - LoadingTestCollector creates_objects_of 71 - Class
+e 2 - LoadingTestCollector has_the_return_type_of 71 - Class
+e 2 - LoadingTestCollector calls_method_of 34 - TestSuite
+e 2 - LoadingTestCollector calls_method_of 71 - Class
+e 3 - ReloadingTestSuiteLoader related_with_its_method 71 - Class
+e 3 - ReloadingTestSuiteLoader has_a_method_with_the_return_type_of 71 - Class
+e 3 - ReloadingTestSuiteLoader overrides_methods_of 3 - ReloadingTestSuiteLoader
+e 3 - ReloadingTestSuiteLoader related_with_its_method 69 - String
+e 3 - ReloadingTestSuiteLoader has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 3 - ReloadingTestSuiteLoader has_a_method_that_has_an_input_parameter_with_the_type_of 71 - Class
+e 3 - ReloadingTestSuiteLoader calls_method_of 73 - aClass
+e 3 - ReloadingTestSuiteLoader related_with_its_method 14 - TestCaseClassLoader
+e 3 - ReloadingTestSuiteLoader has_a_method_with_the_return_type_of 14 - TestCaseClassLoader
+e 3 - ReloadingTestSuiteLoader creates_objects_of 14 - TestCaseClassLoader
+e 4 - Sorter overrides_methods_of 4 - Sorter
+e 4 - Sorter related_with_its_method 74 - Vector
+e 4 - Sorter has_a_method_that_has_an_input_parameter_with_the_type_of 74 - Vector
+e 4 - Sorter related_with_its_method 75 - int
+e 4 - Sorter has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 4 - Sorter related_with_its_method 5 - Swapper
+e 4 - Sorter has_a_method_that_has_an_input_parameter_with_the_type_of 5 - Swapper
+e 4 - Sorter related_with_its_method 69 - String
+e 4 - Sorter calls_method_of 76 - values
+e 5 - Swapper related_with_its_method 74 - Vector
+e 5 - Swapper has_a_method_that_has_an_input_parameter_with_the_type_of 74 - Vector
+e 5 - Swapper related_with_its_method 75 - int
+e 5 - Swapper has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 6 - BaseTestRunner has_the_field_type_of 70 - boolean
+e 6 - BaseTestRunner overrides_methods_of 6 - BaseTestRunner
+e 6 - BaseTestRunner related_with_its_method 25 - Test
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 6 - BaseTestRunner calls_method_of 78 - test
+e 6 - BaseTestRunner related_with_its_method 79 - Properties
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 79 - Properties
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 79 - Properties
+e 6 - BaseTestRunner creates_objects_of 79 - Properties
+e 6 - BaseTestRunner related_with_its_method 80 - FileOutputStream
+e 6 - BaseTestRunner creates_objects_of 80 - FileOutputStream
+e 6 - BaseTestRunner calls_method_of 81 - fos
+e 6 - BaseTestRunner calls_method_of 80 - FileOutputStream
+e 6 - BaseTestRunner related_with_its_method 69 - String
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 6 - BaseTestRunner related_with_its_method 82 - Throwable
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 82 - Throwable
+e 6 - BaseTestRunner related_with_its_method 33 - AssertionFailedError
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 6 - BaseTestRunner related_with_its_method 75 - int
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 25 - Test
+e 6 - BaseTestRunner calls_method_of 83 - suiteClassName
+e 6 - BaseTestRunner related_with_its_method 71 - Class
+e 6 - BaseTestRunner calls_method_of 84 - e
+e 6 - BaseTestRunner related_with_its_method 85 - Method
+e 6 - BaseTestRunner creates_objects_of 71 - Class
+e 6 - BaseTestRunner creates_objects_of 34 - TestSuite
+e 6 - BaseTestRunner calls_method_of 86 - suiteMethod
+e 6 - BaseTestRunner calls_method_of 34 - TestSuite
+e 6 - BaseTestRunner calls_method_of 71 - Class
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 69 - String
+e 6 - BaseTestRunner related_with_its_method 87 - long
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 87 - long
+e 6 - BaseTestRunner calls_method_of 88 - NumberFormat
+e 6 - BaseTestRunner related_with_its_method 69 - String[]
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String[]
+e 6 - BaseTestRunner related_with_its_method 70 - boolean
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 70 - boolean
+e 6 - BaseTestRunner calls_method_of 89 - s
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 71 - Class
+e 6 - BaseTestRunner related_with_its_method 13 - TestSuiteLoader
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 13 - TestSuiteLoader
+e 6 - BaseTestRunner creates_objects_of 3 - ReloadingTestSuiteLoader
+e 6 - BaseTestRunner creates_objects_of 11 - StandardTestSuiteLoader
+e 6 - BaseTestRunner has_the_return_type_of 11 - StandardTestSuiteLoader
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 70 - boolean
+e 6 - BaseTestRunner related_with_its_method 90 - File
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 90 - File
+e 6 - BaseTestRunner creates_objects_of 90 - File
+e 6 - BaseTestRunner related_with_its_method 91 - InputStream
+e 6 - BaseTestRunner creates_objects_of 92 - FileInputStream
+e 6 - BaseTestRunner calls_method_of 93 - is
+e 6 - BaseTestRunner calls_method_of 79 - Properties
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 75 - int
+e 6 - BaseTestRunner calls_method_of 94 - Integer
+e 6 - BaseTestRunner related_with_its_method 95 - StringWriter
+e 6 - BaseTestRunner creates_objects_of 95 - StringWriter
+e 6 - BaseTestRunner related_with_its_method 96 - PrintWriter
+e 6 - BaseTestRunner creates_objects_of 96 - PrintWriter
+e 6 - BaseTestRunner calls_method_of 97 - t
+e 6 - BaseTestRunner calls_method_of 96 - PrintWriter
+e 6 - BaseTestRunner related_with_its_method 98 - StringBuffer
+e 6 - BaseTestRunner calls_method_of 99 - stringWriter
+e 6 - BaseTestRunner calls_method_of 100 - buffer
+e 6 - BaseTestRunner related_with_its_method 101 - StringReader
+e 6 - BaseTestRunner creates_objects_of 101 - StringReader
+e 6 - BaseTestRunner related_with_its_method 102 - BufferedReader
+e 6 - BaseTestRunner creates_objects_of 102 - BufferedReader
+e 6 - BaseTestRunner calls_method_of 103 - br
+e 6 - BaseTestRunner calls_method_of 102 - BufferedReader
+e 6 - BaseTestRunner calls_method_of 104 - pw
+e 6 - BaseTestRunner calls_method_of 105 - sw
+e 6 - BaseTestRunner has_the_field_type_of 75 - int
+e 6 - BaseTestRunner has_the_field_type_of 69 - String
+e 6 - BaseTestRunner has_the_field_type_of 79 - Properties
+e 7 - TestCollector has_a_method_with_the_return_type_of 106 - Enumeration
+e 7 - TestCollector related_with_its_method 106 - Enumeration
+e 8 - TestRunListener has_a_method_with_the_return_type_of 75 - int
+e 8 - TestRunListener related_with_its_method 69 - String
+e 8 - TestRunListener has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 8 - TestRunListener related_with_its_method 75 - int
+e 8 - TestRunListener has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 8 - TestRunListener related_with_its_method 87 - long
+e 8 - TestRunListener has_a_method_that_has_an_input_parameter_with_the_type_of 87 - long
+e 9 - ClassPathTestCollector has_the_field_type_of 75 - int
+e 9 - ClassPathTestCollector related_with_its_method 106 - Enumeration
+e 9 - ClassPathTestCollector has_a_method_with_the_return_type_of 106 - Enumeration
+e 9 - ClassPathTestCollector overrides_methods_of 9 - ClassPathTestCollector
+e 9 - ClassPathTestCollector related_with_its_method 69 - String
+e 9 - ClassPathTestCollector related_with_its_method 107 - Hashtable
+e 9 - ClassPathTestCollector calls_method_of 108 - result
+e 9 - ClassPathTestCollector has_a_method_with_the_return_type_of 107 - Hashtable
+e 9 - ClassPathTestCollector has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 9 - ClassPathTestCollector related_with_its_method 74 - Vector
+e 9 - ClassPathTestCollector has_a_method_that_has_an_input_parameter_with_the_type_of 74 - Vector
+e 9 - ClassPathTestCollector creates_objects_of 107 - Hashtable
+e 9 - ClassPathTestCollector calls_method_of 109 - roots
+e 9 - ClassPathTestCollector calls_method_of 107 - Hashtable
+e 9 - ClassPathTestCollector calls_method_of 84 - e
+e 9 - ClassPathTestCollector creates_objects_of 90 - File
+e 9 - ClassPathTestCollector calls_method_of 90 - File
+e 9 - ClassPathTestCollector related_with_its_method 90 - File
+e 9 - ClassPathTestCollector has_a_method_that_has_an_input_parameter_with_the_type_of 90 - File
+e 9 - ClassPathTestCollector has_a_method_that_has_an_input_parameter_with_the_type_of 107 - Hashtable
+e 9 - ClassPathTestCollector calls_method_of 110 - thisRoot
+e 9 - ClassPathTestCollector related_with_its_method 69 - String[]
+e 9 - ClassPathTestCollector related_with_its_method 75 - int
+e 9 - ClassPathTestCollector has_a_method_with_the_return_type_of 74 - Vector
+e 9 - ClassPathTestCollector creates_objects_of 74 - Vector
+e 9 - ClassPathTestCollector related_with_its_method 111 - StringTokenizer
+e 9 - ClassPathTestCollector creates_objects_of 111 - StringTokenizer
+e 9 - ClassPathTestCollector calls_method_of 112 - tokenizer
+e 9 - ClassPathTestCollector calls_method_of 111 - StringTokenizer
+e 9 - ClassPathTestCollector related_with_its_method 70 - boolean
+e 9 - ClassPathTestCollector has_a_method_with_the_return_type_of 70 - boolean
+e 9 - ClassPathTestCollector overrides_methods_of 2 - LoadingTestCollector
+e 9 - ClassPathTestCollector has_a_method_with_the_return_type_of 69 - String
+e 9 - ClassPathTestCollector calls_method_of 113 - classFileName
+e 10 - SimpleTestCollector related_with_its_method 70 - boolean
+e 10 - SimpleTestCollector has_a_method_with_the_return_type_of 70 - boolean
+e 10 - SimpleTestCollector overrides_methods_of 2 - LoadingTestCollector
+e 10 - SimpleTestCollector related_with_its_method 69 - String
+e 10 - SimpleTestCollector has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 11 - StandardTestSuiteLoader related_with_its_method 71 - Class
+e 11 - StandardTestSuiteLoader has_a_method_with_the_return_type_of 71 - Class
+e 11 - StandardTestSuiteLoader overrides_methods_of 3 - ReloadingTestSuiteLoader
+e 11 - StandardTestSuiteLoader related_with_its_method 69 - String
+e 11 - StandardTestSuiteLoader has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 11 - StandardTestSuiteLoader calls_method_of 71 - Class
+e 11 - StandardTestSuiteLoader has_a_method_that_has_an_input_parameter_with_the_type_of 71 - Class
+e 12 - FailureDetailView has_a_method_with_the_return_type_of 114 - Component
+e 12 - FailureDetailView related_with_its_method 114 - Component
+e 12 - FailureDetailView related_with_its_method 32 - TestFailure
+e 12 - FailureDetailView has_a_method_that_has_an_input_parameter_with_the_type_of 32 - TestFailure
+e 13 - TestSuiteLoader has_a_method_with_the_return_type_of 71 - Class
+e 13 - TestSuiteLoader related_with_its_method 71 - Class
+e 13 - TestSuiteLoader related_with_its_method 69 - String
+e 13 - TestSuiteLoader has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 13 - TestSuiteLoader has_a_method_that_has_an_input_parameter_with_the_type_of 71 - Class
+e 14 - TestCaseClassLoader has_the_field_type_of 74 - Vector
+e 14 - TestCaseClassLoader has_the_field_type_of 69 - String[]
+e 14 - TestCaseClassLoader has_the_field_type_of 69 - String
+e 14 - TestCaseClassLoader related_with_its_method 69 - String
+e 14 - TestCaseClassLoader has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 14 - TestCaseClassLoader overrides_methods_of 14 - TestCaseClassLoader
+e 14 - TestCaseClassLoader creates_objects_of 74 - Vector
+e 14 - TestCaseClassLoader related_with_its_method 111 - StringTokenizer
+e 14 - TestCaseClassLoader creates_objects_of 111 - StringTokenizer
+e 14 - TestCaseClassLoader calls_method_of 115 - st
+e 14 - TestCaseClassLoader calls_method_of 111 - StringTokenizer
+e 14 - TestCaseClassLoader related_with_its_method 116 - URL
+e 14 - TestCaseClassLoader has_a_method_with_the_return_type_of 116 - URL
+e 14 - TestCaseClassLoader calls_method_of 55 - ClassLoader
+e 14 - TestCaseClassLoader related_with_its_method 91 - InputStream
+e 14 - TestCaseClassLoader has_a_method_with_the_return_type_of 91 - InputStream
+e 14 - TestCaseClassLoader related_with_its_method 70 - boolean
+e 14 - TestCaseClassLoader has_a_method_with_the_return_type_of 70 - boolean
+e 14 - TestCaseClassLoader related_with_its_method 75 - int
+e 14 - TestCaseClassLoader related_with_its_method 71 - Class
+e 14 - TestCaseClassLoader has_a_method_with_the_return_type_of 71 - Class
+e 14 - TestCaseClassLoader has_a_method_that_has_an_input_parameter_with_the_type_of 70 - boolean
+e 14 - TestCaseClassLoader related_with_its_method 117 - byte[]
+e 14 - TestCaseClassLoader creates_objects_of 118 - ClassNotFoundException
+e 14 - TestCaseClassLoader has_a_method_with_the_return_type_of 117 - byte[]
+e 14 - TestCaseClassLoader has_the_return_type_of 118 - ClassNotFoundException
+e 14 - TestCaseClassLoader related_with_its_method 90 - File
+e 14 - TestCaseClassLoader creates_objects_of 90 - File
+e 14 - TestCaseClassLoader calls_method_of 119 - file
+e 14 - TestCaseClassLoader calls_method_of 90 - File
+e 14 - TestCaseClassLoader has_a_method_that_has_an_input_parameter_with_the_type_of 90 - File
+e 14 - TestCaseClassLoader related_with_its_method 92 - FileInputStream
+e 14 - TestCaseClassLoader creates_objects_of 92 - FileInputStream
+e 14 - TestCaseClassLoader related_with_its_method 120 - ByteArrayOutputStream
+e 14 - TestCaseClassLoader creates_objects_of 120 - ByteArrayOutputStream
+e 14 - TestCaseClassLoader creates_objects_of 117 - byte
+e 14 - TestCaseClassLoader calls_method_of 121 - stream
+e 14 - TestCaseClassLoader calls_method_of 117 - byte
+e 14 - TestCaseClassLoader calls_method_of 122 - out
+e 14 - TestCaseClassLoader related_with_its_method 123 - ZipFile
+e 14 - TestCaseClassLoader calls_method_of 124 - archive
+e 14 - TestCaseClassLoader creates_objects_of 123 - ZipFile
+e 14 - TestCaseClassLoader related_with_its_method 125 - ZipEntry
+e 14 - TestCaseClassLoader calls_method_of 126 - zipFile
+e 14 - TestCaseClassLoader calls_method_of 123 - ZipFile
+e 14 - TestCaseClassLoader calls_method_of 127 - entry
+e 14 - TestCaseClassLoader related_with_its_method 79 - Properties
+e 14 - TestCaseClassLoader creates_objects_of 79 - Properties
+e 14 - TestCaseClassLoader calls_method_of 128 - p
+e 14 - TestCaseClassLoader calls_method_of 79 - Properties
+e 14 - TestCaseClassLoader calls_method_of 93 - is
+e 14 - TestCaseClassLoader related_with_its_method 106 - Enumeration
+e 14 - TestCaseClassLoader calls_method_of 84 - e
+e 14 - TestCaseClassLoader calls_method_of 129 - path
+e 15 - TestRunner has_the_field_type_of 16 - ResultPrinter
+e 15 - TestRunner has_the_field_type_of 75 - int
+e 15 - TestRunner related_with_its_method 130 - PrintStream
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 130 - PrintStream
+e 15 - TestRunner creates_objects_of 16 - ResultPrinter
+e 15 - TestRunner related_with_its_method 16 - ResultPrinter
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 16 - ResultPrinter
+e 15 - TestRunner overrides_methods_of 15 - TestRunner
+e 15 - TestRunner related_with_its_method 71 - Class
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 71 - Class
+e 15 - TestRunner creates_objects_of 34 - TestSuite
+e 15 - TestRunner has_the_return_type_of 34 - TestSuite
+e 15 - TestRunner related_with_its_method 31 - TestResult
+e 15 - TestRunner has_a_method_with_the_return_type_of 31 - TestResult
+e 15 - TestRunner related_with_its_method 25 - Test
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 15 - TestRunner related_with_its_method 15 - TestRunner
+e 15 - TestRunner creates_objects_of 15 - TestRunner
+e 15 - TestRunner calls_method_of 131 - runner
+e 15 - TestRunner calls_method_of 15 - TestRunner
+e 15 - TestRunner related_with_its_method 13 - TestSuiteLoader
+e 15 - TestRunner has_a_method_with_the_return_type_of 13 - TestSuiteLoader
+e 15 - TestRunner overrides_methods_of 6 - BaseTestRunner
+e 15 - TestRunner creates_objects_of 11 - StandardTestSuiteLoader
+e 15 - TestRunner related_with_its_method 75 - int
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 15 - TestRunner related_with_its_method 82 - Throwable
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 82 - Throwable
+e 15 - TestRunner related_with_its_method 69 - String
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 15 - TestRunner creates_objects_of 31 - TestResult
+e 15 - TestRunner has_the_return_type_of 31 - TestResult
+e 15 - TestRunner related_with_its_method 70 - boolean
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 70 - boolean
+e 15 - TestRunner related_with_its_method 87 - long
+e 15 - TestRunner calls_method_of 132 - System
+e 15 - TestRunner calls_method_of 31 - TestResult
+e 15 - TestRunner calls_method_of 133 - suite
+e 15 - TestRunner overrides_methods_of 1 - Version
+e 15 - TestRunner related_with_its_method 69 - String[]
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String[]
+e 15 - TestRunner calls_method_of 134 - aTestRunner
+e 15 - TestRunner calls_method_of 135 - r
+e 15 - TestRunner calls_method_of 84 - e
+e 15 - TestRunner calls_method_of 1 - Version
+e 15 - TestRunner creates_objects_of 136 - Exception
+e 15 - TestRunner has_the_return_type_of 136 - Exception
+e 16 - ResultPrinter has_the_field_type_of 130 - PrintStream
+e 16 - ResultPrinter has_the_field_type_of 75 - int
+e 16 - ResultPrinter related_with_its_method 130 - PrintStream
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 130 - PrintStream
+e 16 - ResultPrinter overrides_methods_of 16 - ResultPrinter
+e 16 - ResultPrinter related_with_its_method 31 - TestResult
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 16 - ResultPrinter related_with_its_method 87 - long
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 87 - long
+e 16 - ResultPrinter calls_method_of 108 - result
+e 16 - ResultPrinter related_with_its_method 106 - Enumeration
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 106 - Enumeration
+e 16 - ResultPrinter related_with_its_method 75 - int
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 16 - ResultPrinter related_with_its_method 69 - String
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 16 - ResultPrinter calls_method_of 137 - booBoos
+e 16 - ResultPrinter related_with_its_method 32 - TestFailure
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 32 - TestFailure
+e 16 - ResultPrinter calls_method_of 138 - booBoo
+e 16 - ResultPrinter has_a_method_with_the_return_type_of 69 - String
+e 16 - ResultPrinter overrides_methods_of 6 - BaseTestRunner
+e 16 - ResultPrinter calls_method_of 88 - NumberFormat
+e 16 - ResultPrinter has_a_method_with_the_return_type_of 130 - PrintStream
+e 16 - ResultPrinter related_with_its_method 25 - Test
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 16 - ResultPrinter related_with_its_method 82 - Throwable
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 82 - Throwable
+e 16 - ResultPrinter related_with_its_method 33 - AssertionFailedError
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 15 - TestRunner has_the_field_type_of 139 - Frame
+e 15 - TestRunner has_the_field_type_of 74 - Vector
+e 15 - TestRunner has_the_field_type_of 140 - Thread
+e 15 - TestRunner has_the_field_type_of 31 - TestResult
+e 15 - TestRunner has_the_field_type_of 141 - TextArea
+e 15 - TestRunner has_the_field_type_of 142 - TextField
+e 15 - TestRunner has_the_field_type_of 143 - Button
+e 15 - TestRunner has_the_field_type_of 18 - ProgressBar
+e 15 - TestRunner has_the_field_type_of 144 - List
+e 15 - TestRunner has_the_field_type_of 17 - Logo
+e 15 - TestRunner has_the_field_type_of 145 - Label
+e 15 - TestRunner has_the_field_type_of 146 - Checkbox
+e 15 - TestRunner has_the_field_type_of 147 - Font
+e 15 - TestRunner creates_objects_of 147 - Font
+e 15 - TestRunner related_with_its_method 48 - AboutDialog
+e 15 - TestRunner creates_objects_of 48 - AboutDialog
+e 15 - TestRunner calls_method_of 148 - about
+e 15 - TestRunner calls_method_of 48 - AboutDialog
+e 15 - TestRunner related_with_its_method 149 - Panel
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 149 - Panel
+e 15 - TestRunner related_with_its_method 114 - Component
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 114 - Component
+e 15 - TestRunner related_with_its_method 150 - double
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 150 - double
+e 15 - TestRunner related_with_its_method 151 - GridBagConstraints
+e 15 - TestRunner creates_objects_of 151 - GridBagConstraints
+e 15 - TestRunner creates_objects_of 152 - Insets
+e 15 - TestRunner calls_method_of 97 - t
+e 15 - TestRunner calls_method_of 152 - Insets
+e 15 - TestRunner related_with_its_method 153 - Menu
+e 15 - TestRunner has_a_method_with_the_return_type_of 153 - Menu
+e 15 - TestRunner creates_objects_of 153 - Menu
+e 15 - TestRunner related_with_its_method 154 - MenuItem
+e 15 - TestRunner creates_objects_of 154 - MenuItem
+e 15 - TestRunner creates_objects_of 155 - ActionListener
+e 15 - TestRunner related_with_its_method 156 - ActionEvent
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 156 - ActionEvent
+e 15 - TestRunner calls_method_of 157 - menu
+e 15 - TestRunner calls_method_of 155 - ActionListener
+e 15 - TestRunner related_with_its_method 158 - MenuBar
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 158 - MenuBar
+e 15 - TestRunner related_with_its_method 139 - Frame
+e 15 - TestRunner has_a_method_with_the_return_type_of 139 - Frame
+e 15 - TestRunner creates_objects_of 139 - Frame
+e 15 - TestRunner related_with_its_method 159 - Image
+e 15 - TestRunner calls_method_of 160 - frame
+e 15 - TestRunner calls_method_of 139 - Frame
+e 15 - TestRunner creates_objects_of 161 - BorderLayout
+e 15 - TestRunner creates_objects_of 162 - WindowAdapter
+e 15 - TestRunner related_with_its_method 163 - WindowEvent
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 163 - WindowEvent
+e 15 - TestRunner creates_objects_of 158 - MenuBar
+e 15 - TestRunner calls_method_of 158 - MenuBar
+e 15 - TestRunner related_with_its_method 145 - Label
+e 15 - TestRunner creates_objects_of 145 - Label
+e 15 - TestRunner creates_objects_of 142 - TextField
+e 15 - TestRunner creates_objects_of 164 - TextListener
+e 15 - TestRunner related_with_its_method 165 - TextEvent
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 165 - TextEvent
+e 15 - TestRunner creates_objects_of 143 - Button
+e 15 - TestRunner creates_objects_of 146 - Checkbox
+e 15 - TestRunner creates_objects_of 18 - ProgressBar
+e 15 - TestRunner creates_objects_of 144 - List
+e 15 - TestRunner creates_objects_of 166 - ItemListener
+e 15 - TestRunner related_with_its_method 167 - ItemEvent
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 167 - ItemEvent
+e 15 - TestRunner creates_objects_of 149 - Panel
+e 15 - TestRunner creates_objects_of 168 - GridLayout
+e 15 - TestRunner creates_objects_of 141 - TextArea
+e 15 - TestRunner creates_objects_of 17 - Logo
+e 15 - TestRunner creates_objects_of 169 - GridBagLayout
+e 15 - TestRunner calls_method_of 169 - GridBagLayout
+e 15 - TestRunner has_a_method_with_the_return_type_of 149 - Panel
+e 15 - TestRunner related_with_its_method 152 - Insets
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 152 - Insets
+e 15 - TestRunner has_the_return_type_of 151 - GridBagConstraints
+e 15 - TestRunner has_a_method_with_the_return_type_of 70 - boolean
+e 15 - TestRunner has_a_method_with_the_return_type_of 159 - Image
+e 15 - TestRunner related_with_its_method 170 - Toolkit
+e 15 - TestRunner calls_method_of 170 - Toolkit
+e 15 - TestRunner calls_method_of 151 - GridBagConstraints
+e 15 - TestRunner related_with_its_method 116 - URL
+e 15 - TestRunner calls_method_of 171 - url
+e 15 - TestRunner related_with_its_method 140 - Thread
+e 15 - TestRunner has_a_method_with_the_return_type_of 140 - Thread
+e 15 - TestRunner calls_method_of 78 - test
+e 15 - TestRunner related_with_its_method 30 - TestCase
+e 15 - TestRunner calls_method_of 172 - rerunTest
+e 15 - TestRunner calls_method_of 173 - reloadedTest
+e 15 - TestRunner calls_method_of 108 - result
+e 15 - TestRunner creates_objects_of 74 - Vector
+e 15 - TestRunner creates_objects_of 140 - Thread
+e 15 - TestRunner has_the_field_type_of 25 - Test
+e 15 - TestRunner calls_method_of 140 - Thread
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 145 - Label
+e 15 - TestRunner calls_method_of 94 - Integer
+e 15 - TestRunner calls_method_of 174 - label
+e 17 - Logo has_the_field_type_of 159 - Image
+e 17 - Logo has_the_field_type_of 75 - int
+e 17 - Logo related_with_its_method 175 - MediaTracker
+e 17 - Logo creates_objects_of 175 - MediaTracker
+e 17 - Logo calls_method_of 176 - tracker
+e 17 - Logo calls_method_of 175 - MediaTracker
+e 17 - Logo related_with_its_method 159 - Image
+e 17 - Logo has_a_method_with_the_return_type_of 159 - Image
+e 17 - Logo overrides_methods_of 17 - Logo
+e 17 - Logo related_with_its_method 69 - String
+e 17 - Logo has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 17 - Logo related_with_its_method 170 - Toolkit
+e 17 - Logo calls_method_of 170 - Toolkit
+e 17 - Logo related_with_its_method 116 - URL
+e 17 - Logo calls_method_of 171 - url
+e 17 - Logo related_with_its_method 177 - Graphics
+e 17 - Logo has_a_method_that_has_an_input_parameter_with_the_type_of 177 - Graphics
+e 18 - ProgressBar has_the_field_type_of 70 - boolean
+e 18 - ProgressBar has_the_field_type_of 75 - int
+e 18 - ProgressBar related_with_its_method 178 - Color
+e 18 - ProgressBar has_a_method_with_the_return_type_of 178 - Color
+e 18 - ProgressBar overrides_methods_of 18 - ProgressBar
+e 18 - ProgressBar overrides_methods_of 17 - Logo
+e 18 - ProgressBar related_with_its_method 177 - Graphics
+e 18 - ProgressBar has_a_method_that_has_an_input_parameter_with_the_type_of 177 - Graphics
+e 18 - ProgressBar related_with_its_method 179 - Rectangle
+e 18 - ProgressBar creates_objects_of 179 - Rectangle
+e 18 - ProgressBar related_with_its_method 75 - int
+e 18 - ProgressBar has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 18 - ProgressBar overrides_methods_of 15 - TestRunner
+e 18 - ProgressBar has_the_return_type_of 179 - Rectangle
+e 18 - ProgressBar has_a_method_with_the_return_type_of 75 - int
+e 18 - ProgressBar overrides_methods_of 56 - Canvas
+e 18 - ProgressBar related_with_its_method 70 - boolean
+e 18 - ProgressBar has_a_method_that_has_an_input_parameter_with_the_type_of 70 - boolean
+e 19 - ExceptionTestCase has_the_field_type_of 71 - Class
+e 19 - ExceptionTestCase overrides_methods_of 30 - TestCase
+e 19 - ExceptionTestCase related_with_its_method 69 - String
+e 19 - ExceptionTestCase has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 19 - ExceptionTestCase related_with_its_method 71 - Class
+e 19 - ExceptionTestCase has_a_method_that_has_an_input_parameter_with_the_type_of 71 - Class
+e 19 - ExceptionTestCase overrides_methods_of 19 - ExceptionTestCase
+e 19 - ExceptionTestCase calls_method_of 180 - super
+e 19 - ExceptionTestCase calls_method_of 84 - e
+e 20 - RepeatedTest has_the_field_type_of 75 - int
+e 20 - RepeatedTest overrides_methods_of 23 - TestDecorator
+e 20 - RepeatedTest related_with_its_method 25 - Test
+e 20 - RepeatedTest has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 20 - RepeatedTest related_with_its_method 75 - int
+e 20 - RepeatedTest has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 20 - RepeatedTest creates_objects_of 181 - IllegalArgumentException
+e 20 - RepeatedTest has_the_return_type_of 181 - IllegalArgumentException
+e 20 - RepeatedTest has_a_method_with_the_return_type_of 75 - int
+e 20 - RepeatedTest overrides_methods_of 20 - RepeatedTest
+e 20 - RepeatedTest calls_method_of 180 - super
+e 20 - RepeatedTest calls_method_of 181 - IllegalArgumentException
+e 20 - RepeatedTest overrides_methods_of 15 - TestRunner
+e 20 - RepeatedTest related_with_its_method 31 - TestResult
+e 20 - RepeatedTest has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 20 - RepeatedTest calls_method_of 108 - result
+e 20 - RepeatedTest related_with_its_method 69 - String
+e 20 - RepeatedTest has_a_method_with_the_return_type_of 69 - String
+e 21 - ActiveTestSuite has_the_field_type_of 75 - int
+e 21 - ActiveTestSuite overrides_methods_of 34 - TestSuite
+e 21 - ActiveTestSuite related_with_its_method 71 - Class
+e 21 - ActiveTestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 71 - Class
+e 21 - ActiveTestSuite related_with_its_method 69 - String
+e 21 - ActiveTestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 21 - ActiveTestSuite overrides_methods_of 15 - TestRunner
+e 21 - ActiveTestSuite related_with_its_method 31 - TestResult
+e 21 - ActiveTestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 21 - ActiveTestSuite calls_method_of 180 - super
+e 21 - ActiveTestSuite overrides_methods_of 19 - ExceptionTestCase
+e 21 - ActiveTestSuite related_with_its_method 25 - Test
+e 21 - ActiveTestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 21 - ActiveTestSuite related_with_its_method 140 - Thread
+e 21 - ActiveTestSuite creates_objects_of 140 - Thread
+e 21 - ActiveTestSuite has_the_field_type_of 25 - Test
+e 21 - ActiveTestSuite has_the_field_type_of 31 - TestResult
+e 21 - ActiveTestSuite calls_method_of 97 - t
+e 21 - ActiveTestSuite calls_method_of 140 - Thread
+e 21 - ActiveTestSuite overrides_methods_of 21 - ActiveTestSuite
+e 22 - TestSetup overrides_methods_of 23 - TestDecorator
+e 22 - TestSetup related_with_its_method 25 - Test
+e 22 - TestSetup has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 22 - TestSetup overrides_methods_of 15 - TestRunner
+e 22 - TestSetup related_with_its_method 31 - TestResult
+e 22 - TestSetup has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 22 - TestSetup related_with_its_method 27 - Protectable
+e 22 - TestSetup creates_objects_of 27 - Protectable
+e 22 - TestSetup has_the_field_type_of 31 - TestResult
+e 22 - TestSetup overrides_methods_of 22 - TestSetup
+e 23 - TestDecorator has_the_field_type_of 25 - Test
+e 23 - TestDecorator related_with_its_method 25 - Test
+e 23 - TestDecorator has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 23 - TestDecorator overrides_methods_of 23 - TestDecorator
+e 23 - TestDecorator related_with_its_method 31 - TestResult
+e 23 - TestDecorator has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 23 - TestDecorator related_with_its_method 75 - int
+e 23 - TestDecorator has_a_method_with_the_return_type_of 75 - int
+e 23 - TestDecorator overrides_methods_of 20 - RepeatedTest
+e 23 - TestDecorator overrides_methods_of 15 - TestRunner
+e 23 - TestDecorator related_with_its_method 69 - String
+e 23 - TestDecorator has_a_method_with_the_return_type_of 69 - String
+e 23 - TestDecorator has_a_method_with_the_return_type_of 25 - Test
+e 23 - TestDecorator overrides_methods_of 6 - BaseTestRunner
+e 24 - ComparisonCompactor has_the_field_type_of 69 - String
+e 24 - ComparisonCompactor has_the_field_type_of 75 - int
+e 24 - ComparisonCompactor related_with_its_method 75 - int
+e 24 - ComparisonCompactor has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 24 - ComparisonCompactor related_with_its_method 69 - String
+e 24 - ComparisonCompactor has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 24 - ComparisonCompactor has_a_method_with_the_return_type_of 69 - String
+e 24 - ComparisonCompactor overrides_methods_of 24 - ComparisonCompactor
+e 24 - ComparisonCompactor calls_method_of 182 - source
+e 24 - ComparisonCompactor related_with_its_method 70 - boolean
+e 24 - ComparisonCompactor has_a_method_with_the_return_type_of 70 - boolean
+e 25 - Test has_a_method_with_the_return_type_of 75 - int
+e 25 - Test related_with_its_method 75 - int
+e 25 - Test related_with_its_method 31 - TestResult
+e 25 - Test has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 26 - TestListener related_with_its_method 25 - Test
+e 26 - TestListener has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 26 - TestListener related_with_its_method 82 - Throwable
+e 26 - TestListener has_a_method_that_has_an_input_parameter_with_the_type_of 82 - Throwable
+e 26 - TestListener related_with_its_method 33 - AssertionFailedError
+e 26 - TestListener has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 28 - ComparisonFailure has_the_field_type_of 75 - int
+e 28 - ComparisonFailure has_the_field_type_of 87 - long
+e 28 - ComparisonFailure has_the_field_type_of 69 - String
+e 28 - ComparisonFailure overrides_methods_of 33 - AssertionFailedError
+e 28 - ComparisonFailure related_with_its_method 69 - String
+e 28 - ComparisonFailure has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 28 - ComparisonFailure has_a_method_with_the_return_type_of 69 - String
+e 28 - ComparisonFailure overrides_methods_of 28 - ComparisonFailure
+e 28 - ComparisonFailure creates_objects_of 24 - ComparisonCompactor
+e 28 - ComparisonFailure calls_method_of 180 - super
+e 28 - ComparisonFailure calls_method_of 24 - ComparisonCompactor
+e 29 - Assert overrides_methods_of 29 - Assert
+e 29 - Assert related_with_its_method 69 - String
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 29 - Assert related_with_its_method 70 - boolean
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 70 - boolean
+e 29 - Assert creates_objects_of 33 - AssertionFailedError
+e 29 - Assert related_with_its_method 183 - Object
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 183 - Object
+e 29 - Assert calls_method_of 184 - expected
+e 29 - Assert calls_method_of 33 - AssertionFailedError
+e 29 - Assert creates_objects_of 28 - ComparisonFailure
+e 29 - Assert related_with_its_method 150 - double
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 150 - double
+e 29 - Assert creates_objects_of 185 - Double
+e 29 - Assert related_with_its_method 186 - float
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 186 - float
+e 29 - Assert calls_method_of 187 - Float
+e 29 - Assert calls_method_of 185 - Double
+e 29 - Assert creates_objects_of 187 - Float
+e 29 - Assert related_with_its_method 87 - long
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 87 - long
+e 29 - Assert creates_objects_of 188 - Long
+e 29 - Assert calls_method_of 189 - Boolean
+e 29 - Assert calls_method_of 188 - Long
+e 29 - Assert related_with_its_method 117 - byte
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 117 - byte
+e 29 - Assert creates_objects_of 190 - Byte
+e 29 - Assert related_with_its_method 191 - char
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 191 - char
+e 29 - Assert creates_objects_of 192 - Character
+e 29 - Assert related_with_its_method 193 - short
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 193 - short
+e 29 - Assert creates_objects_of 194 - Short
+e 29 - Assert related_with_its_method 75 - int
+e 29 - Assert has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 29 - Assert creates_objects_of 94 - Integer
+e 29 - Assert has_the_return_type_of 94 - Integer
+e 29 - Assert has_a_method_with_the_return_type_of 69 - String
+e 30 - TestCase has_the_field_type_of 69 - String
+e 30 - TestCase related_with_its_method 69 - String
+e 30 - TestCase has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 30 - TestCase related_with_its_method 75 - int
+e 30 - TestCase has_a_method_with_the_return_type_of 75 - int
+e 30 - TestCase overrides_methods_of 20 - RepeatedTest
+e 30 - TestCase related_with_its_method 31 - TestResult
+e 30 - TestCase has_a_method_with_the_return_type_of 31 - TestResult
+e 30 - TestCase overrides_methods_of 30 - TestCase
+e 30 - TestCase creates_objects_of 31 - TestResult
+e 30 - TestCase has_the_return_type_of 31 - TestResult
+e 30 - TestCase overrides_methods_of 15 - TestRunner
+e 30 - TestCase has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 30 - TestCase calls_method_of 108 - result
+e 30 - TestCase calls_method_of 31 - TestResult
+e 30 - TestCase related_with_its_method 82 - Throwable
+e 30 - TestCase overrides_methods_of 19 - ExceptionTestCase
+e 30 - TestCase related_with_its_method 85 - Method
+e 30 - TestCase calls_method_of 195 - runMethod
+e 30 - TestCase creates_objects_of 71 - Class
+e 30 - TestCase calls_method_of 84 - e
+e 30 - TestCase calls_method_of 71 - Class
+e 30 - TestCase overrides_methods_of 22 - TestSetup
+e 30 - TestCase has_a_method_with_the_return_type_of 69 - String
+e 31 - TestResult has_the_field_type_of 74 - Vector
+e 31 - TestResult has_the_field_type_of 75 - int
+e 31 - TestResult has_the_field_type_of 70 - boolean
+e 31 - TestResult creates_objects_of 74 - Vector
+e 31 - TestResult overrides_methods_of 6 - BaseTestRunner
+e 31 - TestResult related_with_its_method 25 - Test
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 31 - TestResult related_with_its_method 82 - Throwable
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 82 - Throwable
+e 31 - TestResult creates_objects_of 32 - TestFailure
+e 31 - TestResult related_with_its_method 106 - Enumeration
+e 31 - TestResult calls_method_of 84 - e
+e 31 - TestResult calls_method_of 32 - TestFailure
+e 31 - TestResult related_with_its_method 33 - AssertionFailedError
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 31 - TestResult overrides_methods_of 31 - TestResult
+e 31 - TestResult related_with_its_method 26 - TestListener
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 26 - TestListener
+e 31 - TestResult related_with_its_method 74 - Vector
+e 31 - TestResult has_a_method_with_the_return_type_of 74 - Vector
+e 31 - TestResult related_with_its_method 75 - int
+e 31 - TestResult has_a_method_with_the_return_type_of 75 - int
+e 31 - TestResult has_a_method_with_the_return_type_of 106 - Enumeration
+e 31 - TestResult overrides_methods_of 15 - TestRunner
+e 31 - TestResult related_with_its_method 30 - TestCase
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 30 - TestCase
+e 31 - TestResult related_with_its_method 27 - Protectable
+e 31 - TestResult creates_objects_of 27 - Protectable
+e 31 - TestResult has_the_field_type_of 30 - TestCase
+e 31 - TestResult overrides_methods_of 22 - TestSetup
+e 31 - TestResult has_the_return_type_of 27 - Protectable
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 27 - Protectable
+e 31 - TestResult calls_method_of 128 - p
+e 31 - TestResult calls_method_of 27 - Protectable
+e 31 - TestResult related_with_its_method 70 - boolean
+e 31 - TestResult has_a_method_with_the_return_type_of 70 - boolean
+e 31 - TestResult calls_method_of 78 - test
+e 32 - TestFailure has_the_field_type_of 25 - Test
+e 32 - TestFailure has_the_field_type_of 82 - Throwable
+e 32 - TestFailure related_with_its_method 25 - Test
+e 32 - TestFailure has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 32 - TestFailure related_with_its_method 82 - Throwable
+e 32 - TestFailure has_a_method_that_has_an_input_parameter_with_the_type_of 82 - Throwable
+e 32 - TestFailure has_a_method_with_the_return_type_of 25 - Test
+e 32 - TestFailure overrides_methods_of 32 - TestFailure
+e 32 - TestFailure has_a_method_with_the_return_type_of 82 - Throwable
+e 32 - TestFailure related_with_its_method 69 - String
+e 32 - TestFailure has_a_method_with_the_return_type_of 69 - String
+e 32 - TestFailure overrides_methods_of 20 - RepeatedTest
+e 32 - TestFailure related_with_its_method 98 - StringBuffer
+e 32 - TestFailure creates_objects_of 98 - StringBuffer
+e 32 - TestFailure calls_method_of 100 - buffer
+e 32 - TestFailure calls_method_of 98 - StringBuffer
+e 32 - TestFailure related_with_its_method 95 - StringWriter
+e 32 - TestFailure creates_objects_of 95 - StringWriter
+e 32 - TestFailure related_with_its_method 96 - PrintWriter
+e 32 - TestFailure creates_objects_of 96 - PrintWriter
+e 32 - TestFailure calls_method_of 99 - stringWriter
+e 32 - TestFailure calls_method_of 96 - PrintWriter
+e 32 - TestFailure related_with_its_method 70 - boolean
+e 32 - TestFailure has_a_method_with_the_return_type_of 70 - boolean
+e 33 - AssertionFailedError has_the_field_type_of 87 - long
+e 33 - AssertionFailedError overrides_methods_of 57 - Error
+e 33 - AssertionFailedError related_with_its_method 69 - String
+e 33 - AssertionFailedError has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 34 - TestSuite has_the_field_type_of 69 - String
+e 34 - TestSuite related_with_its_method 25 - Test
+e 34 - TestSuite has_a_method_with_the_return_type_of 25 - Test
+e 34 - TestSuite overrides_methods_of 34 - TestSuite
+e 34 - TestSuite related_with_its_method 71 - Class
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 71 - Class
+e 34 - TestSuite related_with_its_method 69 - String
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 34 - TestSuite related_with_its_method 196 - Constructor
+e 34 - TestSuite calls_method_of 197 - theClass
+e 34 - TestSuite calls_method_of 198 - constructor
+e 34 - TestSuite related_with_its_method 183 - Object
+e 34 - TestSuite creates_objects_of 183 - Object
+e 34 - TestSuite calls_method_of 84 - e
+e 34 - TestSuite calls_method_of 183 - Object
+e 34 - TestSuite has_a_method_with_the_return_type_of 196 - Constructor
+e 34 - TestSuite related_with_its_method 71 - Class[]
+e 34 - TestSuite creates_objects_of 71 - Class
+e 34 - TestSuite creates_objects_of 30 - TestCase
+e 34 - TestSuite overrides_methods_of 19 - ExceptionTestCase
+e 34 - TestSuite has_the_return_type_of 30 - TestCase
+e 34 - TestSuite has_a_method_with_the_return_type_of 69 - String
+e 34 - TestSuite related_with_its_method 82 - Throwable
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 82 - Throwable
+e 34 - TestSuite related_with_its_method 95 - StringWriter
+e 34 - TestSuite creates_objects_of 95 - StringWriter
+e 34 - TestSuite related_with_its_method 96 - PrintWriter
+e 34 - TestSuite creates_objects_of 96 - PrintWriter
+e 34 - TestSuite calls_method_of 97 - t
+e 34 - TestSuite calls_method_of 96 - PrintWriter
+e 34 - TestSuite calls_method_of 99 - stringWriter
+e 34 - TestSuite has_the_field_type_of 74 - Vector
+e 34 - TestSuite creates_objects_of 74 - Vector
+e 34 - TestSuite calls_method_of 74 - Vector
+e 34 - TestSuite related_with_its_method 74 - Vector
+e 34 - TestSuite related_with_its_method 85 - Method[]
+e 34 - TestSuite calls_method_of 199 - superClass
+e 34 - TestSuite related_with_its_method 75 - int
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 71 - Class[]
+e 34 - TestSuite creates_objects_of 34 - TestSuite
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 34 - TestSuite has_the_return_type_of 34 - TestSuite
+e 34 - TestSuite has_a_method_with_the_return_type_of 75 - int
+e 34 - TestSuite overrides_methods_of 20 - RepeatedTest
+e 34 - TestSuite related_with_its_method 106 - Enumeration
+e 34 - TestSuite calls_method_of 34 - TestSuite
+e 34 - TestSuite calls_method_of 78 - test
+e 34 - TestSuite overrides_methods_of 30 - TestCase
+e 34 - TestSuite overrides_methods_of 15 - TestRunner
+e 34 - TestSuite related_with_its_method 31 - TestResult
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 34 - TestSuite calls_method_of 108 - result
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 34 - TestSuite has_a_method_with_the_return_type_of 106 - Enumeration
+e 34 - TestSuite calls_method_of 180 - super
+e 34 - TestSuite related_with_its_method 85 - Method
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 85 - Method
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 74 - Vector
+e 34 - TestSuite calls_method_of 200 - m
+e 34 - TestSuite calls_method_of 201 - names
+e 34 - TestSuite related_with_its_method 70 - boolean
+e 34 - TestSuite has_a_method_with_the_return_type_of 70 - boolean
+e 15 - TestRunner has_the_field_type_of 202 - JFrame
+e 15 - TestRunner has_the_field_type_of 203 - JComboBox
+e 15 - TestRunner has_the_field_type_of 204 - DefaultListModel
+e 15 - TestRunner has_the_field_type_of 205 - JLabel
+e 15 - TestRunner has_the_field_type_of 35 - CounterPanel
+e 15 - TestRunner has_the_field_type_of 206 - JButton
+e 15 - TestRunner has_the_field_type_of 40 - StatusLine
+e 15 - TestRunner has_the_field_type_of 12 - FailureDetailView
+e 15 - TestRunner has_the_field_type_of 207 - JTabbedPane
+e 15 - TestRunner has_the_field_type_of 208 - JCheckBox
+e 15 - TestRunner has_the_field_type_of 69 - String
+e 15 - TestRunner creates_objects_of 209 - Runnable
+e 15 - TestRunner has_the_field_type_of 82 - Throwable
+e 15 - TestRunner creates_objects_of 32 - TestFailure
+e 15 - TestRunner related_with_its_method 106 - Enumeration
+e 15 - TestRunner calls_method_of 32 - TestFailure
+e 15 - TestRunner related_with_its_method 43 - TestRunView
+e 15 - TestRunner calls_method_of 210 - v
+e 15 - TestRunner overrides_methods_of 21 - ActiveTestSuite
+e 15 - TestRunner calls_method_of 209 - Runnable
+e 15 - TestRunner related_with_its_method 35 - CounterPanel
+e 15 - TestRunner has_a_method_with_the_return_type_of 35 - CounterPanel
+e 15 - TestRunner creates_objects_of 35 - CounterPanel
+e 15 - TestRunner has_the_return_type_of 35 - CounterPanel
+e 15 - TestRunner related_with_its_method 58 - JPanel
+e 15 - TestRunner has_a_method_with_the_return_type_of 58 - JPanel
+e 15 - TestRunner creates_objects_of 58 - JPanel
+e 15 - TestRunner creates_objects_of 206 - JButton
+e 15 - TestRunner related_with_its_method 12 - FailureDetailView
+e 15 - TestRunner has_a_method_with_the_return_type_of 12 - FailureDetailView
+e 15 - TestRunner calls_method_of 71 - Class
+e 15 - TestRunner calls_method_of 211 - viewClass
+e 15 - TestRunner creates_objects_of 36 - DefaultFailureDetailView
+e 15 - TestRunner has_the_return_type_of 36 - DefaultFailureDetailView
+e 15 - TestRunner related_with_its_method 212 - JMenu
+e 15 - TestRunner has_a_method_with_the_return_type_of 212 - JMenu
+e 15 - TestRunner creates_objects_of 212 - JMenu
+e 15 - TestRunner related_with_its_method 213 - JMenuItem
+e 15 - TestRunner creates_objects_of 213 - JMenuItem
+e 15 - TestRunner has_the_return_type_of 155 - ActionListener
+e 15 - TestRunner related_with_its_method 202 - JFrame
+e 15 - TestRunner has_a_method_with_the_return_type_of 202 - JFrame
+e 15 - TestRunner creates_objects_of 202 - JFrame
+e 15 - TestRunner calls_method_of 202 - JFrame
+e 15 - TestRunner has_the_return_type_of 162 - WindowAdapter
+e 15 - TestRunner related_with_its_method 205 - JLabel
+e 15 - TestRunner has_a_method_with_the_return_type_of 205 - JLabel
+e 15 - TestRunner related_with_its_method 214 - Icon
+e 15 - TestRunner creates_objects_of 205 - JLabel
+e 15 - TestRunner calls_method_of 205 - JLabel
+e 15 - TestRunner related_with_its_method 215 - JMenuBar
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 215 - JMenuBar
+e 15 - TestRunner related_with_its_method 208 - JCheckBox
+e 15 - TestRunner has_a_method_with_the_return_type_of 208 - JCheckBox
+e 15 - TestRunner creates_objects_of 208 - JCheckBox
+e 15 - TestRunner calls_method_of 216 - box
+e 15 - TestRunner calls_method_of 208 - JCheckBox
+e 15 - TestRunner related_with_its_method 206 - JButton
+e 15 - TestRunner has_a_method_with_the_return_type_of 206 - JButton
+e 15 - TestRunner calls_method_of 217 - run
+e 15 - TestRunner calls_method_of 206 - JButton
+e 15 - TestRunner has_a_method_with_the_return_type_of 114 - Component
+e 15 - TestRunner related_with_its_method 40 - StatusLine
+e 15 - TestRunner has_a_method_with_the_return_type_of 40 - StatusLine
+e 15 - TestRunner creates_objects_of 40 - StatusLine
+e 15 - TestRunner has_the_return_type_of 40 - StatusLine
+e 15 - TestRunner related_with_its_method 203 - JComboBox
+e 15 - TestRunner has_a_method_with_the_return_type_of 203 - JComboBox
+e 15 - TestRunner creates_objects_of 203 - JComboBox
+e 15 - TestRunner calls_method_of 218 - combo
+e 15 - TestRunner calls_method_of 203 - JComboBox
+e 15 - TestRunner creates_objects_of 66 - KeyAdapter
+e 15 - TestRunner related_with_its_method 219 - KeyEvent
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 219 - KeyEvent
+e 15 - TestRunner calls_method_of 66 - KeyAdapter
+e 15 - TestRunner calls_method_of 220 - event
+e 15 - TestRunner calls_method_of 166 - ItemListener
+e 15 - TestRunner related_with_its_method 207 - JTabbedPane
+e 15 - TestRunner has_a_method_with_the_return_type_of 207 - JTabbedPane
+e 15 - TestRunner creates_objects_of 207 - JTabbedPane
+e 15 - TestRunner related_with_its_method 45 - FailureRunView
+e 15 - TestRunner creates_objects_of 45 - FailureRunView
+e 15 - TestRunner calls_method_of 221 - lv
+e 15 - TestRunner calls_method_of 45 - FailureRunView
+e 15 - TestRunner related_with_its_method 39 - TestHierarchyRunView
+e 15 - TestRunner creates_objects_of 39 - TestHierarchyRunView
+e 15 - TestRunner calls_method_of 222 - tv
+e 15 - TestRunner calls_method_of 39 - TestHierarchyRunView
+e 15 - TestRunner creates_objects_of 223 - ChangeListener
+e 15 - TestRunner related_with_its_method 224 - ChangeEvent
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 224 - ChangeEvent
+e 15 - TestRunner calls_method_of 225 - view
+e 15 - TestRunner calls_method_of 223 - ChangeListener
+e 15 - TestRunner creates_objects_of 215 - JMenuBar
+e 15 - TestRunner calls_method_of 215 - JMenuBar
+e 15 - TestRunner creates_objects_of 47 - MacProgressBar
+e 15 - TestRunner creates_objects_of 204 - DefaultListModel
+e 15 - TestRunner related_with_its_method 226 - JScrollPane
+e 15 - TestRunner creates_objects_of 226 - JScrollPane
+e 15 - TestRunner creates_objects_of 227 - JSeparator
+e 15 - TestRunner related_with_its_method 228 - JSplitPane
+e 15 - TestRunner creates_objects_of 228 - JSplitPane
+e 15 - TestRunner calls_method_of 228 - JSplitPane
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 58 - JPanel
+e 15 - TestRunner has_the_return_type_of 152 - Insets
+e 15 - TestRunner has_a_method_with_the_return_type_of 69 - String
+e 15 - TestRunner related_with_its_method 229 - ListModel
+e 15 - TestRunner has_a_method_with_the_return_type_of 229 - ListModel
+e 15 - TestRunner related_with_its_method 230 - DocumentEvent
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 230 - DocumentEvent
+e 15 - TestRunner related_with_its_method 183 - Object
+e 15 - TestRunner has_a_method_with_the_return_type_of 183 - Object
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 183 - Object
+e 15 - TestRunner calls_method_of 231 - clazz
+e 15 - TestRunner related_with_its_method 71 - Class[]
+e 15 - TestRunner calls_method_of 232 - param
+e 15 - TestRunner related_with_its_method 196 - Constructor
+e 15 - TestRunner related_with_its_method 183 - Object[]
+e 15 - TestRunner calls_method_of 233 - clazzConstructor
+e 15 - TestRunner related_with_its_method 7 - TestCollector
+e 15 - TestRunner related_with_its_method 49 - TestSelector
+e 15 - TestRunner creates_objects_of 49 - TestSelector
+e 15 - TestRunner calls_method_of 234 - selector
+e 15 - TestRunner calls_method_of 49 - TestSelector
+e 15 - TestRunner has_a_method_with_the_return_type_of 7 - TestCollector
+e 15 - TestRunner calls_method_of 235 - collectorClass
+e 15 - TestRunner creates_objects_of 10 - SimpleTestCollector
+e 15 - TestRunner has_the_return_type_of 10 - SimpleTestCollector
+e 15 - TestRunner related_with_its_method 236 - ImageIcon
+e 15 - TestRunner calls_method_of 237 - icon
+e 15 - TestRunner calls_method_of 10 - SimpleTestCollector
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 203 - JComboBox
+e 15 - TestRunner related_with_its_method 102 - BufferedReader
+e 15 - TestRunner creates_objects_of 102 - BufferedReader
+e 15 - TestRunner creates_objects_of 238 - FileReader
+e 15 - TestRunner calls_method_of 103 - br
+e 15 - TestRunner calls_method_of 238 - FileReader
+e 15 - TestRunner related_with_its_method 90 - File
+e 15 - TestRunner has_a_method_with_the_return_type_of 90 - File
+e 15 - TestRunner creates_objects_of 90 - File
+e 15 - TestRunner overrides_methods_of 19 - ExceptionTestCase
+e 15 - TestRunner related_with_its_method 239 - BufferedWriter
+e 15 - TestRunner creates_objects_of 239 - BufferedWriter
+e 15 - TestRunner creates_objects_of 240 - FileWriter
+e 15 - TestRunner calls_method_of 241 - testsuite
+e 15 - TestRunner calls_method_of 240 - FileWriter
+e 15 - TestRunner calls_method_of 242 - bw
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 206 - JButton
+e 15 - TestRunner calls_method_of 243 - failures
+e 15 - TestRunner related_with_its_method 32 - TestFailure
+e 15 - TestRunner calls_method_of 244 - failure
+e 15 - TestRunner has_a_method_with_the_return_type_of 214 - Icon
+e 15 - TestRunner creates_objects_of 236 - ImageIcon
+e 35 - CounterPanel has_the_field_type_of 61 - JTextField
+e 35 - CounterPanel has_the_field_type_of 214 - Icon
+e 35 - CounterPanel has_the_field_type_of 75 - int
+e 35 - CounterPanel overrides_methods_of 58 - JPanel
+e 35 - CounterPanel creates_objects_of 169 - GridBagLayout
+e 35 - CounterPanel creates_objects_of 205 - JLabel
+e 35 - CounterPanel creates_objects_of 152 - Insets
+e 35 - CounterPanel has_the_return_type_of 152 - Insets
+e 35 - CounterPanel related_with_its_method 61 - JTextField
+e 35 - CounterPanel has_a_method_with_the_return_type_of 61 - JTextField
+e 35 - CounterPanel overrides_methods_of 35 - CounterPanel
+e 35 - CounterPanel related_with_its_method 75 - int
+e 35 - CounterPanel has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 35 - CounterPanel creates_objects_of 61 - JTextField
+e 35 - CounterPanel calls_method_of 245 - field
+e 35 - CounterPanel calls_method_of 61 - JTextField
+e 35 - CounterPanel calls_method_of 246 - BorderFactory
+e 35 - CounterPanel related_with_its_method 114 - Component
+e 35 - CounterPanel has_a_method_that_has_an_input_parameter_with_the_type_of 114 - Component
+e 35 - CounterPanel related_with_its_method 150 - double
+e 35 - CounterPanel has_a_method_that_has_an_input_parameter_with_the_type_of 150 - double
+e 35 - CounterPanel related_with_its_method 152 - Insets
+e 35 - CounterPanel has_a_method_that_has_an_input_parameter_with_the_type_of 152 - Insets
+e 35 - CounterPanel related_with_its_method 151 - GridBagConstraints
+e 35 - CounterPanel creates_objects_of 151 - GridBagConstraints
+e 35 - CounterPanel overrides_methods_of 15 - TestRunner
+e 35 - CounterPanel calls_method_of 94 - Integer
+e 35 - CounterPanel calls_method_of 151 - GridBagConstraints
+e 35 - CounterPanel has_a_method_that_has_an_input_parameter_with_the_type_of 61 - JTextField
+e 36 - DefaultFailureDetailView has_the_field_type_of 247 - JList
+e 37 - StackTraceListModel has_the_field_type_of 74 - Vector
+e 37 - StackTraceListModel creates_objects_of 74 - Vector
+e 37 - StackTraceListModel has_the_return_type_of 74 - Vector
+e 37 - StackTraceListModel related_with_its_method 183 - Object
+e 37 - StackTraceListModel has_a_method_with_the_return_type_of 183 - Object
+e 37 - StackTraceListModel overrides_methods_of 37 - StackTraceListModel
+e 37 - StackTraceListModel related_with_its_method 75 - int
+e 37 - StackTraceListModel has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 37 - StackTraceListModel has_a_method_with_the_return_type_of 75 - int
+e 37 - StackTraceListModel related_with_its_method 69 - String
+e 37 - StackTraceListModel has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 37 - StackTraceListModel related_with_its_method 111 - StringTokenizer
+e 37 - StackTraceListModel creates_objects_of 111 - StringTokenizer
+e 37 - StackTraceListModel calls_method_of 115 - st
+e 37 - StackTraceListModel calls_method_of 111 - StringTokenizer
+e 37 - StackTraceListModel overrides_methods_of 59 - AbstractListModel
+e 38 - StackEntryRenderer overrides_methods_of 60 - DefaultListCellRenderer
+e 38 - StackEntryRenderer related_with_its_method 114 - Component
+e 38 - StackEntryRenderer has_a_method_with_the_return_type_of 114 - Component
+e 38 - StackEntryRenderer overrides_methods_of 38 - StackEntryRenderer
+e 38 - StackEntryRenderer related_with_its_method 247 - JList
+e 38 - StackEntryRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 247 - JList
+e 38 - StackEntryRenderer related_with_its_method 183 - Object
+e 38 - StackEntryRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 183 - Object
+e 38 - StackEntryRenderer related_with_its_method 75 - int
+e 38 - StackEntryRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 38 - StackEntryRenderer related_with_its_method 70 - boolean
+e 38 - StackEntryRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 70 - boolean
+e 38 - StackEntryRenderer related_with_its_method 69 - String
+e 38 - StackEntryRenderer creates_objects_of 247 - JList
+e 38 - StackEntryRenderer creates_objects_of 37 - StackTraceListModel
+e 38 - StackEntryRenderer creates_objects_of 147 - Font
+e 38 - StackEntryRenderer creates_objects_of 38 - StackEntryRenderer
+e 38 - StackEntryRenderer related_with_its_method 32 - TestFailure
+e 38 - StackEntryRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 32 - TestFailure
+e 38 - StackEntryRenderer calls_method_of 244 - failure
+e 38 - StackEntryRenderer calls_method_of 38 - StackEntryRenderer
+e 38 - StackEntryRenderer overrides_methods_of 37 - StackTraceListModel
+e 38 - StackEntryRenderer related_with_its_method 37 - StackTraceListModel
+e 38 - StackEntryRenderer has_a_method_with_the_return_type_of 37 - StackTraceListModel
+e 39 - TestHierarchyRunView has_the_field_type_of 41 - TestSuitePanel
+e 39 - TestHierarchyRunView has_the_field_type_of 54 - TestRunContext
+e 39 - TestHierarchyRunView related_with_its_method 54 - TestRunContext
+e 39 - TestHierarchyRunView has_a_method_that_has_an_input_parameter_with_the_type_of 54 - TestRunContext
+e 39 - TestHierarchyRunView creates_objects_of 41 - TestSuitePanel
+e 39 - TestHierarchyRunView creates_objects_of 248 - TreeSelectionListener
+e 39 - TestHierarchyRunView overrides_methods_of 39 - TestHierarchyRunView
+e 39 - TestHierarchyRunView related_with_its_method 249 - TreeSelectionEvent
+e 39 - TestHierarchyRunView has_a_method_that_has_an_input_parameter_with_the_type_of 249 - TreeSelectionEvent
+e 39 - TestHierarchyRunView related_with_its_method 207 - JTabbedPane
+e 39 - TestHierarchyRunView has_a_method_that_has_an_input_parameter_with_the_type_of 207 - JTabbedPane
+e 39 - TestHierarchyRunView related_with_its_method 214 - Icon
+e 39 - TestHierarchyRunView has_the_return_type_of 248 - TreeSelectionListener
+e 39 - TestHierarchyRunView related_with_its_method 25 - Test
+e 39 - TestHierarchyRunView has_a_method_with_the_return_type_of 25 - Test
+e 39 - TestHierarchyRunView overrides_methods_of 15 - TestRunner
+e 39 - TestHierarchyRunView has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 39 - TestHierarchyRunView related_with_its_method 250 - JTree
+e 39 - TestHierarchyRunView related_with_its_method 44 - TestTreeModel
+e 39 - TestHierarchyRunView calls_method_of 251 - tree
+e 39 - TestHierarchyRunView calls_method_of 248 - TreeSelectionListener
+e 39 - TestHierarchyRunView related_with_its_method 74 - Vector
+e 39 - TestHierarchyRunView creates_objects_of 74 - Vector
+e 39 - TestHierarchyRunView related_with_its_method 75 - int
+e 39 - TestHierarchyRunView calls_method_of 252 - model
+e 39 - TestHierarchyRunView calls_method_of 74 - Vector
+e 39 - TestHierarchyRunView related_with_its_method 183 - Object[]
+e 39 - TestHierarchyRunView creates_objects_of 183 - Object
+e 39 - TestHierarchyRunView calls_method_of 253 - vpath
+e 39 - TestHierarchyRunView calls_method_of 183 - Object
+e 39 - TestHierarchyRunView related_with_its_method 183 - Object
+e 39 - TestHierarchyRunView related_with_its_method 254 - TreePath
+e 39 - TestHierarchyRunView creates_objects_of 254 - TreePath
+e 39 - TestHierarchyRunView calls_method_of 254 - TreePath
+e 39 - TestHierarchyRunView related_with_its_method 31 - TestResult
+e 39 - TestHierarchyRunView has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 39 - TestHierarchyRunView overrides_methods_of 21 - ActiveTestSuite
+e 40 - StatusLine has_the_field_type_of 147 - Font
+e 40 - StatusLine creates_objects_of 147 - Font
+e 40 - StatusLine related_with_its_method 75 - int
+e 40 - StatusLine has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 40 - StatusLine related_with_its_method 255 - Dimension
+e 40 - StatusLine overrides_methods_of 15 - TestRunner
+e 40 - StatusLine related_with_its_method 69 - String
+e 40 - StatusLine has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 40 - StatusLine overrides_methods_of 40 - StatusLine
+e 40 - StatusLine overrides_methods_of 37 - StackTraceListModel
+e 41 - TestSuitePanel has_the_field_type_of 250 - JTree
+e 41 - TestSuitePanel has_the_field_type_of 226 - JScrollPane
+e 41 - TestSuitePanel has_the_field_type_of 44 - TestTreeModel
+e 41 - TestSuitePanel overrides_methods_of 58 - JPanel
+e 42 - TestTreeCellRenderer has_the_field_type_of 214 - Icon
+e 42 - TestTreeCellRenderer overrides_methods_of 42 - TestTreeCellRenderer
+e 42 - TestTreeCellRenderer related_with_its_method 69 - String
+e 42 - TestTreeCellRenderer has_a_method_with_the_return_type_of 69 - String
+e 42 - TestTreeCellRenderer related_with_its_method 183 - Object
+e 42 - TestTreeCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 183 - Object
+e 42 - TestTreeCellRenderer calls_method_of 256 - o
+e 42 - TestTreeCellRenderer related_with_its_method 75 - int
+e 42 - TestTreeCellRenderer overrides_methods_of 62 - DefaultTreeCellRenderer
+e 42 - TestTreeCellRenderer related_with_its_method 114 - Component
+e 42 - TestTreeCellRenderer has_a_method_with_the_return_type_of 114 - Component
+e 42 - TestTreeCellRenderer related_with_its_method 250 - JTree
+e 42 - TestTreeCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 250 - JTree
+e 42 - TestTreeCellRenderer related_with_its_method 70 - boolean
+e 42 - TestTreeCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 70 - boolean
+e 42 - TestTreeCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 42 - TestTreeCellRenderer related_with_its_method 63 - TreeModel
+e 42 - TestTreeCellRenderer calls_method_of 251 - tree
+e 42 - TestTreeCellRenderer related_with_its_method 44 - TestTreeModel
+e 42 - TestTreeCellRenderer related_with_its_method 25 - Test
+e 42 - TestTreeCellRenderer calls_method_of 257 - testModel
+e 42 - TestTreeCellRenderer creates_objects_of 161 - BorderLayout
+e 42 - TestTreeCellRenderer creates_objects_of 255 - Dimension
+e 42 - TestTreeCellRenderer creates_objects_of 250 - JTree
+e 42 - TestTreeCellRenderer calls_method_of 258 - ToolTipManager
+e 42 - TestTreeCellRenderer calls_method_of 250 - JTree
+e 42 - TestTreeCellRenderer creates_objects_of 226 - JScrollPane
+e 42 - TestTreeCellRenderer overrides_methods_of 6 - BaseTestRunner
+e 42 - TestTreeCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 42 - TestTreeCellRenderer related_with_its_method 82 - Throwable
+e 42 - TestTreeCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 82 - Throwable
+e 42 - TestTreeCellRenderer related_with_its_method 33 - AssertionFailedError
+e 42 - TestTreeCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 42 - TestTreeCellRenderer has_the_return_type_of 226 - JScrollPane
+e 42 - TestTreeCellRenderer has_a_method_with_the_return_type_of 25 - Test
+e 42 - TestTreeCellRenderer overrides_methods_of 39 - TestHierarchyRunView
+e 42 - TestTreeCellRenderer related_with_its_method 254 - TreePath[]
+e 42 - TestTreeCellRenderer has_a_method_with_the_return_type_of 250 - JTree
+e 42 - TestTreeCellRenderer creates_objects_of 44 - TestTreeModel
+e 42 - TestTreeCellRenderer creates_objects_of 42 - TestTreeCellRenderer
+e 42 - TestTreeCellRenderer creates_objects_of 209 - Runnable
+e 42 - TestTreeCellRenderer has_the_field_type_of 25 - Test
+e 42 - TestTreeCellRenderer has_the_field_type_of 70 - boolean
+e 42 - TestTreeCellRenderer overrides_methods_of 15 - TestRunner
+e 42 - TestTreeCellRenderer related_with_its_method 74 - Vector
+e 42 - TestTreeCellRenderer creates_objects_of 74 - Vector
+e 42 - TestTreeCellRenderer related_with_its_method 183 - Object[]
+e 42 - TestTreeCellRenderer creates_objects_of 183 - Object
+e 42 - TestTreeCellRenderer calls_method_of 253 - vpath
+e 42 - TestTreeCellRenderer calls_method_of 183 - Object
+e 42 - TestTreeCellRenderer related_with_its_method 254 - TreePath
+e 42 - TestTreeCellRenderer creates_objects_of 254 - TreePath
+e 42 - TestTreeCellRenderer calls_method_of 259 - treePath
+e 43 - TestRunView has_a_method_with_the_return_type_of 25 - Test
+e 43 - TestRunView related_with_its_method 25 - Test
+e 43 - TestRunView has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 43 - TestRunView related_with_its_method 207 - JTabbedPane
+e 43 - TestRunView has_a_method_that_has_an_input_parameter_with_the_type_of 207 - JTabbedPane
+e 43 - TestRunView related_with_its_method 31 - TestResult
+e 43 - TestRunView has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 44 - TestTreeModel has_the_field_type_of 25 - Test
+e 44 - TestTreeModel has_the_field_type_of 74 - Vector
+e 44 - TestTreeModel creates_objects_of 74 - Vector
+e 44 - TestTreeModel has_the_field_type_of 107 - Hashtable
+e 44 - TestTreeModel creates_objects_of 107 - Hashtable
+e 44 - TestTreeModel related_with_its_method 25 - Test
+e 44 - TestTreeModel has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 44 - TestTreeModel overrides_methods_of 44 - TestTreeModel
+e 44 - TestTreeModel related_with_its_method 260 - TreeModelListener
+e 44 - TestTreeModel has_a_method_that_has_an_input_parameter_with_the_type_of 260 - TreeModelListener
+e 44 - TestTreeModel has_the_return_type_of 107 - Hashtable
+e 44 - TestTreeModel related_with_its_method 75 - int
+e 44 - TestTreeModel has_a_method_with_the_return_type_of 75 - int
+e 44 - TestTreeModel related_with_its_method 74 - Vector
+e 44 - TestTreeModel has_a_method_that_has_an_input_parameter_with_the_type_of 74 - Vector
+e 44 - TestTreeModel calls_method_of 261 - target
+e 44 - TestTreeModel calls_method_of 107 - Hashtable
+e 44 - TestTreeModel related_with_its_method 34 - TestSuite
+e 44 - TestTreeModel calls_method_of 133 - suite
+e 44 - TestTreeModel calls_method_of 129 - path
+e 44 - TestTreeModel related_with_its_method 254 - TreePath
+e 44 - TestTreeModel has_a_method_that_has_an_input_parameter_with_the_type_of 254 - TreePath
+e 44 - TestTreeModel has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 44 - TestTreeModel related_with_its_method 75 - int[]
+e 44 - TestTreeModel related_with_its_method 183 - Object[]
+e 44 - TestTreeModel related_with_its_method 262 - TreeModelEvent
+e 44 - TestTreeModel creates_objects_of 262 - TreeModelEvent
+e 44 - TestTreeModel related_with_its_method 106 - Enumeration
+e 44 - TestTreeModel calls_method_of 84 - e
+e 44 - TestTreeModel calls_method_of 262 - TreeModelEvent
+e 44 - TestTreeModel calls_method_of 263 - l
+e 44 - TestTreeModel related_with_its_method 183 - Object
+e 44 - TestTreeModel has_a_method_with_the_return_type_of 183 - Object
+e 44 - TestTreeModel has_a_method_that_has_an_input_parameter_with_the_type_of 183 - Object
+e 44 - TestTreeModel related_with_its_method 70 - boolean
+e 44 - TestTreeModel has_a_method_with_the_return_type_of 70 - boolean
+e 44 - TestTreeModel has_a_method_with_the_return_type_of 34 - TestSuite
+e 44 - TestTreeModel overrides_methods_of 6 - BaseTestRunner
+e 44 - TestTreeModel overrides_methods_of 32 - TestFailure
+e 45 - FailureRunView has_the_field_type_of 247 - JList
+e 45 - FailureRunView has_the_field_type_of 54 - TestRunContext
+e 46 - FailureListCellRenderer has_the_field_type_of 214 - Icon
+e 46 - FailureListCellRenderer overrides_methods_of 42 - TestTreeCellRenderer
+e 46 - FailureListCellRenderer overrides_methods_of 60 - DefaultListCellRenderer
+e 46 - FailureListCellRenderer related_with_its_method 114 - Component
+e 46 - FailureListCellRenderer has_a_method_with_the_return_type_of 114 - Component
+e 46 - FailureListCellRenderer overrides_methods_of 38 - StackEntryRenderer
+e 46 - FailureListCellRenderer related_with_its_method 247 - JList
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 247 - JList
+e 46 - FailureListCellRenderer related_with_its_method 183 - Object
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 183 - Object
+e 46 - FailureListCellRenderer related_with_its_method 75 - int
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 46 - FailureListCellRenderer related_with_its_method 70 - boolean
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 70 - boolean
+e 46 - FailureListCellRenderer related_with_its_method 32 - TestFailure
+e 46 - FailureListCellRenderer related_with_its_method 69 - String
+e 46 - FailureListCellRenderer calls_method_of 244 - failure
+e 46 - FailureListCellRenderer calls_method_of 6 - BaseTestRunner
+e 46 - FailureListCellRenderer related_with_its_method 54 - TestRunContext
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 54 - TestRunContext
+e 46 - FailureListCellRenderer creates_objects_of 247 - JList
+e 46 - FailureListCellRenderer creates_objects_of 147 - Font
+e 46 - FailureListCellRenderer creates_objects_of 46 - FailureListCellRenderer
+e 46 - FailureListCellRenderer creates_objects_of 264 - ListSelectionListener
+e 46 - FailureListCellRenderer overrides_methods_of 39 - TestHierarchyRunView
+e 46 - FailureListCellRenderer related_with_its_method 265 - ListSelectionEvent
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 265 - ListSelectionEvent
+e 46 - FailureListCellRenderer has_the_return_type_of 264 - ListSelectionListener
+e 46 - FailureListCellRenderer related_with_its_method 25 - Test
+e 46 - FailureListCellRenderer has_a_method_with_the_return_type_of 25 - Test
+e 46 - FailureListCellRenderer related_with_its_method 229 - ListModel
+e 46 - FailureListCellRenderer calls_method_of 252 - model
+e 46 - FailureListCellRenderer calls_method_of 264 - ListSelectionListener
+e 46 - FailureListCellRenderer related_with_its_method 207 - JTabbedPane
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 207 - JTabbedPane
+e 46 - FailureListCellRenderer related_with_its_method 226 - JScrollPane
+e 46 - FailureListCellRenderer creates_objects_of 226 - JScrollPane
+e 46 - FailureListCellRenderer related_with_its_method 214 - Icon
+e 46 - FailureListCellRenderer overrides_methods_of 15 - TestRunner
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 46 - FailureListCellRenderer related_with_its_method 31 - TestResult
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 46 - FailureListCellRenderer overrides_methods_of 21 - ActiveTestSuite
+e 47 - MacProgressBar has_the_field_type_of 61 - JTextField
+e 47 - MacProgressBar related_with_its_method 61 - JTextField
+e 47 - MacProgressBar has_a_method_that_has_an_input_parameter_with_the_type_of 61 - JTextField
+e 47 - MacProgressBar overrides_methods_of 47 - MacProgressBar
+e 48 - AboutDialog overrides_methods_of 64 - JDialog
+e 48 - AboutDialog related_with_its_method 202 - JFrame
+e 48 - AboutDialog has_a_method_that_has_an_input_parameter_with_the_type_of 202 - JFrame
+e 48 - AboutDialog creates_objects_of 169 - GridBagLayout
+e 48 - AboutDialog calls_method_of 49 - TestSelector
+e 48 - AboutDialog calls_method_of 169 - GridBagLayout
+e 48 - AboutDialog related_with_its_method 206 - JButton
+e 48 - AboutDialog creates_objects_of 206 - JButton
+e 48 - AboutDialog creates_objects_of 155 - ActionListener
+e 48 - AboutDialog overrides_methods_of 15 - TestRunner
+e 48 - AboutDialog related_with_its_method 156 - ActionEvent
+e 48 - AboutDialog has_a_method_that_has_an_input_parameter_with_the_type_of 156 - ActionEvent
+e 48 - AboutDialog related_with_its_method 205 - JLabel
+e 48 - AboutDialog creates_objects_of 205 - JLabel
+e 48 - AboutDialog creates_objects_of 147 - Font
+e 48 - AboutDialog calls_method_of 1 - Version
+e 48 - AboutDialog calls_method_of 205 - JLabel
+e 48 - AboutDialog related_with_its_method 151 - GridBagConstraints
+e 48 - AboutDialog creates_objects_of 151 - GridBagConstraints
+e 48 - AboutDialog creates_objects_of 152 - Insets
+e 48 - AboutDialog creates_objects_of 162 - WindowAdapter
+e 48 - AboutDialog related_with_its_method 163 - WindowEvent
+e 48 - AboutDialog has_a_method_that_has_an_input_parameter_with_the_type_of 163 - WindowEvent
+e 48 - AboutDialog has_a_method_with_the_return_type_of 205 - JLabel
+e 48 - AboutDialog related_with_its_method 214 - Icon
+e 49 - TestSelector has_the_field_type_of 206 - JButton
+e 49 - TestSelector has_the_field_type_of 247 - JList
+e 49 - TestSelector has_the_field_type_of 226 - JScrollPane
+e 49 - TestSelector has_the_field_type_of 205 - JLabel
+e 49 - TestSelector has_the_field_type_of 69 - String
+e 49 - TestSelector overrides_methods_of 64 - JDialog
+e 50 - TestCellRenderer has_the_field_type_of 214 - Icon
+e 50 - TestCellRenderer overrides_methods_of 60 - DefaultListCellRenderer
+e 50 - TestCellRenderer related_with_its_method 114 - Component
+e 50 - TestCellRenderer has_a_method_with_the_return_type_of 114 - Component
+e 50 - TestCellRenderer overrides_methods_of 38 - StackEntryRenderer
+e 50 - TestCellRenderer related_with_its_method 247 - JList
+e 50 - TestCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 247 - JList
+e 50 - TestCellRenderer related_with_its_method 183 - Object
+e 50 - TestCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 183 - Object
+e 50 - TestCellRenderer related_with_its_method 75 - int
+e 50 - TestCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 50 - TestCellRenderer related_with_its_method 70 - boolean
+e 50 - TestCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 70 - boolean
+e 50 - TestCellRenderer related_with_its_method 69 - String
+e 50 - TestCellRenderer has_a_method_with_the_return_type_of 69 - String
+e 50 - TestCellRenderer overrides_methods_of 50 - TestCellRenderer
+e 50 - TestCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 69 - String
+e 50 - TestCellRenderer has_a_method_with_the_return_type_of 70 - boolean
+e 50 - TestCellRenderer related_with_its_method 191 - char
+e 50 - TestCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 191 - char
+e 50 - TestCellRenderer has_a_method_with_the_return_type_of 75 - int
+e 51 - DoubleClickListener overrides_methods_of 51 - DoubleClickListener
+e 51 - DoubleClickListener related_with_its_method 266 - MouseEvent
+e 51 - DoubleClickListener has_a_method_that_has_an_input_parameter_with_the_type_of 266 - MouseEvent
+e 51 - DoubleClickListener calls_method_of 84 - e
+e 52 - KeySelectListener overrides_methods_of 15 - TestRunner
+e 52 - KeySelectListener related_with_its_method 219 - KeyEvent
+e 52 - KeySelectListener has_a_method_that_has_an_input_parameter_with_the_type_of 219 - KeyEvent
+e 52 - KeySelectListener calls_method_of 84 - e
+e 52 - KeySelectListener overrides_methods_of 66 - KeyAdapter
+e 52 - KeySelectListener related_with_its_method 139 - Frame
+e 52 - KeySelectListener has_a_method_that_has_an_input_parameter_with_the_type_of 139 - Frame
+e 52 - KeySelectListener related_with_its_method 7 - TestCollector
+e 52 - KeySelectListener has_a_method_that_has_an_input_parameter_with_the_type_of 7 - TestCollector
+e 52 - KeySelectListener related_with_its_method 74 - Vector
+e 52 - KeySelectListener calls_method_of 267 - Cursor
+e 52 - KeySelectListener creates_objects_of 247 - JList
+e 52 - KeySelectListener creates_objects_of 50 - TestCellRenderer
+e 52 - KeySelectListener creates_objects_of 226 - JScrollPane
+e 52 - KeySelectListener creates_objects_of 206 - JButton
+e 52 - KeySelectListener creates_objects_of 205 - JLabel
+e 52 - KeySelectListener overrides_methods_of 52 - KeySelectListener
+e 52 - KeySelectListener related_with_its_method 114 - Component
+e 52 - KeySelectListener has_a_method_that_has_an_input_parameter_with_the_type_of 114 - Component
+e 52 - KeySelectListener related_with_its_method 255 - Dimension
+e 52 - KeySelectListener calls_method_of 268 - c
+e 52 - KeySelectListener calls_method_of 206 - JButton
+e 52 - KeySelectListener creates_objects_of 155 - ActionListener
+e 52 - KeySelectListener related_with_its_method 156 - ActionEvent
+e 52 - KeySelectListener has_a_method_that_has_an_input_parameter_with_the_type_of 156 - ActionEvent
+e 52 - KeySelectListener creates_objects_of 51 - DoubleClickListener
+e 52 - KeySelectListener creates_objects_of 52 - KeySelectListener
+e 52 - KeySelectListener creates_objects_of 264 - ListSelectionListener
+e 52 - KeySelectListener overrides_methods_of 39 - TestHierarchyRunView
+e 52 - KeySelectListener related_with_its_method 265 - ListSelectionEvent
+e 52 - KeySelectListener has_a_method_that_has_an_input_parameter_with_the_type_of 265 - ListSelectionEvent
+e 52 - KeySelectListener creates_objects_of 162 - WindowAdapter
+e 52 - KeySelectListener related_with_its_method 163 - WindowEvent
+e 52 - KeySelectListener has_a_method_that_has_an_input_parameter_with_the_type_of 163 - WindowEvent
+e 52 - KeySelectListener creates_objects_of 169 - GridBagLayout
+e 52 - KeySelectListener related_with_its_method 151 - GridBagConstraints
+e 52 - KeySelectListener creates_objects_of 151 - GridBagConstraints
+e 52 - KeySelectListener creates_objects_of 152 - Insets
+e 52 - KeySelectListener has_the_return_type_of 152 - Insets
+e 52 - KeySelectListener related_with_its_method 70 - boolean
+e 52 - KeySelectListener has_a_method_with_the_return_type_of 70 - boolean
+e 52 - KeySelectListener related_with_its_method 191 - char
+e 52 - KeySelectListener has_a_method_that_has_an_input_parameter_with_the_type_of 191 - char
+e 52 - KeySelectListener related_with_its_method 229 - ListModel
+e 52 - KeySelectListener calls_method_of 152 - Insets
+e 52 - KeySelectListener calls_method_of 192 - Character
+e 52 - KeySelectListener related_with_its_method 75 - int
+e 52 - KeySelectListener calls_method_of 252 - model
+e 52 - KeySelectListener related_with_its_method 69 - String
+e 52 - KeySelectListener calls_method_of 170 - Toolkit
+e 52 - KeySelectListener has_a_method_with_the_return_type_of 69 - String
+e 52 - KeySelectListener has_a_method_with_the_return_type_of 74 - Vector
+e 52 - KeySelectListener related_with_its_method 106 - Enumeration
+e 52 - KeySelectListener calls_method_of 269 - collector
+e 52 - KeySelectListener creates_objects_of 74 - Vector
+e 52 - KeySelectListener calls_method_of 210 - v
+e 52 - KeySelectListener calls_method_of 74 - Vector
+e 52 - KeySelectListener calls_method_of 270 - each
+e 52 - KeySelectListener calls_method_of 50 - TestCellRenderer
+e 52 - KeySelectListener calls_method_of 271 - displayVector
+e 52 - KeySelectListener creates_objects_of 53 - ParallelSwapper
+e 53 - ParallelSwapper has_the_field_type_of 74 - Vector
+e 53 - ParallelSwapper related_with_its_method 74 - Vector
+e 53 - ParallelSwapper has_a_method_that_has_an_input_parameter_with_the_type_of 74 - Vector
+e 53 - ParallelSwapper overrides_methods_of 53 - ParallelSwapper
+e 53 - ParallelSwapper related_with_its_method 75 - int
+e 53 - ParallelSwapper has_a_method_that_has_an_input_parameter_with_the_type_of 75 - int
+e 53 - ParallelSwapper related_with_its_method 183 - Object
+e 53 - ParallelSwapper calls_method_of 76 - values
+e 53 - ParallelSwapper calls_method_of 53 - ParallelSwapper
+e 18 - ProgressBar overrides_methods_of 47 - MacProgressBar
+e 54 - TestRunContext related_with_its_method 25 - Test
+e 54 - TestRunContext has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 54 - TestRunContext has_a_method_with_the_return_type_of 229 - ListModel
+e 54 - TestRunContext related_with_its_method 229 - ListModel

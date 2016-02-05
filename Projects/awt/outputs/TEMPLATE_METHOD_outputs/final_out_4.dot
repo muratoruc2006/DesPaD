@@ -1,0 +1,12 @@
+digraph SubdueGraph {
+  37 [label="Class",color=blue,fontcolor=blue];
+  60 [label="Class",color=blue,fontcolor=blue];
+  78 [label="Class",color=blue,fontcolor=blue];
+  267 [label="Abstract",color=blue,fontcolor=blue];
+  37 -> 267 [label="extends",color=blue,fontcolor=blue];
+  60 -> 267 [label="extends",color=blue,fontcolor=blue];
+  78 -> 267 [label="extends",color=blue,fontcolor=blue];
+  37 -> 267 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  60 -> 267 [label="overrides_methods_of",color=blue,fontcolor=blue];
+  78 -> 267 [label="overrides_methods_of",color=blue,fontcolor=blue];
+}

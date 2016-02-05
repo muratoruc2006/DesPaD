@@ -1,0 +1,23 @@
+
+digraph SubdueGraph {
+  123 [label="Class",color=blue,fontcolor=blue];
+  195 [label="Class",color=blue,fontcolor=blue];
+  200 [label="Class",color=blue,fontcolor=blue];
+  247 [label="Class",color=blue,fontcolor=blue];
+  481 [label="Interface",color=blue,fontcolor=blue];
+  123 -> 481 [label="implements",color=blue,fontcolor=blue];
+  195 -> 200 [label="extends",color=blue,fontcolor=blue];
+  200 -> 481 [label="implements",color=blue,fontcolor=blue];
+  247 -> 481 [label="implements",color=blue,fontcolor=blue];
+  200 -> 481 [label="related_with_its_method",color=blue,fontcolor=blue];
+  18 [label="Interface",color=blue,fontcolor=blue];
+  28 [label="Class",color=blue,fontcolor=blue];
+  185 [label="Class",color=blue,fontcolor=blue];
+  271 [label="Class",color=blue,fontcolor=blue];
+  273 [label="Class",color=blue,fontcolor=blue];
+  28 -> 18 [label="implements",color=blue,fontcolor=blue];
+  185 -> 18 [label="implements",color=blue,fontcolor=blue];
+  271 -> 185 [label="extends",color=blue,fontcolor=blue];
+  273 -> 18 [label="implements",color=blue,fontcolor=blue];
+  185 -> 18 [label="related_with_its_method",color=blue,fontcolor=blue];
+}
