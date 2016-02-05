@@ -1,0 +1,14 @@
+v 1 RunPattern (Class)
+v 2 Task (Class)
+v 3 Deliverable (Class)
+v 4 ProjectItem (Abstract)
+e 2 - Task extends 4 - ProjectItem
+e 3 - Deliverable extends 4 - ProjectItem
+e 1 - RunPattern related_with_its_method 2 - Task
+e 1 - RunPattern creates_objects_of 2 - Task
+e 1 - RunPattern related_with_its_method 3 - Deliverable
+e 1 - RunPattern creates_objects_of 3 - Deliverable
+e 2 - Task overrides_methods_of 4 - ProjectItem
+e 2 - Task related_with_its_method 4 - ProjectItem
+e 2 - Task has_a_method_that_has_an_input_parameter_with_the_type_of 4 - ProjectItem
+e 3 - Deliverable overrides_methods_of 4 - ProjectItem

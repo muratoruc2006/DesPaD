@@ -1,0 +1,48 @@
+v 1 ProjectItem (Interface)
+v 2 Project (Class)
+v 3 Contact (Interface)
+v 4 RunPattern (Class)
+v 5 ContactImpl (Class)
+v 6 Task (Class)
+v 7 DataRetriever (Class)
+v 8 DataCreator (Class)
+e 2 - Project implements 1 - ProjectItem
+e 5 - ContactImpl implements 3 - Contact
+e 6 - Task implements 1 - ProjectItem
+e 2 - Project has_the_field_type_of 3 - Contact
+e 2 - Project related_with_its_method 3 - Contact
+e 2 - Project has_a_method_that_has_an_input_parameter_with_the_type_of 3 - Contact
+e 2 - Project overrides_methods_of 2 - Project
+e 2 - Project has_a_method_with_the_return_type_of 3 - Contact
+e 2 - Project related_with_its_method 1 - ProjectItem
+e 2 - Project has_a_method_with_the_return_type_of 1 - ProjectItem
+e 2 - Project has_a_method_that_has_an_input_parameter_with_the_type_of 1 - ProjectItem
+e 4 - RunPattern overrides_methods_of 4 - RunPattern
+e 4 - RunPattern related_with_its_method 2 - Project
+e 4 - RunPattern related_with_its_method 1 - ProjectItem
+e 4 - RunPattern has_a_method_that_has_an_input_parameter_with_the_type_of 1 - ProjectItem
+e 5 - ContactImpl overrides_methods_of 5 - ContactImpl
+e 5 - ContactImpl overrides_methods_of 2 - Project
+e 6 - Task has_the_field_type_of 3 - Contact
+e 6 - Task has_the_field_type_of 1 - ProjectItem
+e 6 - Task related_with_its_method 1 - ProjectItem
+e 6 - Task has_a_method_that_has_an_input_parameter_with_the_type_of 1 - ProjectItem
+e 6 - Task related_with_its_method 3 - Contact
+e 6 - Task has_a_method_that_has_an_input_parameter_with_the_type_of 3 - Contact
+e 6 - Task has_a_method_with_the_return_type_of 3 - Contact
+e 6 - Task overrides_methods_of 2 - Project
+e 6 - Task has_a_method_with_the_return_type_of 1 - ProjectItem
+e 6 - Task overrides_methods_of 6 - Task
+e 7 - DataRetriever overrides_methods_of 7 - DataRetriever
+e 8 - DataCreator overrides_methods_of 4 - RunPattern
+e 8 - DataCreator overrides_methods_of 8 - DataCreator
+e 8 - DataCreator related_with_its_method 3 - Contact
+e 8 - DataCreator creates_objects_of 5 - ContactImpl
+e 8 - DataCreator related_with_its_method 2 - Project
+e 8 - DataCreator creates_objects_of 2 - Project
+e 8 - DataCreator related_with_its_method 6 - Task
+e 8 - DataCreator creates_objects_of 6 - Task
+e 1 - ProjectItem has_a_method_with_the_return_type_of 1 - ProjectItem
+e 1 - ProjectItem related_with_its_method 1 - ProjectItem
+e 1 - ProjectItem has_a_method_with_the_return_type_of 3 - Contact
+e 1 - ProjectItem related_with_its_method 3 - Contact

@@ -1,0 +1,16 @@
+v 1 SingletonGui (Class)
+v 2 WindowCloseManager (Class)
+v 3 RunPattern (Class)
+v 4 HistoryList (Class)
+e 1 - SingletonGui creates_objects_of 2 - WindowCloseManager
+e 1 - SingletonGui calls_method_of 4 - HistoryList
+e 2 - WindowCloseManager calls_method_of 4 - HistoryList
+e 2 - WindowCloseManager calls_method_of 2 - WindowCloseManager
+e 3 - RunPattern related_with_its_method 1 - SingletonGui
+e 3 - RunPattern creates_objects_of 1 - SingletonGui
+e 4 - HistoryList has_the_field_type_of 4 - HistoryList
+e 4 - HistoryList creates_objects_of 4 - HistoryList
+e 4 - HistoryList has_the_return_type_of 4 - HistoryList
+e 4 - HistoryList related_with_its_method 4 - HistoryList
+e 4 - HistoryList overrides_methods_of 4 - HistoryList
+e 4 - HistoryList calls_method_of 4 - HistoryList

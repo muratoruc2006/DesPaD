@@ -1,0 +1,457 @@
+v 1 Version (Class)
+v 2 LoadingTestCollector (Class)
+v 3 ReloadingTestSuiteLoader (Class)
+v 4 Sorter (Class)
+v 5 Swapper (Interface)
+v 6 BaseTestRunner (Abstract)
+v 7 TestCollector (Interface)
+v 8 TestRunListener (Interface)
+v 9 ClassPathTestCollector (Abstract)
+v 10 SimpleTestCollector (Class)
+v 11 StandardTestSuiteLoader (Class)
+v 12 FailureDetailView (Interface)
+v 13 TestSuiteLoader (Interface)
+v 14 TestCaseClassLoader (Class)
+v 15 TestRunner (Class)
+v 16 ResultPrinter (Class)
+v 17 Logo (Class)
+v 18 ProgressBar (Class)
+v 19 ExceptionTestCase (Class)
+v 20 RepeatedTest (Class)
+v 21 ActiveTestSuite (Class)
+v 22 TestSetup (Class)
+v 23 TestDecorator (Class)
+v 24 ComparisonCompactor (Class)
+v 25 Test (Interface)
+v 26 TestListener (Interface)
+v 27 Protectable (Interface)
+v 28 ComparisonFailure (Class)
+v 29 Assert (Class)
+v 30 TestCase (Abstract)
+v 31 TestResult (Class)
+v 32 TestFailure (Class)
+v 33 AssertionFailedError (Class)
+v 34 TestSuite (Class)
+v 35 CounterPanel (Class)
+v 36 DefaultFailureDetailView (Class)
+v 37 StackTraceListModel (Class)
+v 38 StackEntryRenderer (Class)
+v 39 TestHierarchyRunView (Class)
+v 40 StatusLine (Class)
+v 41 TestSuitePanel (Class)
+v 42 TestTreeCellRenderer (Class)
+v 43 TestRunView (Interface)
+v 44 TestTreeModel (Class)
+v 45 FailureRunView (Class)
+v 46 FailureListCellRenderer (Class)
+v 47 MacProgressBar (Class)
+v 48 AboutDialog (Class)
+v 49 TestSelector (Class)
+v 50 TestCellRenderer (Class)
+v 51 DoubleClickListener (Class)
+v 52 KeySelectListener (Class)
+v 53 ParallelSwapper (Class)
+v 54 TestRunContext (Interface)
+v 55 ClassLoader (Class)
+v 56 Canvas (Class)
+v 57 Error (Class)
+v 58 JPanel (Class)
+v 59 AbstractListModel (Class)
+v 60 DefaultListCellRenderer (Class)
+v 61 JTextField (Class)
+v 62 DefaultTreeCellRenderer (Class)
+v 63 TreeModel (Interface)
+v 64 JDialog (Class)
+v 65 MouseAdapter (Class)
+v 66 KeyAdapter (Class)
+v 67 SorterSwapper (Interface)
+v 68 JProgressBar (Class)
+e 2 - LoadingTestCollector extends 9 - ClassPathTestCollector
+e 3 - ReloadingTestSuiteLoader implements 13 - TestSuiteLoader
+e 6 - BaseTestRunner implements 26 - TestListener
+e 9 - ClassPathTestCollector implements 7 - TestCollector
+e 10 - SimpleTestCollector extends 9 - ClassPathTestCollector
+e 11 - StandardTestSuiteLoader implements 13 - TestSuiteLoader
+e 14 - TestCaseClassLoader extends 55 - ClassLoader
+e 15 - TestRunner extends 6 - BaseTestRunner
+e 16 - ResultPrinter implements 26 - TestListener
+e 17 - Logo extends 56 - Canvas
+e 18 - ProgressBar extends 56 - Canvas
+e 19 - ExceptionTestCase extends 30 - TestCase
+e 20 - RepeatedTest extends 23 - TestDecorator
+e 21 - ActiveTestSuite extends 34 - TestSuite
+e 22 - TestSetup extends 23 - TestDecorator
+e 23 - TestDecorator extends 29 - Assert
+e 23 - TestDecorator implements 25 - Test
+e 28 - ComparisonFailure extends 33 - AssertionFailedError
+e 30 - TestCase extends 29 - Assert
+e 30 - TestCase implements 25 - Test
+e 33 - AssertionFailedError extends 57 - Error
+e 34 - TestSuite implements 25 - Test
+e 15 - TestRunner implements 54 - TestRunContext
+e 35 - CounterPanel extends 58 - JPanel
+e 36 - DefaultFailureDetailView implements 12 - FailureDetailView
+e 37 - StackTraceListModel extends 59 - AbstractListModel
+e 38 - StackEntryRenderer extends 60 - DefaultListCellRenderer
+e 39 - TestHierarchyRunView implements 43 - TestRunView
+e 40 - StatusLine extends 61 - JTextField
+e 41 - TestSuitePanel extends 58 - JPanel
+e 41 - TestSuitePanel implements 26 - TestListener
+e 42 - TestTreeCellRenderer extends 62 - DefaultTreeCellRenderer
+e 44 - TestTreeModel implements 63 - TreeModel
+e 45 - FailureRunView implements 43 - TestRunView
+e 46 - FailureListCellRenderer extends 60 - DefaultListCellRenderer
+e 47 - MacProgressBar extends 18 - ProgressBar
+e 48 - AboutDialog extends 64 - JDialog
+e 49 - TestSelector extends 64 - JDialog
+e 50 - TestCellRenderer extends 60 - DefaultListCellRenderer
+e 51 - DoubleClickListener extends 65 - MouseAdapter
+e 52 - KeySelectListener extends 66 - KeyAdapter
+e 53 - ParallelSwapper implements 67 - Sorter.Swapper
+e 18 - ProgressBar extends 68 - JProgressBar
+e 1 - Version overrides_methods_of 1 - Version
+e 2 - LoadingTestCollector has_the_field_type_of 14 - TestCaseClassLoader
+e 2 - LoadingTestCollector creates_objects_of 14 - TestCaseClassLoader
+e 2 - LoadingTestCollector has_the_return_type_of 14 - TestCaseClassLoader
+e 2 - LoadingTestCollector overrides_methods_of 2 - LoadingTestCollector
+e 2 - LoadingTestCollector calls_method_of 14 - TestCaseClassLoader
+e 2 - LoadingTestCollector calls_method_of 34 - TestSuite
+e 3 - ReloadingTestSuiteLoader overrides_methods_of 3 - ReloadingTestSuiteLoader
+e 3 - ReloadingTestSuiteLoader related_with_its_method 14 - TestCaseClassLoader
+e 3 - ReloadingTestSuiteLoader has_a_method_with_the_return_type_of 14 - TestCaseClassLoader
+e 3 - ReloadingTestSuiteLoader creates_objects_of 14 - TestCaseClassLoader
+e 4 - Sorter overrides_methods_of 4 - Sorter
+e 4 - Sorter related_with_its_method 5 - Swapper
+e 4 - Sorter has_a_method_that_has_an_input_parameter_with_the_type_of 5 - Swapper
+e 6 - BaseTestRunner overrides_methods_of 6 - BaseTestRunner
+e 6 - BaseTestRunner related_with_its_method 25 - Test
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 6 - BaseTestRunner related_with_its_method 33 - AssertionFailedError
+e 6 - BaseTestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 25 - Test
+e 6 - BaseTestRunner creates_objects_of 34 - TestSuite
+e 6 - BaseTestRunner calls_method_of 34 - TestSuite
+e 6 - BaseTestRunner related_with_its_method 13 - TestSuiteLoader
+e 6 - BaseTestRunner has_a_method_with_the_return_type_of 13 - TestSuiteLoader
+e 6 - BaseTestRunner creates_objects_of 3 - ReloadingTestSuiteLoader
+e 6 - BaseTestRunner creates_objects_of 11 - StandardTestSuiteLoader
+e 6 - BaseTestRunner has_the_return_type_of 11 - StandardTestSuiteLoader
+e 9 - ClassPathTestCollector overrides_methods_of 9 - ClassPathTestCollector
+e 9 - ClassPathTestCollector overrides_methods_of 2 - LoadingTestCollector
+e 10 - SimpleTestCollector overrides_methods_of 2 - LoadingTestCollector
+e 11 - StandardTestSuiteLoader overrides_methods_of 3 - ReloadingTestSuiteLoader
+e 12 - FailureDetailView related_with_its_method 32 - TestFailure
+e 12 - FailureDetailView has_a_method_that_has_an_input_parameter_with_the_type_of 32 - TestFailure
+e 14 - TestCaseClassLoader overrides_methods_of 14 - TestCaseClassLoader
+e 14 - TestCaseClassLoader calls_method_of 55 - ClassLoader
+e 15 - TestRunner has_the_field_type_of 16 - ResultPrinter
+e 15 - TestRunner creates_objects_of 16 - ResultPrinter
+e 15 - TestRunner related_with_its_method 16 - ResultPrinter
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 16 - ResultPrinter
+e 15 - TestRunner overrides_methods_of 15 - TestRunner
+e 15 - TestRunner creates_objects_of 34 - TestSuite
+e 15 - TestRunner has_the_return_type_of 34 - TestSuite
+e 15 - TestRunner related_with_its_method 31 - TestResult
+e 15 - TestRunner has_a_method_with_the_return_type_of 31 - TestResult
+e 15 - TestRunner related_with_its_method 25 - Test
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 15 - TestRunner related_with_its_method 15 - TestRunner
+e 15 - TestRunner creates_objects_of 15 - TestRunner
+e 15 - TestRunner calls_method_of 15 - TestRunner
+e 15 - TestRunner related_with_its_method 13 - TestSuiteLoader
+e 15 - TestRunner has_a_method_with_the_return_type_of 13 - TestSuiteLoader
+e 15 - TestRunner overrides_methods_of 6 - BaseTestRunner
+e 15 - TestRunner creates_objects_of 11 - StandardTestSuiteLoader
+e 15 - TestRunner creates_objects_of 31 - TestResult
+e 15 - TestRunner has_the_return_type_of 31 - TestResult
+e 15 - TestRunner calls_method_of 31 - TestResult
+e 15 - TestRunner overrides_methods_of 1 - Version
+e 15 - TestRunner calls_method_of 1 - Version
+e 16 - ResultPrinter overrides_methods_of 16 - ResultPrinter
+e 16 - ResultPrinter related_with_its_method 31 - TestResult
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 16 - ResultPrinter related_with_its_method 32 - TestFailure
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 32 - TestFailure
+e 16 - ResultPrinter overrides_methods_of 6 - BaseTestRunner
+e 16 - ResultPrinter related_with_its_method 25 - Test
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 16 - ResultPrinter related_with_its_method 33 - AssertionFailedError
+e 16 - ResultPrinter has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 15 - TestRunner has_the_field_type_of 31 - TestResult
+e 15 - TestRunner has_the_field_type_of 18 - ProgressBar
+e 15 - TestRunner has_the_field_type_of 17 - Logo
+e 15 - TestRunner related_with_its_method 48 - AboutDialog
+e 15 - TestRunner creates_objects_of 48 - AboutDialog
+e 15 - TestRunner calls_method_of 48 - AboutDialog
+e 15 - TestRunner creates_objects_of 18 - ProgressBar
+e 15 - TestRunner creates_objects_of 17 - Logo
+e 15 - TestRunner related_with_its_method 30 - TestCase
+e 15 - TestRunner has_the_field_type_of 25 - Test
+e 17 - Logo overrides_methods_of 17 - Logo
+e 18 - ProgressBar overrides_methods_of 18 - ProgressBar
+e 18 - ProgressBar overrides_methods_of 17 - Logo
+e 18 - ProgressBar overrides_methods_of 15 - TestRunner
+e 18 - ProgressBar overrides_methods_of 56 - Canvas
+e 19 - ExceptionTestCase overrides_methods_of 30 - TestCase
+e 19 - ExceptionTestCase overrides_methods_of 19 - ExceptionTestCase
+e 20 - RepeatedTest overrides_methods_of 23 - TestDecorator
+e 20 - RepeatedTest related_with_its_method 25 - Test
+e 20 - RepeatedTest has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 20 - RepeatedTest overrides_methods_of 20 - RepeatedTest
+e 20 - RepeatedTest overrides_methods_of 15 - TestRunner
+e 20 - RepeatedTest related_with_its_method 31 - TestResult
+e 20 - RepeatedTest has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 21 - ActiveTestSuite overrides_methods_of 34 - TestSuite
+e 21 - ActiveTestSuite overrides_methods_of 15 - TestRunner
+e 21 - ActiveTestSuite related_with_its_method 31 - TestResult
+e 21 - ActiveTestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 21 - ActiveTestSuite overrides_methods_of 19 - ExceptionTestCase
+e 21 - ActiveTestSuite related_with_its_method 25 - Test
+e 21 - ActiveTestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 21 - ActiveTestSuite has_the_field_type_of 25 - Test
+e 21 - ActiveTestSuite has_the_field_type_of 31 - TestResult
+e 21 - ActiveTestSuite overrides_methods_of 21 - ActiveTestSuite
+e 22 - TestSetup overrides_methods_of 23 - TestDecorator
+e 22 - TestSetup related_with_its_method 25 - Test
+e 22 - TestSetup has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 22 - TestSetup overrides_methods_of 15 - TestRunner
+e 22 - TestSetup related_with_its_method 31 - TestResult
+e 22 - TestSetup has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 22 - TestSetup related_with_its_method 27 - Protectable
+e 22 - TestSetup creates_objects_of 27 - Protectable
+e 22 - TestSetup has_the_field_type_of 31 - TestResult
+e 22 - TestSetup overrides_methods_of 22 - TestSetup
+e 23 - TestDecorator has_the_field_type_of 25 - Test
+e 23 - TestDecorator related_with_its_method 25 - Test
+e 23 - TestDecorator has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 23 - TestDecorator overrides_methods_of 23 - TestDecorator
+e 23 - TestDecorator related_with_its_method 31 - TestResult
+e 23 - TestDecorator has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 23 - TestDecorator overrides_methods_of 20 - RepeatedTest
+e 23 - TestDecorator overrides_methods_of 15 - TestRunner
+e 23 - TestDecorator has_a_method_with_the_return_type_of 25 - Test
+e 23 - TestDecorator overrides_methods_of 6 - BaseTestRunner
+e 24 - ComparisonCompactor overrides_methods_of 24 - ComparisonCompactor
+e 25 - Test related_with_its_method 31 - TestResult
+e 25 - Test has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 26 - TestListener related_with_its_method 25 - Test
+e 26 - TestListener has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 26 - TestListener related_with_its_method 33 - AssertionFailedError
+e 26 - TestListener has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 28 - ComparisonFailure overrides_methods_of 33 - AssertionFailedError
+e 28 - ComparisonFailure overrides_methods_of 28 - ComparisonFailure
+e 28 - ComparisonFailure creates_objects_of 24 - ComparisonCompactor
+e 28 - ComparisonFailure calls_method_of 24 - ComparisonCompactor
+e 29 - Assert overrides_methods_of 29 - Assert
+e 29 - Assert creates_objects_of 33 - AssertionFailedError
+e 29 - Assert calls_method_of 33 - AssertionFailedError
+e 29 - Assert creates_objects_of 28 - ComparisonFailure
+e 30 - TestCase overrides_methods_of 20 - RepeatedTest
+e 30 - TestCase related_with_its_method 31 - TestResult
+e 30 - TestCase has_a_method_with_the_return_type_of 31 - TestResult
+e 30 - TestCase overrides_methods_of 30 - TestCase
+e 30 - TestCase creates_objects_of 31 - TestResult
+e 30 - TestCase has_the_return_type_of 31 - TestResult
+e 30 - TestCase overrides_methods_of 15 - TestRunner
+e 30 - TestCase has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 30 - TestCase calls_method_of 31 - TestResult
+e 30 - TestCase overrides_methods_of 19 - ExceptionTestCase
+e 30 - TestCase overrides_methods_of 22 - TestSetup
+e 31 - TestResult overrides_methods_of 6 - BaseTestRunner
+e 31 - TestResult related_with_its_method 25 - Test
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 31 - TestResult creates_objects_of 32 - TestFailure
+e 31 - TestResult calls_method_of 32 - TestFailure
+e 31 - TestResult related_with_its_method 33 - AssertionFailedError
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 31 - TestResult overrides_methods_of 31 - TestResult
+e 31 - TestResult related_with_its_method 26 - TestListener
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 26 - TestListener
+e 31 - TestResult overrides_methods_of 15 - TestRunner
+e 31 - TestResult related_with_its_method 30 - TestCase
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 30 - TestCase
+e 31 - TestResult related_with_its_method 27 - Protectable
+e 31 - TestResult creates_objects_of 27 - Protectable
+e 31 - TestResult has_the_field_type_of 30 - TestCase
+e 31 - TestResult overrides_methods_of 22 - TestSetup
+e 31 - TestResult has_the_return_type_of 27 - Protectable
+e 31 - TestResult has_a_method_that_has_an_input_parameter_with_the_type_of 27 - Protectable
+e 31 - TestResult calls_method_of 27 - Protectable
+e 32 - TestFailure has_the_field_type_of 25 - Test
+e 32 - TestFailure related_with_its_method 25 - Test
+e 32 - TestFailure has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 32 - TestFailure has_a_method_with_the_return_type_of 25 - Test
+e 32 - TestFailure overrides_methods_of 32 - TestFailure
+e 32 - TestFailure overrides_methods_of 20 - RepeatedTest
+e 33 - AssertionFailedError overrides_methods_of 57 - Error
+e 34 - TestSuite related_with_its_method 25 - Test
+e 34 - TestSuite has_a_method_with_the_return_type_of 25 - Test
+e 34 - TestSuite overrides_methods_of 34 - TestSuite
+e 34 - TestSuite creates_objects_of 30 - TestCase
+e 34 - TestSuite overrides_methods_of 19 - ExceptionTestCase
+e 34 - TestSuite has_the_return_type_of 30 - TestCase
+e 34 - TestSuite creates_objects_of 34 - TestSuite
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 34 - TestSuite has_the_return_type_of 34 - TestSuite
+e 34 - TestSuite overrides_methods_of 20 - RepeatedTest
+e 34 - TestSuite calls_method_of 34 - TestSuite
+e 34 - TestSuite overrides_methods_of 30 - TestCase
+e 34 - TestSuite overrides_methods_of 15 - TestRunner
+e 34 - TestSuite related_with_its_method 31 - TestResult
+e 34 - TestSuite has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 15 - TestRunner has_the_field_type_of 35 - CounterPanel
+e 15 - TestRunner has_the_field_type_of 40 - StatusLine
+e 15 - TestRunner has_the_field_type_of 12 - FailureDetailView
+e 15 - TestRunner creates_objects_of 32 - TestFailure
+e 15 - TestRunner calls_method_of 32 - TestFailure
+e 15 - TestRunner related_with_its_method 43 - TestRunView
+e 15 - TestRunner overrides_methods_of 21 - ActiveTestSuite
+e 15 - TestRunner related_with_its_method 35 - CounterPanel
+e 15 - TestRunner has_a_method_with_the_return_type_of 35 - CounterPanel
+e 15 - TestRunner creates_objects_of 35 - CounterPanel
+e 15 - TestRunner has_the_return_type_of 35 - CounterPanel
+e 15 - TestRunner related_with_its_method 58 - JPanel
+e 15 - TestRunner has_a_method_with_the_return_type_of 58 - JPanel
+e 15 - TestRunner creates_objects_of 58 - JPanel
+e 15 - TestRunner related_with_its_method 12 - FailureDetailView
+e 15 - TestRunner has_a_method_with_the_return_type_of 12 - FailureDetailView
+e 15 - TestRunner creates_objects_of 36 - DefaultFailureDetailView
+e 15 - TestRunner has_the_return_type_of 36 - DefaultFailureDetailView
+e 15 - TestRunner related_with_its_method 40 - StatusLine
+e 15 - TestRunner has_a_method_with_the_return_type_of 40 - StatusLine
+e 15 - TestRunner creates_objects_of 40 - StatusLine
+e 15 - TestRunner has_the_return_type_of 40 - StatusLine
+e 15 - TestRunner creates_objects_of 66 - KeyAdapter
+e 15 - TestRunner calls_method_of 66 - KeyAdapter
+e 15 - TestRunner related_with_its_method 45 - FailureRunView
+e 15 - TestRunner creates_objects_of 45 - FailureRunView
+e 15 - TestRunner calls_method_of 45 - FailureRunView
+e 15 - TestRunner related_with_its_method 39 - TestHierarchyRunView
+e 15 - TestRunner creates_objects_of 39 - TestHierarchyRunView
+e 15 - TestRunner calls_method_of 39 - TestHierarchyRunView
+e 15 - TestRunner creates_objects_of 47 - MacProgressBar
+e 15 - TestRunner has_a_method_that_has_an_input_parameter_with_the_type_of 58 - JPanel
+e 15 - TestRunner related_with_its_method 7 - TestCollector
+e 15 - TestRunner related_with_its_method 49 - TestSelector
+e 15 - TestRunner creates_objects_of 49 - TestSelector
+e 15 - TestRunner calls_method_of 49 - TestSelector
+e 15 - TestRunner has_a_method_with_the_return_type_of 7 - TestCollector
+e 15 - TestRunner creates_objects_of 10 - SimpleTestCollector
+e 15 - TestRunner has_the_return_type_of 10 - SimpleTestCollector
+e 15 - TestRunner calls_method_of 10 - SimpleTestCollector
+e 15 - TestRunner overrides_methods_of 19 - ExceptionTestCase
+e 15 - TestRunner related_with_its_method 32 - TestFailure
+e 35 - CounterPanel has_the_field_type_of 61 - JTextField
+e 35 - CounterPanel overrides_methods_of 58 - JPanel
+e 35 - CounterPanel related_with_its_method 61 - JTextField
+e 35 - CounterPanel has_a_method_with_the_return_type_of 61 - JTextField
+e 35 - CounterPanel overrides_methods_of 35 - CounterPanel
+e 35 - CounterPanel creates_objects_of 61 - JTextField
+e 35 - CounterPanel calls_method_of 61 - JTextField
+e 35 - CounterPanel overrides_methods_of 15 - TestRunner
+e 35 - CounterPanel has_a_method_that_has_an_input_parameter_with_the_type_of 61 - JTextField
+e 37 - StackTraceListModel overrides_methods_of 37 - StackTraceListModel
+e 37 - StackTraceListModel overrides_methods_of 59 - AbstractListModel
+e 38 - StackEntryRenderer overrides_methods_of 60 - DefaultListCellRenderer
+e 38 - StackEntryRenderer overrides_methods_of 38 - StackEntryRenderer
+e 38 - StackEntryRenderer creates_objects_of 37 - StackTraceListModel
+e 38 - StackEntryRenderer creates_objects_of 38 - StackEntryRenderer
+e 38 - StackEntryRenderer related_with_its_method 32 - TestFailure
+e 38 - StackEntryRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 32 - TestFailure
+e 38 - StackEntryRenderer calls_method_of 38 - StackEntryRenderer
+e 38 - StackEntryRenderer overrides_methods_of 37 - StackTraceListModel
+e 38 - StackEntryRenderer related_with_its_method 37 - StackTraceListModel
+e 38 - StackEntryRenderer has_a_method_with_the_return_type_of 37 - StackTraceListModel
+e 39 - TestHierarchyRunView has_the_field_type_of 41 - TestSuitePanel
+e 39 - TestHierarchyRunView has_the_field_type_of 54 - TestRunContext
+e 39 - TestHierarchyRunView related_with_its_method 54 - TestRunContext
+e 39 - TestHierarchyRunView has_a_method_that_has_an_input_parameter_with_the_type_of 54 - TestRunContext
+e 39 - TestHierarchyRunView creates_objects_of 41 - TestSuitePanel
+e 39 - TestHierarchyRunView overrides_methods_of 39 - TestHierarchyRunView
+e 39 - TestHierarchyRunView related_with_its_method 25 - Test
+e 39 - TestHierarchyRunView has_a_method_with_the_return_type_of 25 - Test
+e 39 - TestHierarchyRunView overrides_methods_of 15 - TestRunner
+e 39 - TestHierarchyRunView has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 39 - TestHierarchyRunView related_with_its_method 44 - TestTreeModel
+e 39 - TestHierarchyRunView related_with_its_method 31 - TestResult
+e 39 - TestHierarchyRunView has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 39 - TestHierarchyRunView overrides_methods_of 21 - ActiveTestSuite
+e 40 - StatusLine overrides_methods_of 15 - TestRunner
+e 40 - StatusLine overrides_methods_of 40 - StatusLine
+e 40 - StatusLine overrides_methods_of 37 - StackTraceListModel
+e 41 - TestSuitePanel has_the_field_type_of 44 - TestTreeModel
+e 41 - TestSuitePanel overrides_methods_of 58 - JPanel
+e 42 - TestTreeCellRenderer overrides_methods_of 42 - TestTreeCellRenderer
+e 42 - TestTreeCellRenderer overrides_methods_of 62 - DefaultTreeCellRenderer
+e 42 - TestTreeCellRenderer related_with_its_method 63 - TreeModel
+e 42 - TestTreeCellRenderer related_with_its_method 44 - TestTreeModel
+e 42 - TestTreeCellRenderer related_with_its_method 25 - Test
+e 42 - TestTreeCellRenderer overrides_methods_of 6 - BaseTestRunner
+e 42 - TestTreeCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 42 - TestTreeCellRenderer related_with_its_method 33 - AssertionFailedError
+e 42 - TestTreeCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 33 - AssertionFailedError
+e 42 - TestTreeCellRenderer has_a_method_with_the_return_type_of 25 - Test
+e 42 - TestTreeCellRenderer overrides_methods_of 39 - TestHierarchyRunView
+e 42 - TestTreeCellRenderer creates_objects_of 44 - TestTreeModel
+e 42 - TestTreeCellRenderer creates_objects_of 42 - TestTreeCellRenderer
+e 42 - TestTreeCellRenderer has_the_field_type_of 25 - Test
+e 42 - TestTreeCellRenderer overrides_methods_of 15 - TestRunner
+e 43 - TestRunView has_a_method_with_the_return_type_of 25 - Test
+e 43 - TestRunView related_with_its_method 25 - Test
+e 43 - TestRunView has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 43 - TestRunView related_with_its_method 31 - TestResult
+e 43 - TestRunView has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 44 - TestTreeModel has_the_field_type_of 25 - Test
+e 44 - TestTreeModel related_with_its_method 25 - Test
+e 44 - TestTreeModel has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 44 - TestTreeModel overrides_methods_of 44 - TestTreeModel
+e 44 - TestTreeModel related_with_its_method 34 - TestSuite
+e 44 - TestTreeModel has_a_method_with_the_return_type_of 34 - TestSuite
+e 44 - TestTreeModel overrides_methods_of 6 - BaseTestRunner
+e 44 - TestTreeModel overrides_methods_of 32 - TestFailure
+e 45 - FailureRunView has_the_field_type_of 54 - TestRunContext
+e 46 - FailureListCellRenderer overrides_methods_of 42 - TestTreeCellRenderer
+e 46 - FailureListCellRenderer overrides_methods_of 60 - DefaultListCellRenderer
+e 46 - FailureListCellRenderer overrides_methods_of 38 - StackEntryRenderer
+e 46 - FailureListCellRenderer related_with_its_method 32 - TestFailure
+e 46 - FailureListCellRenderer calls_method_of 6 - BaseTestRunner
+e 46 - FailureListCellRenderer related_with_its_method 54 - TestRunContext
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 54 - TestRunContext
+e 46 - FailureListCellRenderer creates_objects_of 46 - FailureListCellRenderer
+e 46 - FailureListCellRenderer overrides_methods_of 39 - TestHierarchyRunView
+e 46 - FailureListCellRenderer related_with_its_method 25 - Test
+e 46 - FailureListCellRenderer has_a_method_with_the_return_type_of 25 - Test
+e 46 - FailureListCellRenderer overrides_methods_of 15 - TestRunner
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test
+e 46 - FailureListCellRenderer related_with_its_method 31 - TestResult
+e 46 - FailureListCellRenderer has_a_method_that_has_an_input_parameter_with_the_type_of 31 - TestResult
+e 46 - FailureListCellRenderer overrides_methods_of 21 - ActiveTestSuite
+e 47 - MacProgressBar has_the_field_type_of 61 - JTextField
+e 47 - MacProgressBar related_with_its_method 61 - JTextField
+e 47 - MacProgressBar has_a_method_that_has_an_input_parameter_with_the_type_of 61 - JTextField
+e 47 - MacProgressBar overrides_methods_of 47 - MacProgressBar
+e 48 - AboutDialog overrides_methods_of 64 - JDialog
+e 48 - AboutDialog calls_method_of 49 - TestSelector
+e 48 - AboutDialog overrides_methods_of 15 - TestRunner
+e 48 - AboutDialog calls_method_of 1 - Version
+e 49 - TestSelector overrides_methods_of 64 - JDialog
+e 50 - TestCellRenderer overrides_methods_of 60 - DefaultListCellRenderer
+e 50 - TestCellRenderer overrides_methods_of 38 - StackEntryRenderer
+e 50 - TestCellRenderer overrides_methods_of 50 - TestCellRenderer
+e 51 - DoubleClickListener overrides_methods_of 51 - DoubleClickListener
+e 52 - KeySelectListener overrides_methods_of 15 - TestRunner
+e 52 - KeySelectListener overrides_methods_of 66 - KeyAdapter
+e 52 - KeySelectListener related_with_its_method 7 - TestCollector
+e 52 - KeySelectListener has_a_method_that_has_an_input_parameter_with_the_type_of 7 - TestCollector
+e 52 - KeySelectListener creates_objects_of 50 - TestCellRenderer
+e 52 - KeySelectListener overrides_methods_of 52 - KeySelectListener
+e 52 - KeySelectListener creates_objects_of 51 - DoubleClickListener
+e 52 - KeySelectListener creates_objects_of 52 - KeySelectListener
+e 52 - KeySelectListener overrides_methods_of 39 - TestHierarchyRunView
+e 52 - KeySelectListener calls_method_of 50 - TestCellRenderer
+e 52 - KeySelectListener creates_objects_of 53 - ParallelSwapper
+e 53 - ParallelSwapper overrides_methods_of 53 - ParallelSwapper
+e 53 - ParallelSwapper calls_method_of 53 - ParallelSwapper
+e 18 - ProgressBar overrides_methods_of 47 - MacProgressBar
+e 54 - TestRunContext related_with_its_method 25 - Test
+e 54 - TestRunContext has_a_method_that_has_an_input_parameter_with_the_type_of 25 - Test

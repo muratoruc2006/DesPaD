@@ -1,0 +1,7 @@
+[Desktop Entry]
+Comment=Design Pattern Detector
+Terminal=false
+Name=DesPaD
+Exec=java -jar /home/murat/Masaüstü/eclipse/workspace/AST/DesignPatternDetection.jar
+Type=Application
+Icon=frozensynapse

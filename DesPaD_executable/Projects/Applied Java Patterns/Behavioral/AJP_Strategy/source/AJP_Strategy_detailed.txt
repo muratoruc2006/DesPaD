@@ -1,0 +1,179 @@
+v 1 Contact (Interface)
+v 2 NameSummarizer (Class)
+v 3 NameComparator (Class)
+v 4 RunPattern (Class)
+v 5 OrganizationSummarizer (Class)
+v 6 OrganizationComparator (Class)
+v 7 ContactImpl (Class)
+v 8 ContactList (Class)
+v 9 DataRetriever (Class)
+v 10 DataCreator (Class)
+v 11 SummarizingStrategy (Interface)
+v 12 Serializable (Interface)
+v 13 Comparator (Interface)
+v 14 String (Class)
+v 15 void (Class)
+v 16 StringBuffer (Class)
+v 17 int (Class)
+v 18 product (Class)
+v 19 Collator (Class)
+v 20 Object (Class)
+v 21 boolean (Class)
+v 22 textComparator (Class)
+v 23 File (Class)
+v 24 list (Class)
+v 25 ArrayList (Class)
+v 26 ; (Class)
+v 27 contacts (Class)
+v 28 inputFile (Class)
+v 29 ObjectInputStream (Class)
+v 30 FileInputStream (Class)
+v 31 readIn (Class)
+v 32 exc (Class)
+v 33 ObjectOutputStream (Class)
+v 34 FileOutputStream (Class)
+v 35 serOut (Class)
+e 1 - Contact extends 12 - Serializable
+e 2 - NameSummarizer implements 11 - SummarizingStrategy
+e 3 - NameComparator implements 13 - Comparator
+e 5 - OrganizationSummarizer implements 11 - SummarizingStrategy
+e 6 - OrganizationComparator implements 13 - Comparator
+e 7 - ContactImpl implements 1 - Contact
+e 8 - ContactList implements 12 - Serializable
+e 1 - Contact has_a_method_with_the_return_type_of 14 - String
+e 1 - Contact related_with_its_method 14 - String
+e 1 - Contact has_a_method_that_has_an_input_parameter_with_the_type_of 14 - String
+e 2 - NameSummarizer has_the_field_type_of 13 - Comparator
+e 2 - NameSummarizer creates_objects_of 3 - NameComparator
+e 2 - NameSummarizer has_the_return_type_of 3 - NameComparator
+e 2 - NameSummarizer related_with_its_method 14 - String
+e 2 - NameSummarizer has_a_method_with_the_return_type_of 14 - String
+e 2 - NameSummarizer overrides_methods_of 2 - NameSummarizer
+e 2 - NameSummarizer related_with_its_method 1 - Contact[]
+e 2 - NameSummarizer has_a_method_that_has_an_input_parameter_with_the_type_of 1 - Contact[]
+e 2 - NameSummarizer related_with_its_method 16 - StringBuffer
+e 2 - NameSummarizer creates_objects_of 16 - StringBuffer
+e 2 - NameSummarizer related_with_its_method 17 - int
+e 2 - NameSummarizer calls_method_of 18 - product
+e 2 - NameSummarizer calls_method_of 16 - StringBuffer
+e 2 - NameSummarizer related_with_its_method 14 - String[]
+e 2 - NameSummarizer has_a_method_with_the_return_type_of 14 - String[]
+e 2 - NameSummarizer creates_objects_of 14 - String
+e 3 - NameComparator has_the_field_type_of 19 - Collator
+e 3 - NameComparator calls_method_of 19 - Collator
+e 3 - NameComparator calls_method_of 14 - String
+e 3 - NameComparator related_with_its_method 17 - int
+e 3 - NameComparator has_a_method_with_the_return_type_of 17 - int
+e 3 - NameComparator overrides_methods_of 3 - NameComparator
+e 3 - NameComparator related_with_its_method 20 - Object
+e 3 - NameComparator has_a_method_that_has_an_input_parameter_with_the_type_of 20 - Object
+e 3 - NameComparator related_with_its_method 1 - Contact
+e 3 - NameComparator related_with_its_method 21 - boolean
+e 3 - NameComparator has_a_method_with_the_return_type_of 21 - boolean
+e 3 - NameComparator calls_method_of 22 - textComparator
+e 4 - RunPattern overrides_methods_of 4 - RunPattern
+e 4 - RunPattern related_with_its_method 14 - String[]
+e 4 - RunPattern has_a_method_that_has_an_input_parameter_with_the_type_of 14 - String[]
+e 4 - RunPattern creates_objects_of 23 - File
+e 4 - RunPattern related_with_its_method 8 - ContactList
+e 4 - RunPattern creates_objects_of 2 - NameSummarizer
+e 4 - RunPattern calls_method_of 24 - list
+e 4 - RunPattern calls_method_of 2 - NameSummarizer
+e 4 - RunPattern creates_objects_of 5 - OrganizationSummarizer
+e 4 - RunPattern calls_method_of 5 - OrganizationSummarizer
+e 5 - OrganizationSummarizer has_the_field_type_of 13 - Comparator
+e 5 - OrganizationSummarizer creates_objects_of 6 - OrganizationComparator
+e 5 - OrganizationSummarizer has_the_return_type_of 6 - OrganizationComparator
+e 5 - OrganizationSummarizer related_with_its_method 14 - String
+e 5 - OrganizationSummarizer has_a_method_with_the_return_type_of 14 - String
+e 5 - OrganizationSummarizer overrides_methods_of 2 - NameSummarizer
+e 5 - OrganizationSummarizer related_with_its_method 1 - Contact[]
+e 5 - OrganizationSummarizer has_a_method_that_has_an_input_parameter_with_the_type_of 1 - Contact[]
+e 5 - OrganizationSummarizer related_with_its_method 16 - StringBuffer
+e 5 - OrganizationSummarizer creates_objects_of 16 - StringBuffer
+e 5 - OrganizationSummarizer related_with_its_method 17 - int
+e 5 - OrganizationSummarizer calls_method_of 18 - product
+e 5 - OrganizationSummarizer calls_method_of 16 - StringBuffer
+e 5 - OrganizationSummarizer related_with_its_method 14 - String[]
+e 5 - OrganizationSummarizer has_a_method_with_the_return_type_of 14 - String[]
+e 5 - OrganizationSummarizer creates_objects_of 14 - String
+e 6 - OrganizationComparator has_the_field_type_of 19 - Collator
+e 6 - OrganizationComparator calls_method_of 19 - Collator
+e 6 - OrganizationComparator calls_method_of 14 - String
+e 6 - OrganizationComparator related_with_its_method 17 - int
+e 6 - OrganizationComparator has_a_method_with_the_return_type_of 17 - int
+e 6 - OrganizationComparator overrides_methods_of 3 - NameComparator
+e 6 - OrganizationComparator related_with_its_method 20 - Object
+e 6 - OrganizationComparator has_a_method_that_has_an_input_parameter_with_the_type_of 20 - Object
+e 6 - OrganizationComparator related_with_its_method 1 - Contact
+e 6 - OrganizationComparator related_with_its_method 21 - boolean
+e 6 - OrganizationComparator has_a_method_with_the_return_type_of 21 - boolean
+e 6 - OrganizationComparator calls_method_of 22 - textComparator
+e 7 - ContactImpl has_the_field_type_of 14 - String
+e 7 - ContactImpl related_with_its_method 14 - String
+e 7 - ContactImpl has_a_method_that_has_an_input_parameter_with_the_type_of 14 - String
+e 7 - ContactImpl has_a_method_with_the_return_type_of 14 - String
+e 7 - ContactImpl overrides_methods_of 7 - ContactImpl
+e 8 - ContactList has_the_field_type_of 25 - ArrayList
+e 8 - ContactList creates_objects_of 25 - ArrayList
+e 8 - ContactList has_the_field_type_of 11 - SummarizingStrategy
+e 8 - ContactList has_the_return_type_of 25 - ArrayList
+e 8 - ContactList related_with_its_method 25 - ArrayList
+e 8 - ContactList has_a_method_with_the_return_type_of 25 - ArrayList
+e 8 - ContactList overrides_methods_of 8 - ContactList
+e 8 - ContactList has_the_return_type_of 26 - ;
+e 8 - ContactList related_with_its_method 1 - Contact[]
+e 8 - ContactList has_a_method_with_the_return_type_of 1 - Contact[]
+e 8 - ContactList creates_objects_of 1 - Contact
+e 8 - ContactList related_with_its_method 11 - SummarizingStrategy
+e 8 - ContactList has_a_method_that_has_an_input_parameter_with_the_type_of 11 - SummarizingStrategy
+e 8 - ContactList has_a_method_that_has_an_input_parameter_with_the_type_of 25 - ArrayList
+e 8 - ContactList related_with_its_method 1 - Contact
+e 8 - ContactList has_a_method_that_has_an_input_parameter_with_the_type_of 1 - Contact
+e 8 - ContactList calls_method_of 1 - Contact
+e 8 - ContactList calls_method_of 27 - contacts
+e 8 - ContactList related_with_its_method 14 - String
+e 8 - ContactList has_a_method_with_the_return_type_of 14 - String
+e 8 - ContactList overrides_methods_of 2 - NameSummarizer
+e 8 - ContactList related_with_its_method 14 - String[]
+e 8 - ContactList has_a_method_with_the_return_type_of 14 - String[]
+e 9 - DataRetriever related_with_its_method 20 - Object
+e 9 - DataRetriever has_a_method_with_the_return_type_of 20 - Object
+e 9 - DataRetriever overrides_methods_of 9 - DataRetriever
+e 9 - DataRetriever related_with_its_method 14 - String
+e 9 - DataRetriever has_a_method_that_has_an_input_parameter_with_the_type_of 14 - String
+e 9 - DataRetriever related_with_its_method 23 - File
+e 9 - DataRetriever creates_objects_of 23 - File
+e 9 - DataRetriever calls_method_of 28 - inputFile
+e 9 - DataRetriever calls_method_of 23 - File
+e 9 - DataRetriever related_with_its_method 29 - ObjectInputStream
+e 9 - DataRetriever creates_objects_of 29 - ObjectInputStream
+e 9 - DataRetriever creates_objects_of 30 - FileInputStream
+e 9 - DataRetriever calls_method_of 31 - readIn
+e 9 - DataRetriever calls_method_of 30 - FileInputStream
+e 9 - DataRetriever calls_method_of 32 - exc
+e 10 - DataCreator has_the_field_type_of 14 - String
+e 10 - DataCreator overrides_methods_of 4 - RunPattern
+e 10 - DataCreator related_with_its_method 14 - String[]
+e 10 - DataCreator has_a_method_that_has_an_input_parameter_with_the_type_of 14 - String[]
+e 10 - DataCreator related_with_its_method 14 - String
+e 10 - DataCreator overrides_methods_of 10 - DataCreator
+e 10 - DataCreator has_a_method_that_has_an_input_parameter_with_the_type_of 14 - String
+e 10 - DataCreator calls_method_of 32 - exc
+e 10 - DataCreator related_with_its_method 12 - Serializable
+e 10 - DataCreator has_a_method_with_the_return_type_of 12 - Serializable
+e 10 - DataCreator related_with_its_method 8 - ContactList
+e 10 - DataCreator creates_objects_of 8 - ContactList
+e 10 - DataCreator creates_objects_of 7 - ContactImpl
+e 10 - DataCreator has_a_method_that_has_an_input_parameter_with_the_type_of 12 - Serializable
+e 10 - DataCreator related_with_its_method 33 - ObjectOutputStream
+e 10 - DataCreator creates_objects_of 33 - ObjectOutputStream
+e 10 - DataCreator creates_objects_of 34 - FileOutputStream
+e 10 - DataCreator calls_method_of 35 - serOut
+e 10 - DataCreator calls_method_of 34 - FileOutputStream
+e 11 - SummarizingStrategy has_a_method_with_the_return_type_of 14 - String
+e 11 - SummarizingStrategy related_with_its_method 14 - String
+e 11 - SummarizingStrategy related_with_its_method 1 - Contact[]
+e 11 - SummarizingStrategy has_a_method_that_has_an_input_parameter_with_the_type_of 1 - Contact[]
+e 11 - SummarizingStrategy has_a_method_with_the_return_type_of 14 - String[]
+e 11 - SummarizingStrategy related_with_its_method 14 - String[]

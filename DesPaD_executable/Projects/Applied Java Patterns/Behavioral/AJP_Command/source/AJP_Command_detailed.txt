@@ -1,0 +1,180 @@
+v 1 LocationImpl (Class)
+v 2 Contact (Interface)
+v 3 RunPattern (Class)
+v 4 ContactImpl (Class)
+v 5 Location (Interface)
+v 6 CommandGui (Class)
+v 7 WindowCloseManager (Class)
+v 8 Appointment (Class)
+v 9 LocationEditor (Interface)
+v 10 UndoableCommand (Interface)
+v 11 Command (Interface)
+v 12 ChangeLocationCommand (Class)
+v 13 Serializable (Interface)
+v 14 ActionListener (Interface)
+v 15 WindowAdapter (Class)
+v 16 String (Class)
+v 17 void (Class)
+v 18 Calendar (Class)
+v 19 cmd (Class)
+v 20 application (Class)
+v 21 Date (Class)
+v 22 int (Class)
+v 23 dateCreator (Class)
+v 24 JFrame (Class)
+v 25 JTextArea (Class)
+v 26 JTextField (Class)
+v 27 JButton (Class)
+v 28 JPanel (Class)
+v 29 Container (Class)
+v 30 mainFrame (Class)
+v 31 BoxLayout (Class)
+v 32 JLabel (Class)
+v 33 editorPanel (Class)
+v 34 content (Class)
+v 35 display (Class)
+v 36 displayPanel (Class)
+v 37 controlPanel (Class)
+v 38 update (Class)
+v 39 undo (Class)
+v 40 redo (Class)
+v 41 exit (Class)
+v 42 ActionEvent (Class)
+v 43 Object (Class)
+v 44 evt (Class)
+v 45 WindowEvent (Class)
+v 46 updatedLocation (Class)
+v 47 command (Class)
+v 48 appointment (Class)
+v 49 editor (Class)
+e 1 - LocationImpl implements 5 - Location
+e 2 - Contact extends 13 - Serializable
+e 4 - ContactImpl implements 2 - Contact
+e 5 - Location extends 13 - Serializable
+e 6 - CommandGui implements 14 - ActionListener
+e 6 - CommandGui implements 9 - LocationEditor
+e 7 - WindowCloseManager extends 15 - WindowAdapter
+e 10 - UndoableCommand extends 11 - Command
+e 12 - ChangeLocationCommand implements 10 - UndoableCommand
+e 1 - LocationImpl has_the_field_type_of 16 - String
+e 1 - LocationImpl related_with_its_method 16 - String
+e 1 - LocationImpl has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String
+e 1 - LocationImpl has_a_method_with_the_return_type_of 16 - String
+e 1 - LocationImpl overrides_methods_of 1 - LocationImpl
+e 2 - Contact has_a_method_with_the_return_type_of 16 - String
+e 2 - Contact related_with_its_method 16 - String
+e 2 - Contact has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String
+e 3 - RunPattern has_the_field_type_of 18 - Calendar
+e 3 - RunPattern calls_method_of 18 - Calendar
+e 3 - RunPattern overrides_methods_of 3 - RunPattern
+e 3 - RunPattern related_with_its_method 16 - String[]
+e 3 - RunPattern has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String[]
+e 3 - RunPattern related_with_its_method 2 - Contact[]
+e 3 - RunPattern creates_objects_of 4 - ContactImpl
+e 3 - RunPattern related_with_its_method 8 - Appointment
+e 3 - RunPattern creates_objects_of 8 - Appointment
+e 3 - RunPattern creates_objects_of 1 - LocationImpl
+e 3 - RunPattern related_with_its_method 12 - ChangeLocationCommand
+e 3 - RunPattern creates_objects_of 12 - ChangeLocationCommand
+e 3 - RunPattern calls_method_of 19 - cmd
+e 3 - RunPattern calls_method_of 12 - ChangeLocationCommand
+e 3 - RunPattern related_with_its_method 6 - CommandGui
+e 3 - RunPattern creates_objects_of 6 - CommandGui
+e 3 - RunPattern calls_method_of 20 - application
+e 3 - RunPattern calls_method_of 6 - CommandGui
+e 3 - RunPattern related_with_its_method 21 - Date
+e 3 - RunPattern has_a_method_with_the_return_type_of 21 - Date
+e 3 - RunPattern related_with_its_method 22 - int
+e 3 - RunPattern has_a_method_that_has_an_input_parameter_with_the_type_of 22 - int
+e 3 - RunPattern calls_method_of 23 - dateCreator
+e 4 - ContactImpl has_the_field_type_of 16 - String
+e 4 - ContactImpl related_with_its_method 16 - String
+e 4 - ContactImpl has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String
+e 4 - ContactImpl has_a_method_with_the_return_type_of 16 - String
+e 4 - ContactImpl overrides_methods_of 4 - ContactImpl
+e 4 - ContactImpl overrides_methods_of 1 - LocationImpl
+e 5 - Location has_a_method_with_the_return_type_of 16 - String
+e 5 - Location related_with_its_method 16 - String
+e 5 - Location has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String
+e 6 - CommandGui has_the_field_type_of 24 - JFrame
+e 6 - CommandGui has_the_field_type_of 25 - JTextArea
+e 6 - CommandGui has_the_field_type_of 26 - JTextField
+e 6 - CommandGui has_the_field_type_of 27 - JButton
+e 6 - CommandGui has_the_field_type_of 28 - JPanel
+e 6 - CommandGui has_the_field_type_of 10 - UndoableCommand
+e 6 - CommandGui has_the_field_type_of 8 - Appointment
+e 6 - CommandGui related_with_its_method 10 - UndoableCommand
+e 6 - CommandGui has_a_method_that_has_an_input_parameter_with_the_type_of 10 - UndoableCommand
+e 6 - CommandGui overrides_methods_of 6 - CommandGui
+e 6 - CommandGui related_with_its_method 8 - Appointment
+e 6 - CommandGui has_a_method_that_has_an_input_parameter_with_the_type_of 8 - Appointment
+e 6 - CommandGui creates_objects_of 24 - JFrame
+e 6 - CommandGui related_with_its_method 29 - Container
+e 6 - CommandGui calls_method_of 30 - mainFrame
+e 6 - CommandGui calls_method_of 24 - JFrame
+e 6 - CommandGui creates_objects_of 31 - BoxLayout
+e 6 - CommandGui creates_objects_of 28 - JPanel
+e 6 - CommandGui creates_objects_of 32 - JLabel
+e 6 - CommandGui creates_objects_of 26 - JTextField
+e 6 - CommandGui calls_method_of 33 - editorPanel
+e 6 - CommandGui calls_method_of 26 - JTextField
+e 6 - CommandGui calls_method_of 34 - content
+e 6 - CommandGui creates_objects_of 25 - JTextArea
+e 6 - CommandGui calls_method_of 35 - display
+e 6 - CommandGui calls_method_of 25 - JTextArea
+e 6 - CommandGui calls_method_of 36 - displayPanel
+e 6 - CommandGui creates_objects_of 27 - JButton
+e 6 - CommandGui calls_method_of 37 - controlPanel
+e 6 - CommandGui calls_method_of 27 - JButton
+e 6 - CommandGui calls_method_of 38 - update
+e 6 - CommandGui calls_method_of 39 - undo
+e 6 - CommandGui calls_method_of 40 - redo
+e 6 - CommandGui calls_method_of 41 - exit
+e 6 - CommandGui creates_objects_of 7 - WindowCloseManager
+e 6 - CommandGui calls_method_of 7 - WindowCloseManager
+e 6 - CommandGui related_with_its_method 42 - ActionEvent
+e 6 - CommandGui has_a_method_that_has_an_input_parameter_with_the_type_of 42 - ActionEvent
+e 6 - CommandGui related_with_its_method 43 - Object
+e 6 - CommandGui calls_method_of 44 - evt
+e 7 - WindowCloseManager overrides_methods_of 7 - WindowCloseManager
+e 7 - WindowCloseManager related_with_its_method 45 - WindowEvent
+e 7 - WindowCloseManager has_a_method_that_has_an_input_parameter_with_the_type_of 45 - WindowEvent
+e 7 - WindowCloseManager related_with_its_method 5 - Location
+e 7 - WindowCloseManager has_a_method_with_the_return_type_of 5 - Location
+e 7 - WindowCloseManager creates_objects_of 1 - LocationImpl
+e 7 - WindowCloseManager calls_method_of 46 - updatedLocation
+e 7 - WindowCloseManager calls_method_of 1 - LocationImpl
+e 7 - WindowCloseManager calls_method_of 47 - command
+e 7 - WindowCloseManager calls_method_of 48 - appointment
+e 8 - Appointment has_the_field_type_of 16 - String
+e 8 - Appointment has_the_field_type_of 2 - Contact[]
+e 8 - Appointment has_the_field_type_of 5 - Location
+e 8 - Appointment has_the_field_type_of 21 - Date
+e 8 - Appointment related_with_its_method 16 - String
+e 8 - Appointment has_a_method_that_has_an_input_parameter_with_the_type_of 16 - String
+e 8 - Appointment related_with_its_method 2 - Contact[]
+e 8 - Appointment has_a_method_that_has_an_input_parameter_with_the_type_of 2 - Contact[]
+e 8 - Appointment related_with_its_method 5 - Location
+e 8 - Appointment has_a_method_that_has_an_input_parameter_with_the_type_of 5 - Location
+e 8 - Appointment related_with_its_method 21 - Date
+e 8 - Appointment has_a_method_that_has_an_input_parameter_with_the_type_of 21 - Date
+e 8 - Appointment has_a_method_with_the_return_type_of 16 - String
+e 8 - Appointment overrides_methods_of 8 - Appointment
+e 8 - Appointment has_a_method_with_the_return_type_of 2 - Contact[]
+e 8 - Appointment has_a_method_with_the_return_type_of 5 - Location
+e 8 - Appointment overrides_methods_of 1 - LocationImpl
+e 8 - Appointment has_a_method_with_the_return_type_of 21 - Date
+e 9 - LocationEditor has_a_method_with_the_return_type_of 5 - Location
+e 9 - LocationEditor related_with_its_method 5 - Location
+e 12 - ChangeLocationCommand has_the_field_type_of 8 - Appointment
+e 12 - ChangeLocationCommand has_the_field_type_of 5 - Location
+e 12 - ChangeLocationCommand has_the_field_type_of 9 - LocationEditor
+e 12 - ChangeLocationCommand related_with_its_method 8 - Appointment
+e 12 - ChangeLocationCommand has_a_method_with_the_return_type_of 8 - Appointment
+e 12 - ChangeLocationCommand overrides_methods_of 12 - ChangeLocationCommand
+e 12 - ChangeLocationCommand overrides_methods_of 6 - CommandGui
+e 12 - ChangeLocationCommand has_a_method_that_has_an_input_parameter_with_the_type_of 8 - Appointment
+e 12 - ChangeLocationCommand related_with_its_method 9 - LocationEditor
+e 12 - ChangeLocationCommand has_a_method_that_has_an_input_parameter_with_the_type_of 9 - LocationEditor
+e 12 - ChangeLocationCommand calls_method_of 48 - appointment
+e 12 - ChangeLocationCommand calls_method_of 49 - editor

@@ -1,0 +1,21 @@
+v 1 EditorGui (Class)
+v 2 WindowCloseManager (Class)
+v 3 Contact (Class)
+v 4 ContactEditor (Class)
+v 5 Editable (Interface)
+v 6 RunPattern (Class)
+v 7 ItemEditor (Interface)
+e 3 - Contact implements 5 - Editable
+e 4 - ContactEditor implements 7 - ItemEditor
+e 1 - EditorGui has_the_field_type_of 7 - ItemEditor
+e 1 - EditorGui related_with_its_method 7 - ItemEditor
+e 1 - EditorGui creates_objects_of 2 - WindowCloseManager
+e 2 - WindowCloseManager calls_method_of 2 - WindowCloseManager
+e 3 - Contact related_with_its_method 7 - ItemEditor
+e 3 - Contact overrides_methods_of 7 - ItemEditor
+e 3 - Contact creates_objects_of 4 - ContactEditor
+e 6 - RunPattern related_with_its_method 3 - Contact
+e 6 - RunPattern creates_objects_of 3 - Contact
+e 6 - RunPattern related_with_its_method 1 - EditorGui
+e 6 - RunPattern creates_objects_of 1 - EditorGui
+e 6 - RunPattern calls_method_of 1 - EditorGui

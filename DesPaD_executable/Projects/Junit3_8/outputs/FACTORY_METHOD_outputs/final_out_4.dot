@@ -1,0 +1,11 @@
+digraph SubdueGraph {
+  26 [label="Interface",color=blue,fontcolor=blue];
+  39 [label="Class",color=blue,fontcolor=blue];
+  41 [label="Class",color=blue,fontcolor=blue];
+  43 [label="Interface",color=blue,fontcolor=blue];
+  45 [label="Class",color=blue,fontcolor=blue];
+  39 -> 43 [label="implements",color=blue,fontcolor=blue];
+  41 -> 26 [label="implements",color=blue,fontcolor=blue];
+  45 -> 43 [label="implements",color=blue,fontcolor=blue];
+  39 -> 41 [label="creates_objects_of",color=blue,fontcolor=blue];
+}

@@ -1,0 +1,70 @@
+v 1 MediatorGui (Class)
+v 2 WindowCloseManager (Class)
+v 3 Contact (Interface)
+v 4 RunPattern (Class)
+v 5 ContactImpl (Class)
+v 6 ContactMediatorImpl (Class)
+v 7 ContactSelectorPanel (Class)
+v 8 ContactDisplayPanel (Class)
+v 9 ContactEditorPanel (Class)
+v 10 ContactMediator (Interface)
+e 5 - ContactImpl implements 3 - Contact
+e 6 - ContactMediatorImpl implements 10 - ContactMediator
+e 1 - MediatorGui has_the_field_type_of 10 - ContactMediator
+e 1 - MediatorGui related_with_its_method 10 - ContactMediator
+e 1 - MediatorGui has_a_method_that_has_an_input_parameter_with_the_type_of 10 - ContactMediator
+e 1 - MediatorGui related_with_its_method 7 - ContactSelectorPanel
+e 1 - MediatorGui creates_objects_of 7 - ContactSelectorPanel
+e 1 - MediatorGui related_with_its_method 8 - ContactDisplayPanel
+e 1 - MediatorGui creates_objects_of 8 - ContactDisplayPanel
+e 1 - MediatorGui related_with_its_method 9 - ContactEditorPanel
+e 1 - MediatorGui creates_objects_of 9 - ContactEditorPanel
+e 1 - MediatorGui creates_objects_of 2 - WindowCloseManager
+e 4 - RunPattern related_with_its_method 3 - Contact
+e 4 - RunPattern creates_objects_of 5 - ContactImpl
+e 4 - RunPattern related_with_its_method 6 - ContactMediatorImpl
+e 4 - RunPattern creates_objects_of 6 - ContactMediatorImpl
+e 4 - RunPattern related_with_its_method 1 - MediatorGui
+e 4 - RunPattern creates_objects_of 1 - MediatorGui
+e 4 - RunPattern calls_method_of 1 - MediatorGui
+e 6 - ContactMediatorImpl has_the_field_type_of 8 - ContactDisplayPanel
+e 6 - ContactMediatorImpl has_the_field_type_of 9 - ContactEditorPanel
+e 6 - ContactMediatorImpl has_the_field_type_of 7 - ContactSelectorPanel
+e 6 - ContactMediatorImpl related_with_its_method 8 - ContactDisplayPanel
+e 6 - ContactMediatorImpl has_a_method_that_has_an_input_parameter_with_the_type_of 8 - ContactDisplayPanel
+e 6 - ContactMediatorImpl related_with_its_method 9 - ContactEditorPanel
+e 6 - ContactMediatorImpl has_a_method_that_has_an_input_parameter_with_the_type_of 9 - ContactEditorPanel
+e 6 - ContactMediatorImpl related_with_its_method 7 - ContactSelectorPanel
+e 6 - ContactMediatorImpl has_a_method_that_has_an_input_parameter_with_the_type_of 7 - ContactSelectorPanel
+e 6 - ContactMediatorImpl related_with_its_method 3 - Contact
+e 6 - ContactMediatorImpl creates_objects_of 5 - ContactImpl
+e 6 - ContactMediatorImpl calls_method_of 5 - ContactImpl
+e 6 - ContactMediatorImpl has_a_method_that_has_an_input_parameter_with_the_type_of 3 - Contact
+e 6 - ContactMediatorImpl has_the_return_type_of 3 - Contact[]
+e 6 - ContactMediatorImpl related_with_its_method 3 - Contact[]
+e 6 - ContactMediatorImpl overrides_methods_of 3 - Contact[]
+e 6 - ContactMediatorImpl creates_objects_of 3 - Contact
+e 6 - ContactMediatorImpl calls_method_of 3 - Contact
+e 7 - ContactSelectorPanel has_the_field_type_of 10 - ContactMediator
+e 7 - ContactSelectorPanel related_with_its_method 10 - ContactMediator
+e 7 - ContactSelectorPanel has_a_method_that_has_an_input_parameter_with_the_type_of 10 - ContactMediator
+e 7 - ContactSelectorPanel related_with_its_method 3 - Contact
+e 7 - ContactSelectorPanel has_a_method_that_has_an_input_parameter_with_the_type_of 3 - Contact
+e 8 - ContactDisplayPanel has_the_field_type_of 10 - ContactMediator
+e 8 - ContactDisplayPanel related_with_its_method 10 - ContactMediator
+e 8 - ContactDisplayPanel has_a_method_that_has_an_input_parameter_with_the_type_of 10 - ContactMediator
+e 8 - ContactDisplayPanel related_with_its_method 3 - Contact
+e 8 - ContactDisplayPanel has_a_method_that_has_an_input_parameter_with_the_type_of 3 - Contact
+e 9 - ContactEditorPanel has_the_field_type_of 10 - ContactMediator
+e 9 - ContactEditorPanel related_with_its_method 10 - ContactMediator
+e 9 - ContactEditorPanel has_a_method_that_has_an_input_parameter_with_the_type_of 10 - ContactMediator
+e 9 - ContactEditorPanel related_with_its_method 3 - Contact
+e 9 - ContactEditorPanel has_a_method_that_has_an_input_parameter_with_the_type_of 3 - Contact
+e 10 - ContactMediator related_with_its_method 8 - ContactDisplayPanel
+e 10 - ContactMediator has_a_method_that_has_an_input_parameter_with_the_type_of 8 - ContactDisplayPanel
+e 10 - ContactMediator related_with_its_method 9 - ContactEditorPanel
+e 10 - ContactMediator has_a_method_that_has_an_input_parameter_with_the_type_of 9 - ContactEditorPanel
+e 10 - ContactMediator related_with_its_method 7 - ContactSelectorPanel
+e 10 - ContactMediator has_a_method_that_has_an_input_parameter_with_the_type_of 7 - ContactSelectorPanel
+e 10 - ContactMediator related_with_its_method 3 - Contact
+e 10 - ContactMediator has_a_method_that_has_an_input_parameter_with_the_type_of 3 - Contact

@@ -1,0 +1,55 @@
+v 1 StateGui (Class)
+v 2 WindowCloseManager (Class)
+v 3 StateTableModel (Class)
+v 4 LocationImpl (Class)
+v 5 Contact (Interface)
+v 6 RunPattern (Class)
+v 7 ContactImpl (Class)
+v 8 Location (Interface)
+v 9 CalendarEditor (Class)
+v 10 DirtyState (Class)
+v 11 CleanState (Class)
+v 12 DataCreator (Class)
+v 13 FileLoader (Class)
+v 14 Appointment (Class)
+v 15 State (Interface)
+e 4 - LocationImpl implements 8 - Location
+e 7 - ContactImpl implements 5 - Contact
+e 10 - DirtyState implements 15 - State
+e 11 - CleanState implements 15 - State
+e 1 - StateGui has_the_field_type_of 9 - CalendarEditor
+e 1 - StateGui related_with_its_method 9 - CalendarEditor
+e 1 - StateGui has_a_method_that_has_an_input_parameter_with_the_type_of 9 - CalendarEditor
+e 1 - StateGui creates_objects_of 3 - StateTableModel
+e 1 - StateGui creates_objects_of 14 - Appointment
+e 1 - StateGui creates_objects_of 2 - WindowCloseManager
+e 2 - WindowCloseManager calls_method_of 2 - WindowCloseManager
+e 3 - StateTableModel has_the_field_type_of 14 - Appointment[]
+e 3 - StateTableModel related_with_its_method 14 - Appointment[]
+e 3 - StateTableModel has_a_method_that_has_an_input_parameter_with_the_type_of 14 - Appointment[]
+e 3 - StateTableModel creates_objects_of 4 - LocationImpl
+e 6 - RunPattern related_with_its_method 9 - CalendarEditor
+e 6 - RunPattern creates_objects_of 9 - CalendarEditor
+e 6 - RunPattern related_with_its_method 1 - StateGui
+e 6 - RunPattern creates_objects_of 1 - StateGui
+e 6 - RunPattern calls_method_of 1 - StateGui
+e 9 - CalendarEditor has_the_field_type_of 15 - State
+e 9 - CalendarEditor calls_method_of 13 - FileLoader
+e 9 - CalendarEditor creates_objects_of 11 - CleanState
+e 10 - DirtyState has_the_field_type_of 15 - State
+e 10 - DirtyState related_with_its_method 15 - State
+e 10 - DirtyState has_a_method_that_has_an_input_parameter_with_the_type_of 15 - State
+e 11 - CleanState has_the_field_type_of 15 - State
+e 11 - CleanState creates_objects_of 10 - DirtyState
+e 11 - CleanState has_the_return_type_of 10 - DirtyState
+e 11 - CleanState related_with_its_method 14 - Appointment
+e 11 - CleanState has_a_method_that_has_an_input_parameter_with_the_type_of 14 - Appointment
+e 11 - CleanState calls_method_of 10 - DirtyState
+e 12 - DataCreator creates_objects_of 7 - ContactImpl
+e 12 - DataCreator related_with_its_method 8 - Location
+e 12 - DataCreator creates_objects_of 4 - LocationImpl
+e 12 - DataCreator creates_objects_of 14 - Appointment
+e 14 - Appointment has_the_field_type_of 8 - Location
+e 14 - Appointment related_with_its_method 8 - Location
+e 14 - Appointment has_a_method_that_has_an_input_parameter_with_the_type_of 8 - Location
+e 14 - Appointment overrides_methods_of 8 - Location

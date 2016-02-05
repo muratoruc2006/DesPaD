@@ -1,0 +1,7 @@
+[Desktop Entry]
+Comment=DPD with terminal
+Terminal=true
+Name=DesPaD_terminal
+Exec=java -jar /home/murat/Masaüstü/eclipse/workspace/AST/DesignPatternDetection.jar
+Type=Application
+Icon=gnome-panel-launcher

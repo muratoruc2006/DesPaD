@@ -1,0 +1,74 @@
+v 1 Contact (Interface)
+v 2 RunPattern (Class)
+v 3 ContactImpl (Class)
+v 4 Address (Interface)
+v 5 AddressImpl (Class)
+v 6 AddressBook (Class)
+v 7 AddressBookMemento (Class)
+v 8 Serializable (Interface)
+v 9 String (Class)
+v 10 void (Class)
+v 11 Object (Class)
+v 12 book (Class)
+v 13 ArrayList (Class)
+v 14 ; (Class)
+v 15 contacts (Class)
+e 1 - Contact extends 8 - Serializable
+e 3 - ContactImpl implements 1 - Contact
+e 4 - Address extends 8 - Serializable
+e 5 - AddressImpl implements 4 - Address
+e 1 - Contact has_a_method_with_the_return_type_of 9 - String
+e 1 - Contact related_with_its_method 9 - String
+e 1 - Contact has_a_method_that_has_an_input_parameter_with_the_type_of 9 - String
+e 2 - RunPattern overrides_methods_of 2 - RunPattern
+e 2 - RunPattern related_with_its_method 9 - String[]
+e 2 - RunPattern has_a_method_that_has_an_input_parameter_with_the_type_of 9 - String[]
+e 2 - RunPattern related_with_its_method 6 - AddressBook
+e 2 - RunPattern creates_objects_of 6 - AddressBook
+e 2 - RunPattern creates_objects_of 3 - ContactImpl
+e 2 - RunPattern creates_objects_of 5 - AddressImpl
+e 2 - RunPattern related_with_its_method 11 - Object
+e 2 - RunPattern calls_method_of 12 - book
+e 2 - RunPattern calls_method_of 5 - AddressImpl
+e 3 - ContactImpl has_the_field_type_of 9 - String
+e 3 - ContactImpl has_the_field_type_of 4 - Address
+e 3 - ContactImpl related_with_its_method 9 - String
+e 3 - ContactImpl has_a_method_that_has_an_input_parameter_with_the_type_of 9 - String
+e 3 - ContactImpl related_with_its_method 4 - Address
+e 3 - ContactImpl has_a_method_that_has_an_input_parameter_with_the_type_of 4 - Address
+e 3 - ContactImpl has_a_method_with_the_return_type_of 9 - String
+e 3 - ContactImpl overrides_methods_of 3 - ContactImpl
+e 3 - ContactImpl has_a_method_with_the_return_type_of 4 - Address
+e 4 - Address has_a_method_with_the_return_type_of 9 - String
+e 4 - Address related_with_its_method 9 - String
+e 4 - Address has_a_method_that_has_an_input_parameter_with_the_type_of 9 - String
+e 5 - AddressImpl has_the_field_type_of 9 - String
+e 5 - AddressImpl related_with_its_method 9 - String
+e 5 - AddressImpl has_a_method_that_has_an_input_parameter_with_the_type_of 9 - String
+e 5 - AddressImpl has_a_method_with_the_return_type_of 9 - String
+e 5 - AddressImpl overrides_methods_of 5 - AddressImpl
+e 5 - AddressImpl overrides_methods_of 3 - ContactImpl
+e 6 - AddressBook has_the_field_type_of 13 - ArrayList
+e 6 - AddressBook creates_objects_of 13 - ArrayList
+e 6 - AddressBook has_the_return_type_of 14 - ;
+e 6 - AddressBook related_with_its_method 11 - Object
+e 6 - AddressBook has_a_method_with_the_return_type_of 11 - Object
+e 6 - AddressBook overrides_methods_of 6 - AddressBook
+e 6 - AddressBook creates_objects_of 7 - AddressBookMemento
+e 6 - AddressBook has_a_method_that_has_an_input_parameter_with_the_type_of 11 - Object
+e 6 - AddressBook related_with_its_method 7 - AddressBookMemento
+e 7 - AddressBookMemento has_the_field_type_of 13 - ArrayList
+e 7 - AddressBookMemento related_with_its_method 13 - ArrayList
+e 7 - AddressBookMemento has_a_method_that_has_an_input_parameter_with_the_type_of 13 - ArrayList
+e 7 - AddressBookMemento overrides_methods_of 7 - AddressBookMemento
+e 7 - AddressBookMemento related_with_its_method 1 - Contact
+e 7 - AddressBookMemento has_a_method_that_has_an_input_parameter_with_the_type_of 1 - Contact
+e 7 - AddressBookMemento calls_method_of 7 - AddressBookMemento
+e 7 - AddressBookMemento calls_method_of 15 - contacts
+e 7 - AddressBookMemento creates_objects_of 13 - ArrayList
+e 7 - AddressBookMemento has_the_return_type_of 13 - ArrayList
+e 7 - AddressBookMemento has_a_method_with_the_return_type_of 13 - ArrayList
+e 7 - AddressBookMemento related_with_its_method 9 - String
+e 7 - AddressBookMemento has_a_method_with_the_return_type_of 9 - String
+e 7 - AddressBookMemento overrides_methods_of 3 - ContactImpl
+e 7 - AddressBookMemento calls_method_of 13 - ArrayList

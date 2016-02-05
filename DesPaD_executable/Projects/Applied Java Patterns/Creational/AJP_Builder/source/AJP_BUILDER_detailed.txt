@@ -1,0 +1,72 @@
+v 1 InformationRequiredException (Class)
+v 2 LocationImpl (Class)
+v 3 Contact (Interface)
+v 4 MeetingBuilder (Class)
+v 5 AppointmentBuilder (Class)
+v 6 RunPattern (Class)
+v 7 ContactImpl (Class)
+v 8 Location (Interface)
+v 9 Scheduler (Class)
+v 10 Appointment (Class)
+v 11 Exception (Class)
+v 12 Serializable (Interface)
+e 1 - InformationRequiredException extends 11 - Exception
+e 2 - LocationImpl implements 8 - Location
+e 3 - Contact extends 12 - Serializable
+e 4 - MeetingBuilder extends 5 - AppointmentBuilder
+e 7 - ContactImpl implements 3 - Contact
+e 8 - Location extends 12 - Serializable
+e 1 - InformationRequiredException overrides_methods_of 11 - Exception
+e 1 - InformationRequiredException overrides_methods_of 1 - InformationRequiredException
+e 2 - LocationImpl overrides_methods_of 2 - LocationImpl
+e 4 - MeetingBuilder overrides_methods_of 5 - AppointmentBuilder
+e 4 - MeetingBuilder related_with_its_method 10 - Appointment
+e 4 - MeetingBuilder has_a_method_with_the_return_type_of 10 - Appointment
+e 4 - MeetingBuilder overrides_methods_of 4 - MeetingBuilder
+e 4 - MeetingBuilder creates_objects_of 1 - InformationRequiredException
+e 5 - AppointmentBuilder has_the_field_type_of 10 - Appointment
+e 5 - AppointmentBuilder overrides_methods_of 5 - AppointmentBuilder
+e 5 - AppointmentBuilder creates_objects_of 10 - Appointment
+e 5 - AppointmentBuilder related_with_its_method 8 - Location
+e 5 - AppointmentBuilder has_a_method_that_has_an_input_parameter_with_the_type_of 8 - Location
+e 5 - AppointmentBuilder related_with_its_method 10 - Appointment
+e 5 - AppointmentBuilder has_a_method_with_the_return_type_of 10 - Appointment
+e 5 - AppointmentBuilder overrides_methods_of 4 - MeetingBuilder
+e 5 - AppointmentBuilder creates_objects_of 1 - InformationRequiredException
+e 5 - AppointmentBuilder has_the_return_type_of 1 - InformationRequiredException
+e 6 - RunPattern overrides_methods_of 6 - RunPattern
+e 6 - RunPattern related_with_its_method 10 - Appointment
+e 6 - RunPattern related_with_its_method 9 - Scheduler
+e 6 - RunPattern creates_objects_of 9 - Scheduler
+e 6 - RunPattern related_with_its_method 5 - AppointmentBuilder
+e 6 - RunPattern creates_objects_of 5 - AppointmentBuilder
+e 6 - RunPattern creates_objects_of 2 - LocationImpl
+e 6 - RunPattern related_with_its_method 4 - MeetingBuilder
+e 6 - RunPattern creates_objects_of 4 - MeetingBuilder
+e 6 - RunPattern has_the_return_type_of 2 - LocationImpl
+e 6 - RunPattern calls_method_of 2 - LocationImpl
+e 6 - RunPattern creates_objects_of 7 - ContactImpl
+e 6 - RunPattern has_the_return_type_of 7 - ContactImpl
+e 6 - RunPattern related_with_its_method 1 - InformationRequiredException
+e 6 - RunPattern has_a_method_that_has_an_input_parameter_with_the_type_of 1 - InformationRequiredException
+e 6 - RunPattern calls_method_of 7 - ContactImpl
+e 7 - ContactImpl overrides_methods_of 7 - ContactImpl
+e 7 - ContactImpl overrides_methods_of 6 - RunPattern
+e 7 - ContactImpl overrides_methods_of 2 - LocationImpl
+e 9 - Scheduler related_with_its_method 10 - Appointment
+e 9 - Scheduler has_a_method_with_the_return_type_of 10 - Appointment
+e 9 - Scheduler overrides_methods_of 9 - Scheduler
+e 9 - Scheduler related_with_its_method 5 - AppointmentBuilder
+e 9 - Scheduler has_a_method_that_has_an_input_parameter_with_the_type_of 5 - AppointmentBuilder
+e 9 - Scheduler related_with_its_method 8 - Location
+e 9 - Scheduler has_a_method_that_has_an_input_parameter_with_the_type_of 8 - Location
+e 9 - Scheduler creates_objects_of 5 - AppointmentBuilder
+e 9 - Scheduler calls_method_of 5 - AppointmentBuilder
+e 10 - Appointment has_the_field_type_of 8 - Location
+e 10 - Appointment overrides_methods_of 10 - Appointment
+e 10 - Appointment related_with_its_method 8 - Location
+e 10 - Appointment has_a_method_with_the_return_type_of 8 - Location
+e 10 - Appointment overrides_methods_of 2 - LocationImpl
+e 10 - Appointment has_a_method_that_has_an_input_parameter_with_the_type_of 8 - Location
+e 10 - Appointment related_with_its_method 3 - Contact
+e 10 - Appointment has_a_method_that_has_an_input_parameter_with_the_type_of 3 - Contact

@@ -1,0 +1,27 @@
+v 1 ManagedList (Class)
+v 2 Contact (Interface)
+v 3 RunPattern (Class)
+v 4 ContactImpl (Class)
+v 5 DirtyState (Class)
+v 6 Address (Interface)
+v 7 CleanState (Class)
+v 8 AddressImpl (Class)
+v 9 State (Interface)
+v 10 StateFactory (Class)
+e 4 - ContactImpl implements 2 - Contact
+e 5 - DirtyState implements 9 - State
+e 7 - CleanState implements 9 - State
+e 8 - AddressImpl implements 6 - Address
+e 3 - RunPattern related_with_its_method 1 - ManagedList
+e 3 - RunPattern creates_objects_of 1 - ManagedList
+e 3 - RunPattern calls_method_of 10 - StateFactory
+e 3 - RunPattern calls_method_of 1 - ManagedList
+e 3 - RunPattern creates_objects_of 4 - ContactImpl
+e 3 - RunPattern creates_objects_of 8 - AddressImpl
+e 10 - StateFactory has_the_field_type_of 9 - State
+e 10 - StateFactory creates_objects_of 7 - CleanState
+e 10 - StateFactory creates_objects_of 5 - DirtyState
+e 10 - StateFactory has_the_return_type_of 5 - DirtyState
+e 10 - StateFactory related_with_its_method 9 - State
+e 10 - StateFactory overrides_methods_of 9 - State
+e 10 - StateFactory has_a_method_that_has_an_input_parameter_with_the_type_of 9 - State

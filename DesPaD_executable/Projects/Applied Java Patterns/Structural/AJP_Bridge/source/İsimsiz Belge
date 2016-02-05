@@ -1,0 +1,9 @@
+murat@murat-SATELLITE-L855 ~/Masaüstü/eclipse/workspace/AST/Projects/Applied Java Patterns/Structural/AJP_Bridge/source $ neato -Tpng deneme.dot -o deneme2.png
+murat@murat-SATELLITE-L855 ~/Masaüstü/eclipse/workspace/AST/Projects/Applied Java Patterns/Structural/AJP_Bridge/source $ fdp -Tpng deneme.dot -o deneme3.png
+murat@murat-SATELLITE-L855 ~/Masaüstü/eclipse/workspace/AST/Projects/Applied Java Patterns/Structural/AJP_Bridge/source $ sfdp -Tpng deneme.dot -o deneme4.png
+Error: remove_overlap: Graphviz not built with triangulation library
+murat@murat-SATELLITE-L855 ~/Masaüstü/eclipse/workspace/AST/Projects/Applied Java Patterns/Structural/AJP_Bridge/source $ twopi -Tpng deneme.dot -o deneme5.png
+murat@murat-SATELLITE-L855 ~/Masaüstü/eclipse/workspace/AST/Projects/Applied Java Patterns/Structural/AJP_Bridge/source $ circo -Tpng deneme.dot -o deneme6.png
+murat@murat-SATELLITE-L855 ~/Masaüstü/eclipse/workspace/AST/Projects/Applied Java Patterns/Structural/AJP_Bridge/source $ patchwork -Tpng deneme.dot -o deneme7.png
+murat@murat-SATELLITE-L855 ~/Masaüstü/eclipse/workspace/AST/Projects/Applied Java Patterns/Structural/AJP_Bridge/source $ osage -Tpng deneme.dot -o deneme8.pngmurat@murat-SATELLITE-L855 ~/Masaüstü/eclipse/workspace/AST/Projects/Applied Java Patterns/Structural/AJP_Bridge/source $ 
+

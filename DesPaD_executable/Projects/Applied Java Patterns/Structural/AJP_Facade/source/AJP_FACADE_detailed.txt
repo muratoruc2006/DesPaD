@@ -1,0 +1,51 @@
+v 1 PhoneNumber (Class)
+v 2 Currency (Class)
+v 3 RunPattern (Class)
+v 4 DataCreator (Class)
+v 5 InternationalizationWizard (Class)
+v 6 FacadeGui (Class)
+v 7 WindowCloseManager (Class)
+v 8 InternationalizedText (Class)
+v 9 Nation (Class)
+v 10 ActionListener (Interface)
+v 11 ItemListener (Interface)
+v 12 WindowAdapter (Class)
+e 6 - FacadeGui implements 10 - ActionListener
+e 6 - FacadeGui implements 11 - ItemListener
+e 7 - WindowCloseManager extends 12 - WindowAdapter
+e 1 - PhoneNumber overrides_methods_of 1 - PhoneNumber
+e 2 - Currency overrides_methods_of 2 - Currency
+e 3 - RunPattern overrides_methods_of 3 - RunPattern
+e 3 - RunPattern related_with_its_method 5 - InternationalizationWizard
+e 3 - RunPattern creates_objects_of 5 - InternationalizationWizard
+e 3 - RunPattern related_with_its_method 6 - FacadeGui
+e 3 - RunPattern creates_objects_of 6 - FacadeGui
+e 3 - RunPattern calls_method_of 6 - FacadeGui
+e 4 - DataCreator overrides_methods_of 4 - DataCreator
+e 5 - InternationalizationWizard has_the_field_type_of 2 - Currency
+e 5 - InternationalizationWizard creates_objects_of 2 - Currency
+e 5 - InternationalizationWizard has_the_field_type_of 8 - InternationalizedText
+e 5 - InternationalizationWizard creates_objects_of 8 - InternationalizedText
+e 5 - InternationalizationWizard related_with_its_method 9 - Nation[]
+e 5 - InternationalizationWizard creates_objects_of 9 - Nation
+e 5 - InternationalizationWizard overrides_methods_of 5 - InternationalizationWizard
+e 5 - InternationalizationWizard related_with_its_method 9 - Nation
+e 5 - InternationalizationWizard calls_method_of 9 - Nation
+e 5 - InternationalizationWizard has_a_method_with_the_return_type_of 9 - Nation
+e 5 - InternationalizationWizard overrides_methods_of 2 - Currency
+e 5 - InternationalizationWizard calls_method_of 1 - PhoneNumber
+e 6 - FacadeGui has_the_field_type_of 5 - InternationalizationWizard
+e 6 - FacadeGui related_with_its_method 5 - InternationalizationWizard
+e 6 - FacadeGui has_a_method_that_has_an_input_parameter_with_the_type_of 5 - InternationalizationWizard
+e 6 - FacadeGui overrides_methods_of 6 - FacadeGui
+e 6 - FacadeGui creates_objects_of 7 - WindowCloseManager
+e 6 - FacadeGui calls_method_of 7 - WindowCloseManager
+e 6 - FacadeGui overrides_methods_of 5 - InternationalizationWizard
+e 6 - FacadeGui related_with_its_method 9 - Nation
+e 6 - FacadeGui has_a_method_that_has_an_input_parameter_with_the_type_of 9 - Nation
+e 7 - WindowCloseManager overrides_methods_of 7 - WindowCloseManager
+e 8 - InternationalizedText overrides_methods_of 8 - InternationalizedText
+e 8 - InternationalizedText overrides_methods_of 5 - InternationalizationWizard
+e 9 - Nation overrides_methods_of 9 - Nation
+e 9 - Nation overrides_methods_of 2 - Currency
+e 9 - Nation overrides_methods_of 1 - PhoneNumber

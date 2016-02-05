@@ -1,0 +1,75 @@
+v 1 LocationImpl (Class)
+v 2 Contact (Interface)
+v 3 RunPattern (Class)
+v 4 ContactImpl (Class)
+v 5 Location (Interface)
+v 6 CommandGui (Class)
+v 7 WindowCloseManager (Class)
+v 8 Appointment (Class)
+v 9 LocationEditor (Interface)
+v 10 UndoableCommand (Interface)
+v 11 Command (Interface)
+v 12 ChangeLocationCommand (Class)
+v 13 Serializable (Interface)
+v 14 ActionListener (Interface)
+v 15 WindowAdapter (Class)
+e 1 - LocationImpl implements 5 - Location
+e 2 - Contact extends 13 - Serializable
+e 4 - ContactImpl implements 2 - Contact
+e 5 - Location extends 13 - Serializable
+e 6 - CommandGui implements 14 - ActionListener
+e 6 - CommandGui implements 9 - LocationEditor
+e 7 - WindowCloseManager extends 15 - WindowAdapter
+e 10 - UndoableCommand extends 11 - Command
+e 12 - ChangeLocationCommand implements 10 - UndoableCommand
+e 1 - LocationImpl overrides_methods_of 1 - LocationImpl
+e 3 - RunPattern overrides_methods_of 3 - RunPattern
+e 3 - RunPattern related_with_its_method 2 - Contact[]
+e 3 - RunPattern creates_objects_of 4 - ContactImpl
+e 3 - RunPattern related_with_its_method 8 - Appointment
+e 3 - RunPattern creates_objects_of 8 - Appointment
+e 3 - RunPattern creates_objects_of 1 - LocationImpl
+e 3 - RunPattern related_with_its_method 12 - ChangeLocationCommand
+e 3 - RunPattern creates_objects_of 12 - ChangeLocationCommand
+e 3 - RunPattern calls_method_of 12 - ChangeLocationCommand
+e 3 - RunPattern related_with_its_method 6 - CommandGui
+e 3 - RunPattern creates_objects_of 6 - CommandGui
+e 3 - RunPattern calls_method_of 6 - CommandGui
+e 4 - ContactImpl overrides_methods_of 4 - ContactImpl
+e 4 - ContactImpl overrides_methods_of 1 - LocationImpl
+e 6 - CommandGui has_the_field_type_of 10 - UndoableCommand
+e 6 - CommandGui has_the_field_type_of 8 - Appointment
+e 6 - CommandGui related_with_its_method 10 - UndoableCommand
+e 6 - CommandGui has_a_method_that_has_an_input_parameter_with_the_type_of 10 - UndoableCommand
+e 6 - CommandGui overrides_methods_of 6 - CommandGui
+e 6 - CommandGui related_with_its_method 8 - Appointment
+e 6 - CommandGui has_a_method_that_has_an_input_parameter_with_the_type_of 8 - Appointment
+e 6 - CommandGui creates_objects_of 7 - WindowCloseManager
+e 6 - CommandGui calls_method_of 7 - WindowCloseManager
+e 7 - WindowCloseManager overrides_methods_of 7 - WindowCloseManager
+e 7 - WindowCloseManager related_with_its_method 5 - Location
+e 7 - WindowCloseManager has_a_method_with_the_return_type_of 5 - Location
+e 7 - WindowCloseManager creates_objects_of 1 - LocationImpl
+e 7 - WindowCloseManager calls_method_of 1 - LocationImpl
+e 8 - Appointment has_the_field_type_of 2 - Contact[]
+e 8 - Appointment has_the_field_type_of 5 - Location
+e 8 - Appointment related_with_its_method 2 - Contact[]
+e 8 - Appointment has_a_method_that_has_an_input_parameter_with_the_type_of 2 - Contact[]
+e 8 - Appointment related_with_its_method 5 - Location
+e 8 - Appointment has_a_method_that_has_an_input_parameter_with_the_type_of 5 - Location
+e 8 - Appointment overrides_methods_of 8 - Appointment
+e 8 - Appointment has_a_method_with_the_return_type_of 2 - Contact[]
+e 8 - Appointment has_a_method_with_the_return_type_of 5 - Location
+e 8 - Appointment overrides_methods_of 1 - LocationImpl
+e 9 - LocationEditor has_a_method_with_the_return_type_of 5 - Location
+e 9 - LocationEditor related_with_its_method 5 - Location
+e 12 - ChangeLocationCommand has_the_field_type_of 8 - Appointment
+e 12 - ChangeLocationCommand has_the_field_type_of 5 - Location
+e 12 - ChangeLocationCommand has_the_field_type_of 9 - LocationEditor
+e 12 - ChangeLocationCommand related_with_its_method 8 - Appointment
+e 12 - ChangeLocationCommand has_a_method_with_the_return_type_of 8 - Appointment
+e 12 - ChangeLocationCommand overrides_methods_of 12 - ChangeLocationCommand
+e 12 - ChangeLocationCommand overrides_methods_of 6 - CommandGui
+e 12 - ChangeLocationCommand has_a_method_that_has_an_input_parameter_with_the_type_of 8 - Appointment
+e 12 - ChangeLocationCommand related_with_its_method 9 - LocationEditor
+e 12 - ChangeLocationCommand has_a_method_that_has_an_input_parameter_with_the_type_of 9 - LocationEditor

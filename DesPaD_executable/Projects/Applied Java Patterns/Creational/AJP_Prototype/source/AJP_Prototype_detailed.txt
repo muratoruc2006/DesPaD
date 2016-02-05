@@ -1,0 +1,8 @@
+v 1 Copyable (Interface)
+v 2 RunPattern (Class)
+v 3 Address (Class)
+e 3 - Address implements 1 - Copyable
+e 2 - RunPattern related_with_its_method 3 - Address
+e 2 - RunPattern creates_objects_of 3 - Address
+e 3 - Address creates_objects_of 3 - Address
+e 3 - Address has_the_return_type_of 3 - Address
